@@ -1,5 +1,4 @@
 import React from 'react';
-import logo from './logo.svg';
 import Pioli from './Pioli.png';
 import './App.css';
 
