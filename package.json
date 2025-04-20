@@ -11,8 +11,13 @@
     "@types/node": "^16.18.101",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
+    "framer-motion": "^12.7.4",
+    "lucide-react": "^0.501.0",
+    "next": "^15.3.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "react-icons": "^5.4.0",
+    "react-pro-sidebar": "^1.1.0",
     "react-scripts": "5.0.1",
     "styled-components": "^6.1.12",
     "typescript": "^4.9.5",
@@ -24,7 +29,10 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "dev": "next dev",
+    "buildNext": "next build",
+    "startNext": "next start"
   },
   "eslintConfig": {
     "extends": [
