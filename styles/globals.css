@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.open span:nth-child(1) {
+    transform: translateY(7.5px) rotate(45deg);
+  }
+  
+  .open span:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .open span:nth-child(3) {
+    transform: translateY(-7.5px) rotate(-45deg);
+  }
+  
