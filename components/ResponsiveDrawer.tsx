@@ -53,21 +53,24 @@ export default function ResponsiveDrawer() {
   return (
     <>
       {/* Hamburger Icon (hidden on desktop) */}
-      <button
-        onClick={toggleDrawer}
-        className="fixed top-4 left-4 z-[1001] bg-transparent border-none block lg:hidden"
-        aria-label="Toggle Menu"
-        data-id="hamburger-button"
-      >
-        <div
-          className={`w-6 h-4 flex flex-col justify-between cursor-pointer ${isOpen ? "open" : ""}`}
-          data-id="hamburger-icon"
+      {!isOpen && (
+        <button
+          onClick={toggleDrawer}
+          className="fixed top-4 left-4 z-[60] bg-transparent border-none block lg:hidden"
+          aria-label="Open Menu"
+          data-id="hamburger-button"
         >
-          <span className="h-[3px] bg-gray-800 rounded transition-all duration-300 ease-in-out origin-top-left" />
-          <span className={`h-[3px] bg-gray-800 rounded transition-all duration-300 ease-in-out ${isOpen ? "opacity-0" : ""}`} />
-          <span className="h-[3px] bg-gray-800 rounded transition-all duration-300 ease-in-out origin-bottom-left" />
-        </div>
-      </button>
+          <div
+            className="w-6 h-4 flex flex-col justify-between cursor-pointer"
+            data-id="hamburger-icon"
+          >
+            <span className="h-[3px] bg-gray-800 rounded transition-all duration-300 ease-in-out" />
+            <span className="h-[3px] bg-gray-800 rounded transition-all duration-300 ease-in-out" />
+            <span className="h-[3px] bg-gray-800 rounded transition-all duration-300 ease-in-out" />
+          </div>
+        </button>
+      )}
+
 
       {/* Drawer Overlay + Drawer */}
       <AnimatePresence>
@@ -81,14 +84,37 @@ export default function ResponsiveDrawer() {
           >
             <motion.div
               ref={drawerRef}
-              className="bg-white w-[250px] h-full p-8 pt-8 relative z-[1001]"
+              className="bg-white w-[250px] h-full p-8 pt-8 relative z-[1003]"
               initial={{ x: "-100%" }}
               animate={{ x: 0 }}
               exit={{ x: "-100%" }}
               transition={{ type: "tween", duration: 0.5 }}
               data-id="mobile-drawer"
             >
+              {/* Close/X button here */}
+              <button
+                onClick={closeDrawer}
+                aria-label="Close menu"
+                className="ml-auto mb-4 text-black hover:text-red-500 transition-colors"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth="2"
+                  stroke="currentColor"
+                  className="w-6 h-6"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M6 18L18 6M6 6l12 12"
+                  />
+                </svg>
+              </button>
+              
               <h2 className="text-xl font-bold mb-4" data-id="mobile-menu-title">Menu</h2>
+              
               {navLinks.map((link) => (
                 <Link
                   key={link.name}
