@@ -8,7 +8,7 @@ export default function Header() {
 
   return (
     <>
-      <header className="fixed top-0 left-0 w-full z-50 bg-white shadow h-16 flex items-center justify-between px-4">
+      <header className="fixed top-0 left-0 w-full z-50 bg-white shadow h-16 flex items-center justify-between px-4 lg:pl-[250px]">
         {/* Mobile hamburger */}
         <button
           onClick={toggleDrawer}
@@ -23,7 +23,7 @@ export default function Header() {
         </button>
 
         {/* Site title */}
-        <h1 className="text-xl font-bold">I75 League</h1>
+        <h1 className="text-xl font-bold pl-2">I75 League</h1>
       </header>
 
       {/* Drawer outside header so it doesn’t get clipped */}
