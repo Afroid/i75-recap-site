@@ -12,13 +12,23 @@ const navLinks = [
   { name: "Contact", path: "/contact" },
 ];
 
-export default function ResponsiveDrawer() {
-  const [isOpen, setIsOpen] = useState(false);
+export default function ResponsiveDrawer({
+  isOpen,
+  onClose
+}: {
+  isOpen: boolean;
+  onClose: () => void;
+}) {
+  // const [isOpen, setIsOpen] = useState(false);
+  // const drawerRef = useRef<HTMLDivElement>(null);
+  // const router = useRouter();
+
+  // const toggleDrawer = () => setIsOpen(!isOpen);
+  // const closeDrawer = () => setIsOpen(false);
   const drawerRef = useRef<HTMLDivElement>(null);
   const router = useRouter();
 
-  const toggleDrawer = () => setIsOpen(!isOpen);
-  const closeDrawer = () => setIsOpen(false);
+  const closeDrawer = onClose; // Optional alias
 
   useEffect(() => {
     const handleOutsideClick = (e: MouseEvent) => {
@@ -52,26 +62,6 @@ export default function ResponsiveDrawer() {
 
   return (
     <>
-      {/* Hamburger Icon (hidden on desktop) */}
-      {!isOpen && (
-        <button
-          onClick={toggleDrawer}
-          className="fixed top-4 left-4 z-[60] bg-transparent border-none block lg:hidden"
-          aria-label="Open Menu"
-          data-id="hamburger-button"
-        >
-          <div
-            className="w-6 h-4 flex flex-col justify-between cursor-pointer"
-            data-id="hamburger-icon"
-          >
-            <span className="h-[3px] bg-gray-800 rounded transition-all duration-300 ease-in-out" />
-            <span className="h-[3px] bg-gray-800 rounded transition-all duration-300 ease-in-out" />
-            <span className="h-[3px] bg-gray-800 rounded transition-all duration-300 ease-in-out" />
-          </div>
-        </button>
-      )}
-
-
       {/* Drawer Overlay + Drawer */}
       <AnimatePresence>
         {isOpen && (
