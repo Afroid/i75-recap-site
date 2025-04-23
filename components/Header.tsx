@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Link from "next/link";
 import ResponsiveDrawer from "./ResponsiveDrawer";
 
 export default function Header() {
@@ -22,8 +23,10 @@ export default function Header() {
           </div>
         </button>
 
-        {/* Site title */}
-        <h1 className="text-xl font-bold pl-2">I75 League</h1>
+        {/* Site title as Home link */}
+        <Link href="/" className="text-xl font-bold pl-2 hover:text-blue-600 transition-colors duration-200">
+          I75 League
+        </Link>
       </header>
 
       {/* Drawer outside header so it doesn’t get clipped */}
