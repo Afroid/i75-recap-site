@@ -26,7 +26,11 @@ export default function Home() {
         </p>
 
         <p className="text-lg text-gray-700 mb-4">
+<<<<<<< HEAD
          I'm going to <b>change</b> and <b>add</b> a lot of things, such as: Changing color schemes and fonts, as well as changing the I75 League at the top to a logo with a picture of I75 League instead of just plain text. Keep in mind that I made a logo for us a while back.
+=======
+         I'm going to <b>change</b> and <b>add</b> a lot of things, such as: Changing color schemes, fonts and changing the I75 League at the top to a logo and the text will likely be a picture of I75 League instead of plain text. Keep in mind that I made a logo for us a while back.
+>>>>>>> a4e3aa3c435ed09bfa0c3f9b7b56c5f1332d17e6
         </p>
 
         <p className="text-lg text-gray-700 mb-4">
