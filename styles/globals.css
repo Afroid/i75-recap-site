@@ -25,6 +25,9 @@
     }
 }
 
+/* This was an option for a different animation.
+*  It's not currently being used.
+*/
 .animate-fade-slide-in {
     animation: fade-slide-in 0.5s ease-in-out;
 }
