@@ -10,11 +10,11 @@ export default function Home() {
         <meta name="description" content="Where everybody knows your name." />
       </Head>
 
-      <main>
+      <main className="pt-4 lg:pl-[240px]">
         <h1 className="text-4xl text-green-600 font-bold mb-4">Welcome to I75 League</h1>
-        <h1 className="text-3xl text-orange-600 font-bold mb-4">None of the links go to anything, yet.</h1>
+        <h1 className="text-3xl text-orange-600 font-bold mb-4">Links are working with dummy data.</h1>
         <p className="text-lg text-gray-700 mb-4">
-          Content will go here. The menus are in place but again the links won't take you anywhere, yet.
+          Content will go here.
         </p>
 
         <p className="text-lg text-gray-700 mb-4">
