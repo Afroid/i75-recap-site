@@ -10,9 +10,8 @@ export default function MyApp({ Component, pageProps }: AppProps) {
       {/* <ResponsiveDrawer /> */}
       {/* On desktop, push content over by 16rem; on mobile just p-4 */}
       {/* pt-16 gives vertical spacing for mobile header */}
-      {/* lg:pl-[250px] offsets desktop layout for the sidebar */}
-      <div className="pt-16 lg:pl-[250px] px-4">
-        <main className="lg:pl-2">
+      <div className="pt-16 px-4">
+        <main>
             <Component {...pageProps} />
         </main>
       </div>

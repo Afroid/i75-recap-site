@@ -6,13 +6,14 @@ import path from "path";
 
 interface Props {
   recap: RecapWeek | null;
+  year: string;
 }
 
 // Page component: renders the recap layout for the given week.
 // If no recap is found, displays a fallback message.
-export default function RecapPage({ recap }: Props) {
+export default function RecapPage({ recap, year }: Props) {
   if (!recap) return <div>Recap not found</div>;
-  return <RecapLayout recap={recap} />;
+  return <RecapLayout recap={recap} year={year} />;
 }
 
 // getStaticPaths: generates all valid routes for [year]/[week] based on JSON files in /data/recaps.
@@ -69,6 +70,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     return {
       props: {
         recap,
+        year,
       },
     };
   } catch (err) {
