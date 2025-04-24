@@ -2,8 +2,9 @@ import React, { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { motion, AnimatePresence } from "framer-motion";
-import { recapData } from "../data/recapData";
+import { getRecaps } from "@/lib/getRecaps";
 
+const recapData = getRecaps();
 
 const navLinks = [
   { name: "Home", path: "/" },
