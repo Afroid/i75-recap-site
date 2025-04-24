@@ -7,9 +7,6 @@ export default function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <Header />
-      {/* <ResponsiveDrawer /> */}
-      {/* On desktop, push content over by 16rem; on mobile just p-4 */}
-      {/* pt-16 gives vertical spacing for mobile header */}
       <div className="pt-16 px-4">
         <main>
             <Component {...pageProps} />
