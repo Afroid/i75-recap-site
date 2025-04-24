@@ -11,7 +11,7 @@ interface Props {
 export default function RecapLayout({ recap, year }: Props) {
   return (
     // This box is no wider than 768px and it's centered
-    <div className="pt-16 px-4 max-w-3xl mx-auto">
+    <div className="pt-4 max-w-3xl mx-auto">
       <Breadcrumb year={year} week={`Week ${recap.week}`} />
       <h1 className="text-3xl font-bold mb-6">
         Week {recap.week} Recap

@@ -8,7 +8,7 @@ interface BreadcrumbProps {
 
 export default function Breadcrumb({ year, week }: BreadcrumbProps) {
   return (
-    <nav className="text-sm text-gray-600 mb-4">
+    <nav className="text-sm text-gray-600 mb-8">
       <ol className="flex space-x-2">
         <li>
           <Link href="/" className="hover:underline text-blue-600">
