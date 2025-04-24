@@ -1,14 +1,18 @@
 import React from "react";
 import Image from "next/image";
 import { RecapWeek } from "@/types/types";
+import Breadcrumb from "./Breadcrumb";
 
 interface Props {
   recap: RecapWeek;
+  year: string;
 }
 
-export default function RecapLayout({ recap }: Props) {
+export default function RecapLayout({ recap, year }: Props) {
   return (
-    <div className="pt-16 lg:pl-[250px] px-4 max-w-3xl mx-auto">
+    // This box is no wider than 768px and it's centered
+    <div className="pt-16 px-4 max-w-3xl mx-auto">
+      <Breadcrumb year={year} week={`Week ${recap.week}`} />
       <h1 className="text-3xl font-bold mb-6">
         Week {recap.week} Recap
       </h1>
