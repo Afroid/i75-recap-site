@@ -1,6 +1,6 @@
 /**
  * Represents an individual content block within a recap.
- * 
+ *
  * Each section can be a block of text (like "intro", "tidbits", etc.)
  * and may optionally include an image (e.g. for GIFs or screenshots).
  */
@@ -21,7 +21,7 @@ export interface RecapSection {
 
 /**
  * Represents a single weekly recap for a season.
- * 
+ *
  * Each recap includes a week number, a title (for display),
  * and a list of content sections that make up the recap body.
  */
@@ -39,7 +39,7 @@ export interface RecapWeek {
 
 /**
  * Represents a full set of recaps for a given fantasy season.
- * 
+ *
  * The structure groups all recaps for a specific year into a single file.
  * You can load a different RecapData object for each season.
  */

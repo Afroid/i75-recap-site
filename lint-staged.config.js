@@ -1,7 +1,6 @@
 /** @type {import('lint-staged').Config} */
 
-const config = {
-  // Lint and auto-fix JS/TS/React files
+module.exports = {
   "**/*.{js,jsx,ts,tsx}": ["eslint --fix"],
 
   // Example: format Markdown or JSON files (uncomment if needed)
@@ -10,5 +9,3 @@ const config = {
   // Example: style linting (if added later)
   // "**/*.{css,scss}": ["stylelint --fix"],
 };
-
-export default config;
