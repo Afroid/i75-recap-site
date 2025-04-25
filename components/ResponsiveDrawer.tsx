@@ -59,12 +59,12 @@ export default function ResponsiveDrawer({
 
   /**
    * Renders the mobile version of the Recaps navigation section.
-   * 
+   *
    * - Displays each year as a collapsible accordion
    * - Uses Framer Motion for smooth expand/collapse animation
    * - Includes a "View All Recaps" link at the bottom
    * - Used in the mobile drawer (hidden on desktop)
-   * 
+   *
    * @returns JSX.Element
    */
   const renderRecapLinks = () => (
@@ -74,7 +74,7 @@ export default function ResponsiveDrawer({
       .sort((a, b) => Number(b[0]) - Number(a[0])) // sort years descending
       .map(([year, weeks]) => {
         const isOpen = activeYear === year;
-    
+
         return (
           <div key={year} className="mb-2 mx-4">
             <button
@@ -95,7 +95,7 @@ export default function ResponsiveDrawer({
                 <path strokeLinecap="round" strokeLinejoin="round" d="M6 9l6 6 6-6" />
               </svg>
             </button>
-    
+
             <AnimatePresence initial={false}>
               {isOpen && (
                 <motion.div
@@ -134,11 +134,11 @@ export default function ResponsiveDrawer({
 
   /**
    * Renders the desktop version of the Recaps navigation section.
-   * 
+   *
    * - Displays each year with a hoverable flyout submenu of weeks
    * - Flyout appears to the right of the drawer on hover
    * - Used only on desktop (visible on lg: screens)
-   * 
+   *
    * @returns JSX.Element
    */
 
@@ -157,7 +157,7 @@ export default function ResponsiveDrawer({
 
             {/* Pointer (half inside the year row, half outside) */}
             <div className="absolute top-1/2 left-[244px] -translate-y-1/2 w-3 h-3 bg-white rotate-45 border-l border-t border-gray-200 shadow-md z-50 hidden group-hover:block"/>
-            
+
             {/* Flyout */}
             <div className="absolute top-0 left-full hidden group-hover:block bg-white shadow-xl rounded-md p-2 z-50 w-40">
               {weeks.map((week) => (
@@ -172,7 +172,7 @@ export default function ResponsiveDrawer({
             </div>
           </div>
         ))}
-  
+
       <div className="mt-6 pl-4">
         <Link
           href="/recaps"
@@ -183,7 +183,7 @@ export default function ResponsiveDrawer({
       </div>
     </div>
   );
-  
+
 
   const renderStaticLinks = () => (
     <>
