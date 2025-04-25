@@ -3,6 +3,7 @@ import path from "path";
 import Link from "next/link";
 import { GetStaticPaths, GetStaticProps } from "next";
 import { RecapData } from "@/types/types";
+import { motion } from "framer-motion";
 
 interface Props {
   year: number;
@@ -12,19 +13,46 @@ interface Props {
 export default function YearPage({ year, weeks }: Props) {
   return (
     <div className="pt-4 px-4 max-w-2xl mx-auto">
-      <h1 className="text-3xl font-bold mb-4">Recaps for {year}</h1>
-      <ul className="space-y-2">
-        {weeks.map((week) => (
-          <li key={week}>
+
+      <div className="text-center">
+        <div className="inline-block">
+          <h1 className="text-4xl lg:text-5xl font-extrabold text-gray-900 mb-2">
+            {year} Season Recaps
+          </h1>
+          <div className="h-1 w-full bg-gradient-to-r from-green-500 to-green-700 rounded-full mb-6"></div>
+        </div>
+      </div>
+
+      <ul className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+        {weeks.map((week, idx) => (
+          <motion.li
+            key={week}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: idx * 0.1 }}
+          >
             <Link
               href={`/recaps/${year}/week-${week}`}
-              className="text-blue-600 hover:underline text-lg"
+              className="
+                block rounded-lg shadow-md
+                bg-white hover:bg-green-50
+                p-6 text-center transition
+                border border-gray-200 hover:border-green-400
+                transform transition-transform
+                hover:shadow-lg hover:scale-105 hover:-translate-y-1
+                flex flex-col justify-center
+                min-h-[150px]
+              "
             >
-              Week {week} Recap
+              <h2 className="text-xl font-semibold text-gray-900 mb-2">
+                Week {week}
+              </h2>
+              <p className="text-gray-600">View Recap</p>
             </Link>
-          </li>
+          </motion.li>
         ))}
       </ul>
+
     </div>
   );
 }
