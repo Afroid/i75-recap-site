@@ -43,6 +43,7 @@ export default defineConfig([
     },
     rules: {
       "react/react-in-jsx-scope": "off", // React doesn't need to be imported manually.
+      "no-trailing-spaces": "error",
     },
   },
 ]);

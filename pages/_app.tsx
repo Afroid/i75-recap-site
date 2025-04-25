@@ -7,7 +7,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <Header />
-      <div className="pt-16 px-4">
+      <div className="pt-16 px-4"> 
         <main>
             <Component {...pageProps} />
         </main>
