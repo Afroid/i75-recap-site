@@ -18,15 +18,15 @@ export default defineConfig([
   },
 
   // 🛠 2. Main JS/TS config
-  { 
-    files: ["**/*.{js,mjs,cjs,ts,jsx,tsx}"], 
-    plugins: { js }, 
+  {
+    files: ["**/*.{js,mjs,cjs,ts,jsx,tsx}"],
+    plugins: { js },
     extends: ["js/recommended"],
   },
 
   // 🌎 3. Globals like window, document, etc.
-  { 
-    files: ["**/*.{js,mjs,cjs,ts,jsx,tsx}"], 
+  {
+    files: ["**/*.{js,mjs,cjs,ts,jsx,tsx}"],
     languageOptions: { globals: { ...globals.browser, ...globals.node } },
   },
 
