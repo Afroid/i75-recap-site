@@ -73,7 +73,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
         year,
       },
     };
-  } catch {
+  } catch (err) {
     // If file doesn't exist or something goes wrong, return 404
     return {
       notFound: true,
