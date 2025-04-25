@@ -74,7 +74,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
       },
     };
   } catch (err) {
-    // If file doesn't exist or something goes wrong, return 404
+    // If the file doesn't exist or something goes wrong, return 404
     return {
       notFound: true,
     };
