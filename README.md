@@ -1,46 +1,100 @@
-# Getting Started with Create React App
+# 🏈 I75 League - Fantasy Football Recaps
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to the official repository for the **I75 League**, a private Fantasy Football league.
+This project transforms years of weekly email recaps into a clean, dynamic, modern web experience.
 
-## Available Scripts
+Built with **Next.js**, **TypeScript**, **TailwindCSS**, **Framer Motion**, **ESLint (Flat Config)**, **Husky**, and **Lint-Staged**.
 
-In the project directory, you can run:
+🧠 Full project wiki available here: [**I75 League Wiki**](https://github.com/Afroid/i75league/wiki/I75-League-Wiki)
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## 🚀 Features
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- Dynamic Recap Pages (by year and week)
+- Animated, responsive layout
+- Clean desktop and mobile experience
+- ESLint + Husky pre-commit hooks for code quality
+- Future-proofed for admin features and CMS/image uploads
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 📦 Local Development Setup
 
-### `npm run build`
+### Requirements
+- Node.js `v20.x`
+- NPM `v9.x` or higher
+- Git
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Getting Started
+1. **Clone the repo:**
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```bash
+git clone https://github.com/Afroid/i75league.git
+cd i75league
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+2. **Install dependencies:**
 
-### `npm run eject`
+```bash
+npm install
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+3. **Start local dev server:**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+npm run dev
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Open [http://localhost:3000](http://localhost:3000) to see the app.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+---
 
-## Learn More
+## 🛠 Code Quality Tools
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- **ESLint** (Flat Config - modern setup)
+- **Husky** (Git pre-commit hooks)
+- **Lint-Staged** (only lints staged files on commit)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+✅ Code will auto-lint on every commit.
+✅ Trailing spaces, formatting, and basic rules are enforced automatically.
+
+---
+
+## 📁 Project Structure (high-level)
+
+```
+/components       → UI components (Header, Navbar, Drawer, etc.)
+/data/recaps      → JSON recap content (by year)
+/lib              → Utility libraries (e.g., getRecaps.ts)
+/pages            → Routes (dynamic year/week routing)
+/public           → Static assets (images, icons)
+/styles           → TailwindCSS global styles
+/types            → TypeScript types (RecapData, RecapWeek, etc.)
+.vscode           → Project-wide VS Code settings (optional)
+.husky            → Git hooks
+```
+
+---
+
+## 🧐 Future Plans
+
+- Admin login per league
+- Multiple league support
+- Upload GIFs/screenshots to CDN
+- Dark mode
+- Mobile app (possible)
+
+---
+
+## ✍️ Author
+
+**John Brady**
+Built with 💚 for the I75 League.
+
+---
+
+## 📜 License
+
+This project is private to the I75 League.
+Contact the repo owner for questions.

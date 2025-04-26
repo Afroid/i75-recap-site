@@ -10,7 +10,7 @@ export default function Home() {
         <meta name="description" content="Where everybody knows your name." />
       </Head>
 
-      <main className="pt-4 lg:pl-[240px]">
+      <main className="pt-4">
         <h1 className="text-4xl text-green-600 font-bold mb-4">Welcome to I75 League</h1>
         <h1 className="text-3xl text-orange-600 font-bold mb-4">Links are working with dummy data.</h1>
         <p className="text-lg text-gray-700 mb-4">

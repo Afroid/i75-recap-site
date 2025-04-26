@@ -1,36 +1,49 @@
 import { useState } from "react";
-import Link from "next/link";
-import ResponsiveDrawer from "./ResponsiveDrawer";
+import Logo from "./Logo";
+import DesktopNavbar from "./DesktopNavbar";
+import MobileDrawer from "./MobileDrawer";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
-  const toggleDrawer = () => setIsOpen(!isOpen);
+  const toggleDrawer = () => setIsOpen((prev) => !prev);
+  const closeDrawer = () => setIsOpen(false);
 
   return (
     <>
-      <header className="fixed top-0 left-0 w-full z-50 bg-white shadow h-16 flex items-center justify-between px-4 lg:pl-[250px]">
-        {/* Mobile hamburger */}
-        <button
-          onClick={toggleDrawer}
-          className="lg:hidden bg-transparent border-none"
-          aria-label="Open menu"
-        >
-          <div className="w-6 h-4 flex flex-col justify-between cursor-pointer">
-            <span className="h-[3px] bg-gray-800 rounded" />
-            <span className="h-[3px] bg-gray-800 rounded" />
-            <span className="h-[3px] bg-gray-800 rounded" />
+      {/* Main Header */}
+      <header className="fixed top-0 left-0 w-full z-50 bg-black text-white shadow-md h-16">
+        <div className="max-w-7xl mx-auto px-4 flex items-center justify-between h-full">
+          {/* Mobile Hamburger */}
+          <div className="lg:hidden">
+            <button
+              onClick={toggleDrawer}
+              className="focus:outline-none"
+              aria-label="Open menu"
+            >
+              {/* Hamburger Icon */}
+              <div className="space-y-1">
+                <div className="w-6 h-0.5 bg-white" />
+                <div className="w-6 h-0.5 bg-white" />
+                <div className="w-6 h-0.5 bg-white" />
+              </div>
+            </button>
           </div>
-        </button>
 
-        {/* Site title as Home link */}
-        <Link href="/" className="text-xl font-bold pl-2 hover:text-blue-600 transition-colors duration-200">
-          I75 League
-        </Link>
+          {/* Logo (always visible) */}
+          <div className="flex-1 flex justify-center lg:justify-start">
+            <Logo />
+          </div>
+
+          {/* Desktop Navbar (hidden on mobile) */}
+          <nav className="hidden lg:flex items-center space-x-8">
+            <DesktopNavbar />
+          </nav>
+        </div>
       </header>
 
-      {/* Drawer outside header so it doesn’t get clipped */}
-      <ResponsiveDrawer isOpen={isOpen} onClose={() => setIsOpen(false)} />
+      {/* Mobile Drawer (slides out) */}
+      <MobileDrawer isOpen={isOpen} onClose={closeDrawer} />
     </>
   );
 }
