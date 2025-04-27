@@ -15,7 +15,7 @@ export default function Logo() {
         "
       />
 
-      {/* Lighter background, slightly maller */}
+      {/* Lighter background, slightly smaller */}
       <span
         className="
           absolute top-0 bottom-0 left-0 right-[-10px] bg-green-500

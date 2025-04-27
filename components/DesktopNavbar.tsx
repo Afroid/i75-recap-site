@@ -6,7 +6,7 @@ const recapData = getRecaps();
 export default function DesktopNavbar() {
   return (
     <div className="flex items-center justify-between w-full">
-      {/* Left: Recaps */}
+      {/* Recaps on the left side */}
       <div className="relative flex flex-col items-center group w-24">
 
         <button
@@ -56,11 +56,22 @@ export default function DesktopNavbar() {
                   {year} Season
                 </button>
 
+                {/* Sub-Flyout Pointer */}
+                <div
+                  className="
+                    absolute top-1/2 left-full
+                    -translate-y-1/2 -ml-2
+                    w-4 h-4 bg-white rotate-45
+                    hidden group-hover/season:block shadow-md
+                  "
+                />
+
                 {/* Sub-Flyout: Weeks */}
                 <div
                   className="
-                    absolute top-0 left-full hidden group-hover/season:flex flex-col
-                    bg-white text-black shadow-lg rounded-md
+                    absolute top-0 left-full
+                    hidden group-hover/season:flex flex-col
+                    bg-white text-black rounded-md
                     p-2 min-w-[100px] w-full
                   "
                 >
@@ -80,10 +91,25 @@ export default function DesktopNavbar() {
                 </div>
               </div>
             ))}
+            {/* Divider line */}
+            <div className="border-t border-gray-300 my-2" />
+
+            {/* View All Recaps Link */}
+            <Link
+              href="/recaps"
+              className="
+                block text-center px-4 py-2
+                text-green-600 hover:text-green-800
+                font-semibold hover:bg-green-100 rounded-md
+                transition-colors duration-300
+              "
+            >
+              View All Recaps
+            </Link>
         </div>
       </div>
 
-      {/* Right: Static Links */}
+      {/* Static Links on the right side */}
       <div className="flex items-center space-x-8 ml-auto">
         <Link href="/" className="hover:text-green-400 transition-colors duration-300">
           Home
