@@ -10,15 +10,17 @@ export default function Home() {
         <meta name="description" content="Where everybody knows your name." />
       </Head>
 
-      <main className="pt-4">
+      <main>
         <h1 className="text-4xl text-green-600 font-bold mb-4">Welcome to I75 League</h1>
-        <h1 className="text-3xl text-orange-600 font-bold mb-4">Links are working with dummy data.</h1>
+        <h1 className="text-3xl text-orange-600 font-bold mb-4">
+          Links are working with dummy data.
+        </h1>
         <p className="text-lg text-gray-700 mb-4">
           Content will go here.
         </p>
 
         <p className="text-lg text-gray-700 mb-4">
-          Feel free to click around on mobile or desktop and see if you like the feel of the menu/drawer.
+          Desktop version is at a good stopping point. Refactoring mobile soon.
         </p>
 
         <p className="text-lg text-gray-700 mb-4">
@@ -26,7 +28,10 @@ export default function Home() {
         </p>
 
         <p className="text-lg text-gray-700 mb-4">
-         I'm going to <b>change</b> and <b>add</b> a lot of things, such as: Changing color schemes and fonts, as well as changing the I75 League at the top to a logo with a picture of I75 League instead of just plain text. Keep in mind that I made a logo for us a while back.
+         I'm going to <b>change</b> and <b>add</b> a lot of things,
+         such as: Changing color schemes and fonts, as well as changing the I75 League at the top
+         to a logo with a picture of I75 League instead of just plain text.
+         Keep in mind that I made a logo for us a while back.
         </p>
 
         <p className="text-lg text-gray-700 mb-4">

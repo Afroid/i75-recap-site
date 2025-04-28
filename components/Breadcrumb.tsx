@@ -1,4 +1,3 @@
-// components/Breadcrumb.tsx
 import Link from "next/link";
 
 interface BreadcrumbProps {
@@ -7,22 +6,29 @@ interface BreadcrumbProps {
 }
 
 export default function Breadcrumb({ year, week }: BreadcrumbProps) {
+  const crumbs = [
+    { href: "/", label: "I75 League" },
+    { href: `/recaps/${year}`, label: year },
+    { href: "", label: week },
+  ];
+
   return (
     <nav className="text-sm text-gray-600 mb-8">
-      <ol className="flex space-x-2">
-        <li>
-          <Link href="/" className="hover:underline text-blue-600">
-            I75 League
-          </Link>
-          <span className="mx-1">/</span>
-        </li>
-        <li>
-          <Link href={`/recaps/${year}`} className="hover:underline text-blue-600">
-            {year}
-          </Link>
-          <span className="mx-1">/</span>
-        </li>
-        <li className="text-gray-900 font-semibold">{week}</li>
+      <ol className="flex flex-wrap">
+        {crumbs.map((crumb, idx) => (
+          <li key={idx} className="flex items-center">
+            {crumb.href ? (
+              <Link href={crumb.href} className="hover:underline text-blue-600">
+                {crumb.label}
+              </Link>
+            ) : (
+              <span className="text-gray-900 font-semibold">{crumb.label}</span>
+            )}
+            {idx !== crumbs.length - 1 && (
+              <span className="px-2 text-gray-400">/</span> // ← automatic slash
+            )}
+          </li>
+        ))}
       </ol>
     </nav>
   );

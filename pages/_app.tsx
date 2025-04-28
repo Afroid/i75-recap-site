@@ -7,9 +7,10 @@ export default function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <Header />
-      <div className="pt-16 px-4">
-        <main>
-            <Component {...pageProps} />
+      <div className="pt-16 px-4 max-w-7xl mx-auto">
+        <main className="min-h-[calc(100vh-3rem)]">
+          {/* Header is 3rem = 48px = h-12 */}
+          <Component {...pageProps} />
         </main>
       </div>
     </>
