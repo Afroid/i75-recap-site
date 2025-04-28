@@ -4,7 +4,12 @@ import { getRecaps } from "@/lib/getRecaps";
 
 const recapData = getRecaps();
 
-export default function MobileDrawer({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) {
+interface MobileDrawerProps {
+  isOpen: boolean;
+  onClose: () => void;
+}
+
+export default function MobileDrawer({ isOpen, onClose }: MobileDrawerProps) {
   return (
     <AnimatePresence>
       {isOpen && (
