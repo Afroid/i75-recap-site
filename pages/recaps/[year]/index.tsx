@@ -12,14 +12,21 @@ interface Props {
 
 export default function YearPage({ year, weeks }: Props) {
   return (
-    <div className="pt-4 px-4 max-w-2xl mx-auto">
+    <div className="pt-4 max-w-2xl mx-auto">
 
       <div className="text-center">
         <div className="inline-block">
           <h1 className="text-4xl lg:text-5xl font-extrabold text-gray-900 mb-2">
             {year} Season Recaps
           </h1>
-          <div className="h-1 w-full bg-gradient-to-r from-green-500 to-green-700 rounded-full mb-6"></div>
+
+          {/* This is the underline with a gradient from light green to darker green*/}
+          <div className="
+                h-1 w-full
+                bg-gradient-to-r from-green-300 to-green-700 rounded-full
+                mb-6
+              "
+          />
         </div>
       </div>
 

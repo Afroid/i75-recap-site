@@ -12,16 +12,13 @@ export default function Header() {
   return (
     <>
       {/* Main Header */}
-      <header className="fixed top-0 left-0 w-full z-50 bg-black text-white shadow-md h-16">
+      <header className="fixed top-0 left-0 w-full z-50 bg-global-nav text-white shadow-md h-12">
         <div className="max-w-7xl mx-auto px-4 flex items-center justify-between h-full">
+
           {/* Mobile Hamburger */}
-          <div className="lg:hidden">
-            <button
-              onClick={toggleDrawer}
-              className="focus:outline-none"
-              aria-label="Open menu"
-            >
-              {/* Hamburger Icon */}
+          <div className="flex-shrink-0 lg:hidden">
+            <button onClick={toggleDrawer} aria-label="Open menu" className="focus:outline-none">
+              {/* Hamburger Menu/Lines */}
               <div className="space-y-1">
                 <div className="w-6 h-0.5 bg-white" />
                 <div className="w-6 h-0.5 bg-white" />
@@ -31,19 +28,25 @@ export default function Header() {
           </div>
 
           {/* Logo (always visible) */}
-          <div className="flex-1 flex justify-center lg:justify-start">
+          <div className="flex-shrink-0">
             <Logo />
           </div>
 
-          {/* Desktop Navbar (hidden on mobile) */}
-          <nav className="hidden lg:flex items-center space-x-8">
+          {/* Desktop Nav (hidden on mobile) */}
+          <nav className="hidden lg:flex items-center flex-grow ml-8">
             <DesktopNavbar />
           </nav>
+
         </div>
+
+        {/* Mobile Drawer (slides out) */}
+        <MobileDrawer isOpen={isOpen} onClose={closeDrawer} />
+
       </header>
 
+
       {/* Mobile Drawer (slides out) */}
-      <MobileDrawer isOpen={isOpen} onClose={closeDrawer} />
+      {/* <MobileDrawer isOpen={isOpen} onClose={closeDrawer} /> */}
     </>
   );
 }
