@@ -14,26 +14,25 @@ export default function MobileDrawer({ isOpen, onClose }: MobileDrawerProps) {
     <AnimatePresence>
       {isOpen && (
         <motion.div
-          className="fixed inset-0 bg-black/50 z-[1000]"
+          className="fixed top-12 left-0 right-0 bottom-0 bg-black/50 z-[1000]"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
+          onClick={onClose}
         >
           <motion.div
-            className="fixed top-0 left-0 w-64 bg-white h-full p-6 z-[1001] flex flex-col gap-6"
+            className="
+              fixed top-12 left-0 w-64 h-[calc(100vh-3rem)]
+              bg-white
+              p-6 z-[1001]
+              flex flex-col gap-6"
             initial={{ x: "-100%" }}
             animate={{ x: 0 }}
             exit={{ x: "-100%" }}
             transition={{ type: "tween", duration: 0.4 }}
+            // Prevents mask from being clicked when clicking inside the drawer
+            onClick={(e) => e.stopPropagation()}
           >
-            {/* Close Button */}
-            <button
-              onClick={onClose}
-              className="self-end text-black hover:text-red-500 transition"
-              aria-label="Close menu"
-            >
-              ✕
-            </button>
 
             {/* Static Nav Links */}
             <div className="flex flex-col gap-4">
