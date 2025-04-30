@@ -33,9 +33,13 @@ export default function MobileDrawer({ isOpen, onClose }: MobileDrawerProps) {
         <div key={year} className="mb-2">
           <button
             onClick={() => setExpandedYear(isExpanded ? null : year)}
-            className="flex justify-between items-center w-full font-semibold text-gray-900 ml-2"
+            className="
+              flex justify-between items-center w-full
+              rounded-md whitespace-nowrap text-gray-900
+              ml-2
+            "
           >
-            {year}
+            {year} Season
             {isExpanded ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
           </button>
 
@@ -77,9 +81,9 @@ export default function MobileDrawer({ isOpen, onClose }: MobileDrawerProps) {
         >
           <motion.div
             className="
-              fixed top-12 left-0 w-64 h-[calc(100vh-3rem)]
-              bg-white
-              px-6 py-2 z-[1001]
+              fixed top-12 left-0 w-60 h-[calc(100vh-3rem)]
+              bg-gray-50
+              pl-4 pr-6 py-2 z-[1001]
               flex flex-col gap-6"
             initial={{ x: "-100%" }}
             animate={{ x: 0 }}
