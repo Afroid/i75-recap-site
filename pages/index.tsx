@@ -20,7 +20,7 @@ export default function Home() {
         </p>
 
         <p className="text-lg text-gray-700 mb-4">
-          Desktop and mobile pretty solid right now.
+          Desktop and mobile have pretty solid navigation right now.
         </p>
 
         <p className="text-lg text-gray-700 mb-4">
