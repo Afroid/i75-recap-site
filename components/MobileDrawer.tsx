@@ -2,6 +2,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { AnimatePresence, motion } from "framer-motion";
 import { getRecaps } from "@/lib/getRecaps";
+import { ChevronDown, ChevronUp } from "lucide-react";
 
 const recapData = getRecaps();
 
@@ -12,6 +13,7 @@ interface MobileDrawerProps {
 
 export default function MobileDrawer({ isOpen, onClose }: MobileDrawerProps) {
   const [showOlderSeasons, setShowOlderSeasons] = useState(false);
+  const [expandedYear, setExpandedYear] = useState<string | null>(null);
 
   const toggleOlderSeasons = () => setShowOlderSeasons((prev) => !prev);
 
@@ -20,10 +22,48 @@ export default function MobileDrawer({ isOpen, onClose }: MobileDrawerProps) {
     (a, b) => Number(b[0]) - Number(a[0])
   );
 
-  // Split seasons from the last three versus the older ones after that.
   const latestSeasons = sortedSeasons.slice(0, 3);
   const olderSeasons = sortedSeasons.slice(3);
 
+  const renderSeasonLinks = (seasons: [string, number[]][]) =>
+    seasons.map(([year, weeks]) => {
+      const isExpanded = expandedYear === year;
+
+      return (
+        <div key={year} className="mb-2">
+          <button
+            onClick={() => setExpandedYear(isExpanded ? null : year)}
+            className="flex justify-between items-center w-full font-semibold text-gray-900 ml-2"
+          >
+            {year}
+            {isExpanded ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
+          </button>
+
+          <AnimatePresence initial={false}>
+          {isExpanded && (
+            <motion.div
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: "auto" }}
+              exit={{ opacity: 0, height: 0 }}
+              transition={{ duration: 0.3, ease: "easeInOut" }}
+              className="ml-5 overflow-hidden flex flex-col gap-1 mt-1"
+            >
+              {weeks.map((week) => (
+                <Link
+                  key={week}
+                  href={`/recaps/${year}/week-${week}`}
+                  onClick={onClose}
+                  className="text-sm text-gray-700"
+                >
+                  Week {week}
+                </Link>
+              ))}
+            </motion.div>
+          )}
+          </AnimatePresence>
+        </div>
+      );
+    });
 
   return (
     <AnimatePresence>
@@ -33,7 +73,7 @@ export default function MobileDrawer({ isOpen, onClose }: MobileDrawerProps) {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          onClick={onClose} // Close drawer when clicking on the mask
+          onClick={onClose}
         >
           <motion.div
             className="
@@ -45,72 +85,28 @@ export default function MobileDrawer({ isOpen, onClose }: MobileDrawerProps) {
             animate={{ x: 0 }}
             exit={{ x: "-100%" }}
             transition={{ type: "tween", duration: 0.4 }}
-            // Prevents mask from being clicked when clicking inside the drawer
             onClick={(e) => e.stopPropagation()}
           >
-
-            {/* Recaps Section */}
             <div>
-              <h2 className="font-bold text-lg text-green-600 mb-2 text-decoration-line: underline">
+              <h2 className="font-bold text-lg text-green-600 mb-2 underline">
                 Recaps
               </h2>
 
               {/* Latest Recaps */}
-              {latestSeasons.map(([year, weeks]) => (
-                <div key={year}>
-                  <div className="font-semibold text-gray-900 ml-2">{year}</div>
-                  <div className="ml-5 flex flex-col gap-1 mt-1">
-                    {weeks.map((week) => (
-                      <Link
-                        key={week}
-                        href={`/recaps/${year}/week-${week}`}
-                        onClick={onClose}
-                        className="text-sm text-gray-700"
-                      >
-                        Week {week}
-                      </Link>
-                    ))}
-                  </div>
-                </div>
-              ))}
+              {renderSeasonLinks(latestSeasons)}
 
-              {/* View Older Seasons */}
               {showOlderSeasons && (
                 <>
-                  {/* Divider */}
                   <div className="border-t border-gray-300 my-2" />
-                  <h2 className="
-                        font-bold text-lg text-green-600 text-decoration-line: underline
-                        mb-2
-                      "
-                  >
+                  <h2 className="font-bold text-lg text-green-600 mb-2 underline">
                     Older Recaps
                   </h2>
-
-                  {olderSeasons.map(([year, weeks]) => (
-                    <div key={year} className="mb-2">
-                      <div className="font-semibold text-gray-900 ml-2">{year}</div>
-                      <div className="ml-5 flex flex-col gap-1 mt-1">
-                        {weeks.map((week) => (
-                          <Link
-                            key={week}
-                            href={`/recaps/${year}/week-${week}`}
-                            onClick={onClose}
-                            className="text-sm text-gray-700"
-                          >
-                            Week {week}
-                          </Link>
-                        ))}
-                      </div>
-                    </div>
-                  ))}
+                  {renderSeasonLinks(olderSeasons)}
                 </>
               )}
 
-              {/* Divider */}
               <div className="border-t border-gray-300 my-2" />
 
-              {/* Toggle Button */}
               <button
                 onClick={toggleOlderSeasons}
                 className="mb-2 text-md text-green-600"
@@ -118,7 +114,6 @@ export default function MobileDrawer({ isOpen, onClose }: MobileDrawerProps) {
                 {showOlderSeasons ? "Hide Older Seasons" : "View Older Seasons"}
               </button>
 
-              {/* View All Recaps Link */}
               <div className="mb-2">
                 <Link
                   href="/recaps"
@@ -131,10 +126,8 @@ export default function MobileDrawer({ isOpen, onClose }: MobileDrawerProps) {
 
               {/* Divider */}
               <div className="border-t border-gray-300" />
-
             </div>
 
-            {/* Static Nav Links */}
             <div className="flex flex-col gap-4">
               <Link href="/" onClick={onClose} className="text-lg text-gray-800">
                 Home
@@ -146,7 +139,6 @@ export default function MobileDrawer({ isOpen, onClose }: MobileDrawerProps) {
                 Contact
               </Link>
             </div>
-
           </motion.div>
         </motion.div>
       )}
