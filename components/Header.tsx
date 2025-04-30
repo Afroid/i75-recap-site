@@ -13,22 +13,45 @@ export default function Header() {
     <>
       {/* Main Header */}
       <header className="fixed top-0 left-0 w-full z-50 bg-global-nav text-white shadow-md h-12">
-        <div className="max-w-7xl mx-auto px-4 flex items-center justify-between h-full">
+        <div className="max-w-7xl mx-auto flex items-center justify-between h-full">
 
-          {/* Mobile Hamburger */}
-          <div className="flex-shrink-0 lg:hidden">
-            <button onClick={toggleDrawer} aria-label="Open menu" className="focus:outline-none">
-              {/* Hamburger Menu/Lines */}
-              <div className="space-y-1">
-                <div className="w-6 h-0.5 bg-white" />
-                <div className="w-6 h-0.5 bg-white" />
-                <div className="w-6 h-0.5 bg-white" />
-              </div>
+          {/* Mobile Hamburger and Logo*/}
+          <div className="flex items-center space-x-4 lg:hidden bg-green-500 h-full pl-4">
+            <button
+              onClick={toggleDrawer}
+              aria-label="Toggle menu"
+              className="relative w-8 h-8 flex items-center justify-center"
+            >
+              {/* Top Bar */}
+              <div
+                className={`
+                  absolute w-8 h-0.5 bg-white transform
+                  transition-all duration-300 ease-in-out
+                  ${isOpen ? "rotate-45" : "-translate-y-2"}
+                `}
+              />
+              {/* Middle Bar */}
+              <div
+                className={`absolute w-8 h-0.5 bg-white transition-all duration-300 ease-in-out
+                  ${isOpen ? "opacity-0" : ""}
+                `}
+              />
+              {/* Bottom Bar */}
+              <div
+                className={`
+                  absolute w-8 h-0.5 bg-white transform
+                  transition-all duration-300 ease-in-out
+                  ${isOpen ? "-rotate-45" : "translate-y-2"}
+                `}
+              />
             </button>
+
+            {/* Mobile Logo */}
+            <Logo />
           </div>
 
-          {/* Logo (always visible) */}
-          <div className="flex-shrink-0">
+          {/* Desktop Logo (hidden on mobile) */}
+          <div className="hidden lg:flex">
             <Logo />
           </div>
 
@@ -44,9 +67,6 @@ export default function Header() {
 
       </header>
 
-
-      {/* Mobile Drawer (slides out) */}
-      {/* <MobileDrawer isOpen={isOpen} onClose={closeDrawer} /> */}
     </>
   );
 }

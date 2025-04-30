@@ -130,6 +130,13 @@ export default function DesktopNavbar() {
             {showAllSeasons && olderSeasons.length > 0 && (
               <>
                 <div className="border-t border-gray-300 my-2" />
+                <h2 className="
+                      font-bold text-lg text-center text-green-600 text-decoration-line: underline
+                      mb-2
+                    "
+                >
+                  Older Recaps
+                </h2>
                 {olderSeasons.map(([year, weeks]) => (
                   <div key={year} className="relative group/season w-full">
                     <button className="
