@@ -13,33 +13,26 @@ export default function Home() {
       <main>
         <h1 className="text-4xl text-green-600 font-bold mb-4">Welcome to I75 League</h1>
         <h1 className="text-3xl text-orange-600 font-bold mb-4">
-          Links are working with dummy data.
+          Links are working with dummy data. Real data will be uploaded soon.
         </h1>
         <p className="text-lg text-gray-700 mb-4">
-          Content will go here.
+          Some homepage content will go here.
         </p>
 
         <p className="text-lg text-gray-700 mb-4">
-          Desktop version is at a good stopping point. Refactoring mobile soon.
+          Desktop and mobile have pretty solid navigation right now.
         </p>
 
         <p className="text-lg text-gray-700 mb-4">
-          Some of the More section will likely go away and we can put other links there eventually.
+          Some of the static links, like About and Contact may eventually go away or be updated.
         </p>
 
         <p className="text-lg text-gray-700 mb-4">
-         I'm going to <b>change</b> and <b>add</b> a lot of things,
-         such as: Changing color schemes and fonts, as well as changing the I75 League at the top
-         to a logo with a picture of I75 League instead of just plain text.
-         Keep in mind that I made a logo for us a while back.
+          I still have lots of ideas to implement.
         </p>
 
         <p className="text-lg text-gray-700 mb-4">
           As always, any suggestions, comments, concerns, or questions are welcomed.
-        </p>
-
-        <p className="text-lg text-gray-700 mb-4">
-          Just sit tight. It's coming...
         </p>
       </main>
     </>
