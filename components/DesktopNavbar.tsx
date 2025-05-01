@@ -218,6 +218,7 @@ export default function DesktopNavbar() {
                 text-blue-600 hover:text-blue-800 font-semibold hover:bg-blue-300
                 rounded-md transition-colors duration-300
               "
+              onClick={() => setIsFlyoutOpen(false)}
             >
               View All Recaps
             </Link>
