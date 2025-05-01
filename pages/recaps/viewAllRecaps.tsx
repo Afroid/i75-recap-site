@@ -55,6 +55,24 @@ export default function ViewAllRecapsPage({ allRecaps }: { allRecaps: RecapEntry
     router.replace({ pathname: router.pathname, query: newQuery }, undefined, { shallow: true });
   };
 
+  const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const value = e.target.value;
+    setSearchTerm(value);
+    updateQuery({ search: value });
+
+    if (/^\d{4}$/.test(value)) {
+      setYearFilter("");
+      updateQuery({ search: value, year: "" });
+    }
+  };
+
+  const handleYearChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    const selectedYear = e.target.value;
+    setYearFilter(selectedYear);
+    setSearchTerm("");
+    updateQuery({ year: selectedYear, search: "" });
+  };
+
   const filteredRecaps = allRecaps
     .filter((entry) => {
       const combinedText = `${entry.year} season week ${entry.week}`.toLowerCase();
@@ -88,10 +106,7 @@ export default function ViewAllRecapsPage({ allRecaps }: { allRecaps: RecapEntry
           type="text"
           placeholder="Search by year or week..."
           value={searchTerm}
-          onChange={(e) => {
-            setSearchTerm(e.target.value);
-            updateQuery({ search: e.target.value });
-          }}
+          onChange={handleSearchChange}
           className="border px-3 py-2 rounded-md w-full sm:max-w-xs"
         />
 
@@ -99,10 +114,7 @@ export default function ViewAllRecapsPage({ allRecaps }: { allRecaps: RecapEntry
           <div className="flex justify-between w-full sm:w-auto sm:gap-4">
             <select
               value={yearFilter}
-              onChange={(e) => {
-                setYearFilter(e.target.value);
-                updateQuery({ year: e.target.value });
-              }}
+              onChange={handleYearChange}
               className="border px-3 py-2 rounded-md w-[48%] sm:w-auto"
             >
               <option value="">All Years</option>
