@@ -211,13 +211,14 @@ export default function DesktopNavbar() {
 
             {/* View All Recaps */}
             <Link
-              href="/recaps"
+              href="/recaps/viewAllRecaps"
               className="
                 block text-center
                 px-4 py-2
                 text-blue-600 hover:text-blue-800 font-semibold hover:bg-blue-300
                 rounded-md transition-colors duration-300
               "
+              onClick={() => setIsFlyoutOpen(false)}
             >
               View All Recaps
             </Link>

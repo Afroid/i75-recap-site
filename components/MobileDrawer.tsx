@@ -120,7 +120,7 @@ export default function MobileDrawer({ isOpen, onClose }: MobileDrawerProps) {
 
               <div className="mb-2">
                 <Link
-                  href="/recaps"
+                  href="/recaps/viewAllRecaps"
                   onClick={onClose}
                   className="text-md text-blue-600"
                 >

@@ -2,8 +2,8 @@
     "year": 2022,
     "recaps": [
       {
-        "week": 5,
-        "title": "Week 5 Recap",
+        "week": 4,
+        "title": "Week 4 Recap",
         "sections": [
           {
             "type": "intro",
@@ -32,8 +32,8 @@
         ]
       },
       {
-        "week": 4,
-        "title": "Week 4 Recap",
+        "week": 5,
+        "title": "Week 5 Recap",
         "sections": [
           {
             "type": "intro",
