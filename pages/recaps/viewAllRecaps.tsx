@@ -168,33 +168,39 @@ export default function ViewAllRecapsPage({ allRecaps }: { allRecaps: RecapEntry
           />
         </div>
 
-        <div className="flex flex-col w-full gap-2 sm:flex-row sm:w-auto sm:gap-4 sm:items-center">
-          <Dropdown
-            label="All Years"
-            options={[
-              { label: "All Years", value: "" },
-              ...uniqueYears.map((year) => ({ label: year, value: year }))
-            ]}
-            value={yearFilter}
-            onChange={(val) => {
-              setYearFilter(val);
-              setSearchTerm("");
-              updateQuery({ year: val, search: "" });
-            }}
-          />
+        <div className="flex flex-col sm:flex-row w-full sm:w-auto sm:gap-4 gap-2">
+          <div className="flex flex-row gap-2 w-full sm:w-auto">
+            <div className="w-1/2 sm:w-auto">
+              <Dropdown
+                label="All Years"
+                options={[
+                  { label: "All Years", value: "" },
+                  ...uniqueYears.map((year) => ({ label: year, value: year }))
+                ]}
+                value={yearFilter}
+                onChange={(val) => {
+                  setYearFilter(val);
+                  setSearchTerm("");
+                  updateQuery({ year: val, search: "" });
+                }}
+              />
+            </div>
 
-          <Dropdown
-            label="Sort Order"
-            options={[
-              { label: "Latest to Oldest", value: "desc" },
-              { label: "Oldest to Latest", value: "asc" },
-            ]}
-            value={sortOrder}
-            onChange={(val) => {
-              setSortOrder(val);
-              updateQuery({ sort: val });
-            }}
-          />
+            <div className="w-1/2 sm:w-auto">
+              <Dropdown
+                label="Sort Order"
+                options={[
+                  { label: "Latest to Oldest", value: "desc" },
+                  { label: "Oldest to Latest", value: "asc" },
+                ]}
+                value={sortOrder}
+                onChange={(val) => {
+                  setSortOrder(val);
+                  updateQuery({ sort: val });
+                }}
+              />
+            </div>
+          </div>
         </div>
       </div>
 
