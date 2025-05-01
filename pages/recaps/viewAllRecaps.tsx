@@ -54,7 +54,7 @@ function Dropdown({ label, options, value, onChange }: {
   }, []);
 
   return (
-    <div ref={dropdownRef} className="relative w-full sm:w-auto">
+    <div ref={dropdownRef} className="relative w-full">
       <button
         onClick={() => setIsOpen(!isOpen)}
         className="flex justify-between items-center border px-3 py-2 rounded-md w-full"
@@ -170,7 +170,7 @@ export default function ViewAllRecapsPage({ allRecaps }: { allRecaps: RecapEntry
 
         <div className="flex flex-col sm:flex-row w-full sm:w-auto sm:gap-4 gap-2">
           <div className="flex flex-row gap-2 w-full sm:w-auto">
-            <div className="w-1/2 sm:w-auto">
+            <div className="w-2/5 sm:w-auto lg:w-28">
               <Dropdown
                 label="All Years"
                 options={[
@@ -186,7 +186,7 @@ export default function ViewAllRecapsPage({ allRecaps }: { allRecaps: RecapEntry
               />
             </div>
 
-            <div className="w-1/2 sm:w-auto">
+            <div className="w-3/5 sm:w-auto lg:w-40">
               <Dropdown
                 label="Sort Order"
                 options={[
