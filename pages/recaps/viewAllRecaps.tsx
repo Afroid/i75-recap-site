@@ -77,8 +77,8 @@ export default function ViewAllRecapsPage({ allRecaps }: { allRecaps: RecapEntry
     .filter((entry) => {
       const combinedText = `${entry.year} season week ${entry.week}`.toLowerCase();
       const matchesSearch = searchTerm.trim()
-        ? combinedText.includes(searchTerm.trim().toLowerCase())
-        : true;
+      ? new RegExp(`\\b${searchTerm.trim().toLowerCase()}\\b`).test(combinedText)
+      : true;
       const matchesYear = yearFilter ? entry.year === yearFilter : true;
       return matchesSearch && matchesYear;
     })
