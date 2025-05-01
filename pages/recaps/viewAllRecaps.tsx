@@ -5,6 +5,7 @@ import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { RecapData } from "@/types/types";
+import { ChevronDown, ChevronUp } from "lucide-react";
 
 interface RecapEntry {
   year: string;
@@ -29,6 +30,52 @@ export async function getStaticProps() {
       allRecaps,
     },
   };
+}
+
+function Dropdown({ label, options, value, onChange }: {
+  label: string;
+  options: { label: string; value: string }[];
+  value: string;
+  onChange: (val: string) => void;
+}) {
+  const [isOpen, setIsOpen] = useState(false);
+
+  return (
+    <div className="relative w-full sm:w-auto">
+      <button
+        onClick={() => setIsOpen(!isOpen)}
+        className="flex justify-between items-center border px-3 py-2 rounded-md w-full"
+      >
+        <span>{options.find((opt) => opt.value === value)?.label || label}</span>
+        {isOpen ?
+          <ChevronUp size={16} className="text-gray-500" /> :
+          <ChevronDown size={16} className="text-gray-500" />
+        }
+      </button>
+      {isOpen && (
+        <ul
+          className="
+            absolute left-0 mt-1 w-full border bg-white
+            shadow-lg z-10 rounded-md overflow-hidden
+          "
+        >
+          {options.map((opt) => (
+            <li
+              key={opt.value}
+              onClick={() => {
+                onChange(opt.value);
+                setIsOpen(false);
+              }}
+              className={`px-4 py-2 cursor-pointer
+                hover:bg-green-100 ${value === opt.value ? "bg-green-50" : ""}`}
+            >
+              {opt.label}
+            </li>
+          ))}
+        </ul>
+      )}
+    </div>
+  );
 }
 
 export default function ViewAllRecapsPage({ allRecaps }: { allRecaps: RecapEntry[] }) {
@@ -66,19 +113,12 @@ export default function ViewAllRecapsPage({ allRecaps }: { allRecaps: RecapEntry
     }
   };
 
-  const handleYearChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    const selectedYear = e.target.value;
-    setYearFilter(selectedYear);
-    setSearchTerm("");
-    updateQuery({ year: selectedYear, search: "" });
-  };
-
   const filteredRecaps = allRecaps
     .filter((entry) => {
       const combinedText = `${entry.year} season week ${entry.week}`.toLowerCase();
-      const matchesSearch = searchTerm.trim()
-      ? new RegExp(`\\b${searchTerm.trim().toLowerCase()}\\b`).test(combinedText)
-      : true;
+      const search = searchTerm.trim().toLowerCase();
+      const searchRegex = new RegExp(`\\b${search}\\b`);
+      const matchesSearch = search ? searchRegex.test(combinedText) : true;
       const matchesYear = yearFilter ? entry.year === yearFilter : true;
       return matchesSearch && matchesYear;
     })
@@ -111,32 +151,32 @@ export default function ViewAllRecapsPage({ allRecaps }: { allRecaps: RecapEntry
         />
 
         <div className="flex flex-col w-full gap-2 sm:flex-row sm:w-auto sm:gap-4 sm:items-center">
-          <div className="flex justify-between w-full sm:w-auto sm:gap-4">
-            <select
-              value={yearFilter}
-              onChange={handleYearChange}
-              className="border px-3 py-2 rounded-md w-[48%] sm:w-auto"
-            >
-              <option value="">All Years</option>
-              {uniqueYears.map((year) => (
-                <option key={year} value={year}>
-                  {year}
-                </option>
-              ))}
-            </select>
+          <Dropdown
+            label="All Years"
+            options={[
+              { label: "All Years", value: "" },
+              ...uniqueYears.map((year) => ({ label: year, value: year }))
+            ]}
+            value={yearFilter}
+            onChange={(val) => {
+              setYearFilter(val);
+              setSearchTerm("");
+              updateQuery({ year: val, search: "" });
+            }}
+          />
 
-            <select
-              value={sortOrder}
-              onChange={(e) => {
-                setSortOrder(e.target.value);
-                updateQuery({ sort: e.target.value });
-              }}
-              className="border px-3 py-2 rounded-md w-[48%] sm:w-auto"
-            >
-              <option value="desc">Latest to Oldest</option>
-              <option value="asc">Oldest to Latest</option>
-            </select>
-          </div>
+          <Dropdown
+            label="Sort Order"
+            options={[
+              { label: "Latest to Oldest", value: "desc" },
+              { label: "Oldest to Latest", value: "asc" },
+            ]}
+            value={sortOrder}
+            onChange={(val) => {
+              setSortOrder(val);
+              updateQuery({ sort: val });
+            }}
+          />
         </div>
       </div>
 
