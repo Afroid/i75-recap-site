@@ -5,7 +5,7 @@ import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { RecapData } from "@/types/types";
-import { ChevronDown, ChevronUp } from "lucide-react";
+import { ChevronDown, ChevronUp, Search } from "lucide-react";
 
 interface RecapEntry {
   year: string;
@@ -142,13 +142,18 @@ export default function ViewAllRecapsPage({ allRecaps }: { allRecaps: RecapEntry
   return (
     <div className="pt-4 max-w-4xl mx-auto px-4">
       <div className="mb-6 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-        <input
-          type="text"
-          placeholder="Search by year or week..."
-          value={searchTerm}
-          onChange={handleSearchChange}
-          className="border px-3 py-2 rounded-md w-full sm:max-w-xs"
-        />
+        <div className="relative w-full sm:max-w-xs">
+          <input
+            type="text"
+            placeholder="Search by year or week..."
+            value={searchTerm}
+            onChange={handleSearchChange}
+            className="border px-3 py-2 rounded-md w-full sm:max-w-xs"
+          />
+          <Search
+            className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400" size={18}
+          />
+        </div>
 
         <div className="flex flex-col w-full gap-2 sm:flex-row sm:w-auto sm:gap-4 sm:items-center">
           <Dropdown
