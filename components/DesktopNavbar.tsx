@@ -211,7 +211,7 @@ export default function DesktopNavbar() {
 
             {/* View All Recaps */}
             <Link
-              href="/recaps"
+              href="/recaps/viewAllRecaps"
               className="
                 block text-center
                 px-4 py-2
