@@ -23,5 +23,8 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
+# Local alias mapping that has private information that shouldn't go in the repo
+/tools/nameMap.ts
+
 # Developer notes (ignored by Git and compiler)
 *.ignore

@@ -1,3 +1,22 @@
+export type SectionType =
+  | "intro"
+  | "tidbits"
+  | "injuries"
+  | "gameNotes"
+  | "sidePieces"
+  | "matchups"
+  | "farewell";
+
+export const sectionDisplayNames: Record<SectionType, string> = {
+  intro: "",
+  tidbits: "Interesting Tidbits",
+  injuries: "Notable Injuries",
+  gameNotes: "Game Notes",
+  sidePieces: "Side Pieces",
+  matchups: "Matchup(s) to Watch",
+  farewell: "",
+};
+
 /**
  * Represents an individual content block within a recap.
  *
@@ -5,8 +24,12 @@
  * an outro, and an optional image (e.g., GIF or screenshot).
  */
 export interface RecapSection {
-  /** The name of the section (e.g., "intro", "tidbits", etc.) */
-  type: string;
+  /** Exclude "gameNotes" so this interface only covers generic sections;
+   *  game notes get the specialized GameNotesSection type
+  */
+  type: Exclude<SectionType, "gameNotes">;
+
+  /** The name of the Generic Fields for each section (e.g., "intro", "tidbits", etc.) */
 
   /** Optional intro paragraph or lead-in for the section */
   intro?: string;
@@ -50,7 +73,7 @@ export interface RecapMatchup {
 /**
  * Special structure for the Game Notes section.
  */
-export interface GameNotesSection {
+export interface GNSSection {
   type: "gameNotes";
   pointsLeader: {
     name: string;
@@ -79,7 +102,7 @@ export interface RecapWeek {
   title: string;
 
   /** An array of content sections that make up the full recap */
-  sections: (RecapSection | GameNotesSection)[];
+  sections: (RecapSection | GNSSection)[];
 }
 
 /**
