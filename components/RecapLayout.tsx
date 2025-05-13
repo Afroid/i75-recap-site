@@ -7,6 +7,7 @@ import {
   RecapSection,
   GNSSection
 } from "@/types/types";
+import Breadcrumb from "@/components/Breadcrumb";
 import GameNotesSection from "@/components/GameNotesSection";
 
 interface Props {
@@ -17,6 +18,7 @@ interface Props {
 export default function RecapLayout({ recap, year }: Props) {
   return (
     <div className="container">
+      <Breadcrumb year={year} week={`Week ${recap.week}`} />
       <h1 className="text-3xl font-bold mb-6">
         {year} - Week {recap.week} Recap
       </h1>
