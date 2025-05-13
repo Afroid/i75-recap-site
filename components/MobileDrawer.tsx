@@ -18,9 +18,7 @@ export default function MobileDrawer({ isOpen, onClose }: MobileDrawerProps) {
   const toggleOlderSeasons = () => setShowOlderSeasons((prev) => !prev);
 
   // Sort all of the seasons in descending order
-  const sortedSeasons = Object.entries(recapData).sort(
-    (a, b) => Number(b[0]) - Number(a[0])
-  );
+  const sortedSeasons = Object.entries(recapData).sort((a, b) => Number(b[0]) - Number(a[0]));
 
   const latestSeasons = sortedSeasons.slice(0, 3);
   const olderSeasons = sortedSeasons.slice(3);

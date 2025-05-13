@@ -5,7 +5,7 @@ This project transforms years of weekly email recaps into a clean, dynamic, mode
 
 Built with **Next.js**, **TypeScript**, **TailwindCSS**, **Framer Motion**, **ESLint (Flat Config)**, **Husky**, and **Lint-Staged**.
 
-🧠 Full project wiki available here: [**I75 League Wiki**](https://github.com/Afroid/i75league/wiki/I75-League-Wiki)
+🧠 Full project wiki available here: [**I75 League Wiki**](https://github.com/Afroid/i75-recap-site/wiki)
 
 ---
 
@@ -30,7 +30,7 @@ Built with **Next.js**, **TypeScript**, **TailwindCSS**, **Framer Motion**, **ES
 1. **Clone the repo:**
 
 ```bash
-git clone https://github.com/Afroid/i75league.git
+git clone https://github.com/Afroid/i75-recap-site.git
 cd i75league
 ```
 
@@ -90,7 +90,6 @@ Open [http://localhost:3000](http://localhost:3000) to see the app.
 ## ✍️ Author
 
 **John Brady**
-Built with 💚 for the I75 League.
 
 ---
 

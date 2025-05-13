@@ -13,7 +13,7 @@ export default function Breadcrumb({ year, week }: BreadcrumbProps) {
   ];
 
   return (
-    <nav className="text-sm text-gray-600 mb-8">
+    <nav className="text-sm text-gray-600 mb-6">
       <ol className="flex flex-wrap">
         {crumbs.map((crumb, idx) => (
           <li key={idx} className="flex items-center">
