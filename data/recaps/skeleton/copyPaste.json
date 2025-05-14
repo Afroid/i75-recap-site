@@ -1,72 +1,8 @@
 {
-  "year": 2022,
+  "year": 1111,
   "recaps": [
     {
       "week": 1,
-      "title": "Week 1 Recap",
-      "sections": [
-        {
-          "type": "intro",
-          "content": ""
-        },
-        {
-          "type": "tidbits",
-          "intro": "",
-          "bullets": [],
-          "outro": "",
-          "imageUrl": "",
-          "imageAlt": ""
-        },
-        {
-          "type": "injuries",
-          "intro": "",
-          "bullets": [],
-          "outro": "",
-          "imageUrl": "",
-          "imageAlt": ""
-        },
-        {
-          "type": "gameNotes",
-          "pointsLeader": {
-            "name": "",
-            "points": 0,
-            "notes": ""
-          },
-          "dud": {
-            "name": "",
-            "points": 0,
-            "notes": ""
-          },
-          "matchups": [
-            {
-              "team1": "",
-              "team2": "",
-              "winner": "",
-              "score": "",
-              "breakdown": "",
-              "imageUrl": "",
-              "imageAlt": ""
-            }
-          ]
-        },
-        {
-          "type": "sidePieces",
-          "content": "",
-          "imageUrl": "",
-          "imageAlt": ""
-        },
-        {
-          "type": "matchups",
-          "content": ""
-        },
-        {
-          "type": "farewell",
-          "content": ""
-        }
-      ]
-    },
-    {
-      "week": 4,
       "title": "Week 1 Recap",
       "sections": [
         {

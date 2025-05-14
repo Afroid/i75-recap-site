@@ -1,10 +1,8 @@
-import fs from "fs";
-import path from "path";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
-import { RecapData } from "@/types/types";
+import { getRecaps } from "@/lib/getRecaps";
 import { ChevronDown, ChevronUp, Search } from "lucide-react";
 
 interface RecapEntry {
@@ -13,23 +11,13 @@ interface RecapEntry {
 }
 
 export async function getStaticProps() {
-  const dir = path.join(process.cwd(), "data", "recaps");
-  const files = fs.readdirSync(dir);
-  const allRecaps: RecapEntry[] = [];
+  const summary = getRecaps();              // Record<number,number[]>
+  const allRecaps = Object.entries(summary) // [ [year, weeks], … ]
+    .flatMap(([year, weeks]) =>
+      weeks.map((week) => ({ year, week }))
+    );
 
-  for (const file of files) {
-    const year = file.replace(".json", "");
-    const data = JSON.parse(fs.readFileSync(path.join(dir, file), "utf-8")) as RecapData;
-    for (const recap of data.recaps) {
-      allRecaps.push({ year, week: recap.week });
-    }
-  }
-
-  return {
-    props: {
-      allRecaps,
-    },
-  };
+  return { props: { allRecaps } };
 }
 
 function Dropdown({ label, options, value, onChange }: {

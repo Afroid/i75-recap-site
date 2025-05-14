@@ -2,14 +2,22 @@
 
 import Link from "next/link";
 import { useState, useRef, useEffect } from "react";
-import { getRecaps } from "@/lib/getRecaps";
 
-const recapData = getRecaps();
+type Summary = Record<string, number[]>;
 
 export default function DesktopNavbar() {
+  const [recapData, setRecapData] = useState<Summary>({});
   const [isFlyoutOpen, setIsFlyoutOpen] = useState(false);
   const [showAllSeasons, setShowAllSeasons] = useState(false);
   const flyoutRef = useRef<HTMLDivElement>(null);
+
+  // Fetch summary from our API on mount
+  useEffect(() => {
+    fetch("/api/recapsSummary")
+      .then((r) => r.json())
+      .then(setRecapData)
+      .catch(console.error);
+  }, []);
 
   useEffect(() => {
     function handleClickOutside(event: MouseEvent) {

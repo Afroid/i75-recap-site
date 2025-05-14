@@ -1,26 +1,23 @@
-import raw2024 from "@/data/recaps/2024.json";
-import raw2023 from "@/data/recaps/2023.json";
-import raw2022 from "@/data/recaps/2022.json";
-import raw2021 from "@/data/recaps/2021.json";
-import raw2020 from "@/data/recaps/2020.json";
+import fs from "fs";
+import path from "path";
+import { RecapDataSchema } from "@/lib/recapSchema";
 import { RecapData } from "@/types/types";
 
-// These consts tell TypeScript to treat the JSONs as the RecapData type
-const recap2024 = raw2024 as unknown as RecapData;
-const recap2023 = raw2023 as unknown as RecapData;
-const recap2022 = raw2022 as unknown as RecapData;
-const recap2021 = raw2021 as unknown as RecapData;
-const recap2020 = raw2020 as unknown as RecapData;
-
 export function getRecaps(): Record<number, number[]> {
-  const allData: RecapData[] = [
-    recap2024, recap2023, recap2022, recap2021, recap2020
-  ]; // Add more years/seasons as needed
-
+  const recapsDir = path.resolve(process.cwd(), "data/recaps");
   const summary: Record<number, number[]> = {};
 
-  for (const season of allData) {
-    summary[season.year] = season.recaps.map((r) => r.week);
+  for (const fileName of fs.readdirSync(recapsDir)) {
+    if (!fileName.endsWith(".json")) continue;
+
+    const raw = JSON.parse(
+      fs.readFileSync(path.join(recapsDir, fileName), "utf-8")
+    );
+
+    // Parse & validate — this returns the exact shape of RecapData
+    const data: RecapData = RecapDataSchema.parse(raw);
+
+    summary[data.year] = data.recaps.map((r) => r.week);
   }
 
   return summary;

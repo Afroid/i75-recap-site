@@ -37,6 +37,7 @@ export default function RecapLayout({ recap, year }: Props) {
               </h2>
             )}
 
+            {/* This is checked to narrow types and pick a completely different rendering path */}
             {isGameNotes ? (
               <GameNotesSection data={section as GNSSection}/>
             ) : (
