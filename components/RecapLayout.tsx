@@ -67,13 +67,15 @@ export default function RecapLayout({ recap, year }: Props) {
                   </ReactMarkdown>
                 )}
                 {"imageUrl" in section && section.imageUrl && (
-                  <div className="mt-4">
+                  <div className="mt-4 w-full max-w-lg">
                     <Image
                       src={section.imageUrl}
                       alt={section.imageAlt || "GIF or Screenshot"}
                       width={600}
                       height={400}
-                      className="rounded shadow-md"
+                      // sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 600px"
+                      className="w-full h-auto rounded shadow-md"
+                      loading="lazy"
                     />
                   </div>
                 )}

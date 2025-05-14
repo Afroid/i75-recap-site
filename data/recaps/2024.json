@@ -20,7 +20,7 @@
               "Oh, and there's only  **one winless** **team**. Mine. Suck it."
             ],
             "outro": "Let’s see how it plays out.",
-            "imageUrl": "/images/someGif1.gif",
+            "imageUrl": "",
             "imageAlt": "Some alt text"
           },
           {
@@ -40,8 +40,8 @@
               "Joe Mixon - The Tay"
             ],
             "outro": "The list goes on but those creamy hamstrings and ankles sure are hurting those fantasy teams these days. Tua getting hurt is very notable because without anyone to throw the ball to Hill (Hoc Tua taking him third overall), he'll likely not even finish a Top 10 WR. That's unfortunate considering Hock Tua was likely licking his lips for that Tua/Hill combo all season.\n\nI imagine it was something like that on draft day. At least you're **2-1**, though.",
-            "imageUrl": "/images/gif1.gif",
-            "imageAlt": "Some alt text"
+            "imageUrl": "/images/2024-week1-jackie.gif",
+            "imageAlt": "Tua/Hill Combo"
           },
           {
             "type": "gameNotes",
@@ -75,16 +75,20 @@
           {
             "type": "sidePieces",
             "content": "So, we're here in e-mail form, yet again. I've added a few things to the website but nothing concrete, yet. I'm working on a few things. Also, I'm having trouble publishing new changes again (which has been a pain, for whatever reason). So, bear with me but the site is coming soon. I know, I know. You've all heard that before.\nAlso, I'm thinking of slightly switching the format of the recaps. Instead of me breaking down each game, I think I'll just break down one game a week that I find the most interesting, with a possible honorable mention. Thoughts?\nI really enjoyed the video call with everyone on draft day. It was fun. And big thanks to Mikey for getting us the lake house. Hopefully next year, more of you can make it to draft in person. ",
-            "imageUrl": "/images/gif1.gif",
+            "imageUrl": "",
             "imageAlt": "Some alt text"
           },
           {
             "type": "matchups",
-            "content": "I want to call out my matchup, simply because it might be a tight matchup (looks to be the closest one on the board, as of right meow) and it'd be nice to get my first win. Plus, I wanted to take Bijan in the draft but I thought the only logical thing to do was take CMAC. It's almost like having the #1  pick this year was a curse (unless, of course, CMAC comes roaring back by like,  Week  8). Had I been at #2, I would've taken Bijan.\nNow, I have to face Bijan this  week  while CMAC is in Germany with some witch doctor (or whatever). I don't see me pulling this one out while Rachel has Bijan, Henry, Malik, and DK but we shall see. Maybe Hurts can bounce back against Tampa but maybe not.\nI have to mention another rivalry between Two Words and Rev. This one will likely be a bit lopsided (even though Crap Team just broke 163) but here's to hoping the upset can be pulled off. Or, you know, maybe both teams will lose."
+            "content": "I want to call out my matchup, simply because it might be a tight matchup (looks to be the closest one on the board, as of right meow) and it'd be nice to get my first win. Plus, I wanted to take Bijan in the draft but I thought the only logical thing to do was take CMAC. It's almost like having the #1  pick this year was a curse (unless, of course, CMAC comes roaring back by like,  Week  8). Had I been at #2, I would've taken Bijan.\nNow, I have to face Bijan this  week  while CMAC is in Germany with some witch doctor (or whatever). I don't see me pulling this one out while Rachel has Bijan, Henry, Malik, and DK but we shall see. Maybe Hurts can bounce back against Tampa but maybe not.\nI have to mention another rivalry between Two Words and Rev. This one will likely be a bit lopsided (even though Crap Team just broke 163) but here's to hoping the upset can be pulled off. Or, you know, maybe both teams will lose.",
+            "imageUrl": "/images/2024-week-1-bromberg-vs-not-shaving.png",
+            "imageAlt": "Bromberg vs Not shaving my legs for this"
           },
           {
             "type": "farewell",
-            "content": "**As always, good luck to you all, except for Smelly.**\n(I hope you stub your toe.)"
+            "content": "**As always, good luck to you all, except for Smelly.**\n(I hope you stub your toe.)",
+            "imageUrl": "/images/2024-week1-stubbed-toe.gif",
+            "imageAlt": "Stubbed toe death"
           }
         ]
       }
