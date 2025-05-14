@@ -65,8 +65,11 @@ export default function YearPage({ year, weeks }: Props) {
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const dir = path.join(process.cwd(), "data", "recaps");
-  const files = fs.readdirSync(dir);
+  const recapDir = path.join(process.cwd(), "data", "recaps");
+  // Read all filenames (e.g., 2024.json, 2023.json, etc.)
+  const files = fs
+    .readdirSync(recapDir)
+    .filter((f) => f.endsWith(".json"));
 
   const paths = files.map((file) => {
     const year = file.replace(".json", "");

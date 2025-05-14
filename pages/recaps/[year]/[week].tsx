@@ -23,7 +23,9 @@ export const getStaticPaths: GetStaticPaths = async () => {
   const recapDir = path.join(process.cwd(), "data", "recaps");
 
   // Read all filenames (e.g., 2024.json, 2023.json, etc.)
-  const files = fs.readdirSync(recapDir);
+  const files = fs
+    .readdirSync(recapDir)
+    .filter((f) => f.endsWith(".json"));
 
   const paths: { params: { year: string; week: string } }[] = [];
 

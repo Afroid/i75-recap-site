@@ -1,10 +1,9 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import { AnimatePresence, motion } from "framer-motion";
-import { getRecaps } from "@/lib/getRecaps";
 import { ChevronDown, ChevronUp } from "lucide-react";
 
-const recapData = getRecaps();
+type Summary = Record<string, number[]>;
 
 interface MobileDrawerProps {
   isOpen: boolean;
@@ -12,8 +11,16 @@ interface MobileDrawerProps {
 }
 
 export default function MobileDrawer({ isOpen, onClose }: MobileDrawerProps) {
+  const [recapData, setRecapData] = useState<Summary>({});
   const [showOlderSeasons, setShowOlderSeasons] = useState(false);
   const [expandedYear, setExpandedYear] = useState<string | null>(null);
+
+  useEffect(() => {
+    fetch("/api/recapsSummary")
+      .then((r) => r.json())
+      .then(setRecapData)
+      .catch(console.error);
+  }, []);
 
   const toggleOlderSeasons = () => setShowOlderSeasons((prev) => !prev);
 
