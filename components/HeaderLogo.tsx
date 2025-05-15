@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-export default function Logo() {
+export default function HeaderLogo() {
   return (
     <Link href="/" className="relative inline-flex items-center justify-center group h-12">
       {/* Background Layers */}

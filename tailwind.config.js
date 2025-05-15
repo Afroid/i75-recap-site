@@ -9,6 +9,9 @@ module.exports = {
       colors: {
         "global-nav": "#2b2c2d",
       },
+      dropShadow: {
+        heavy: '0 4px 6px rgba(0,0,0,0.98)',
+      },
     },
   },
   plugins: [],

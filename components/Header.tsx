@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Logo from "./Logo";
+import HeaderLogo from "./HeaderLogo";
 import DesktopNavbar from "./DesktopNavbar";
 import MobileDrawer from "./MobileDrawer";
 
@@ -47,12 +47,12 @@ export default function Header() {
             </button>
 
             {/* Mobile Logo */}
-            <Logo />
+            <HeaderLogo />
           </div>
 
-          {/* Desktop Logo (hidden on mobile) */}
+          {/* Desktop HeaderLogo (hidden on mobile) */}
           <div className="hidden lg:flex">
-            <Logo />
+            <HeaderLogo />
           </div>
 
           {/* Desktop Nav (hidden on mobile) */}

@@ -17,7 +17,7 @@ interface Props {
 
 export default function RecapLayout({ recap, year }: Props) {
   return (
-    <div className="container">
+    <>
       <Breadcrumb year={year} week={`Week ${recap.week}`} />
       <h1 className="text-3xl font-bold mb-6">
         {year} - Week {recap.week} Recap
@@ -62,20 +62,18 @@ export default function RecapLayout({ recap, year }: Props) {
                   </ReactMarkdown>
                 )}
                 {"content" in section && section.content && !("bullets" in section) && (
-                  <ReactMarkdown className="text-lg text-gray-800 whitespace-pre-line">
+                  <ReactMarkdown className="text-lg text-gray-800 whitespace-pre-wrap">
                     {section.content}
                   </ReactMarkdown>
                 )}
                 {"imageUrl" in section && section.imageUrl && (
-                  <div className="mt-4 w-full max-w-lg">
+                  <div className="mt-4">
                     <Image
                       src={section.imageUrl}
                       alt={section.imageAlt || "GIF or Screenshot"}
                       width={600}
                       height={400}
-                      // sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 600px"
-                      className="w-full h-auto rounded shadow-md"
-                      loading="lazy"
+                      className="w-full lg:w-auto h-auto rounded shadow-md"
                     />
                   </div>
                 )}
@@ -84,6 +82,6 @@ export default function RecapLayout({ recap, year }: Props) {
           </div>
         );
       })}
-    </div>
+    </>
   );
 }

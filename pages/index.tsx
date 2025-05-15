@@ -1,39 +1,65 @@
-// pages/index.tsx
 import React from "react";
-import Head from "next/head";
+import Image from "next/image";
+
+const logos = [
+  "/default-logo.png",
+  "/default-logo-alt.png",
+  "/default-RWB.png"
+];
 
 export default function Home() {
+  // Randomizer
+  const logoSrc = React.useMemo(
+    () => logos[Math.floor(Math.random() * logos.length)],
+    []
+  );
+
   return (
     <>
-      <Head>
-        <title>I75 League</title>
-        <meta name="description" content="Where everybody knows your name." />
-      </Head>
+      <main className="">
+        {/* Hero/logo */}
+        <div className="mx-auto w-full max-w-lg">
+          <Image
+            src={logoSrc}
+            alt={"Hero Logo"}
+            width={600}
+            height={400}
+            className="w-auto h-auto rounded drop-shadow-heavy"
+          />
+        </div>
 
-      <main>
-        <h1 className="text-4xl text-green-600 font-bold mb-4">Welcome to I75 League</h1>
-        <h1 className="text-3xl text-orange-600 font-bold mb-4">
-          Links are working with dummy data. Real data will be uploaded soon.
-        </h1>
-        <p className="text-lg text-gray-700 mb-4">
-          Some homepage content will go here.
-        </p>
+        {/* Intro */}
+        <section className="max-w-2xl mx-auto text-center">
+          <h1 className="lg:text-5xl text-3xl font-extrabold text-green-700 mb-4">
+            I75 League Recaps
+          </h1>
+          <p className="text-lg text-gray-600 mb-6">
+            Welcome to the official recap hub for the I75 League, where every week’s matchups
+            are transformed from email threads into a polished web experience—complete with scores,
+            highlights, GIFs, and a dash of humor.
+          </p>
 
-        <p className="text-lg text-gray-700 mb-4">
-          Desktop and mobile have pretty solid navigation right now.
-        </p>
-
-        <p className="text-lg text-gray-700 mb-4">
-          Some of the static links, like About and Contact may eventually go away or be updated.
-        </p>
-
-        <p className="text-lg text-gray-700 mb-4">
-          I still have lots of ideas to implement.
-        </p>
-
-        <p className="text-lg text-gray-700 mb-4">
-          As always, any suggestions, comments, concerns, or questions are welcomed.
-        </p>
+          {/* Links */}
+          <div className="flex justify-center gap-4">
+            <a
+              href="/recaps/viewAllRecaps"
+              className="
+                px-5 py-3 bg-green-600
+                text-white font-semibold rounded-lg
+                hover:bg-green-700 transition
+              ">
+              View All Recaps
+            </a>
+            <a
+              href="/about"
+              className="
+                px-5 py-3 border border-green-600 text-green-600
+                rounded-lg hover:bg-green-50 transition
+              ">
+              Learn More
+            </a>
+          </div>
+        </section>
       </main>
     </>
   );

@@ -1,17 +1,22 @@
 import type { AppProps } from "next/app";
 import Header from "../components/Header";
+import Head from "next/head";
 import "../styles/globals.css"; // This is where your globals live.
 
 export default function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
+      <Head>
+        <title>I75 League</title>
+        <meta name="description" content="Where everybody knows your name." />
+        <link rel="icon" href="/default-logo.png" />
+      </Head>
       <Header />
-      <div className="pt-16 px-4 max-w-7xl mx-auto">
-        <main className="min-h-[calc(100vh-3rem)]">
-          {/* Header is 3rem = 48px = h-12 */}
+      <main className="pt-16">
+        <div className="mx-auto px-4 max-w-7xl">
           <Component {...pageProps} />
-        </main>
-      </div>
+        </div>
+      </main>
     </>
   );
 }
