@@ -2,6 +2,7 @@ export type SectionType =
   | "intro"
   | "tidbits"
   | "injuries"
+  | "leaderDud"
   | "gameNotes"
   | "sidePieces"
   | "matchups"
@@ -11,6 +12,7 @@ export const sectionDisplayNames: Record<SectionType, string> = {
   intro: "",
   tidbits: "Interesting Tidbits",
   injuries: "Notable Injuries",
+  leaderDud: "Leader and Loser",
   gameNotes: "Game Notes",
   sidePieces: "Side Pieces",
   matchups: "Matchup(s) to Watch",
@@ -75,10 +77,10 @@ export interface RecapMatchup {
 }
 
 /**
- * Special structure for the Game Notes section.
+ * This section is for Points Leader and the Dud of the week
  */
-export interface GNSSection {
-  type: "gameNotes";
+export interface LDSSection {
+  type: "leaderDud";
   pointsLeader: {
     name: string;
     points: number;
@@ -89,6 +91,13 @@ export interface GNSSection {
     points: number;
     notes?: string;
   };
+}
+
+/**
+ * Special structure for the Game Notes section.
+ */
+export interface GNSSection {
+  type: "gameNotes";
   matchups: RecapMatchup[];
 }
 
@@ -106,7 +115,7 @@ export interface RecapWeek {
   title: string;
 
   /** An array of content sections that make up the full recap */
-  sections: (RecapSection | GNSSection)[];
+  sections: (RecapSection | LDSSection | GNSSection)[];
 }
 
 /**

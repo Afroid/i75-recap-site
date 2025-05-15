@@ -9,6 +9,7 @@ export interface ScoreEntry {
 }
 
 export default function Scoreboard({ entries }: { entries: ScoreEntry[] }) {
+
   return (
     <div className="
       w-full                /* mobile: full width */
@@ -28,7 +29,7 @@ export default function Scoreboard({ entries }: { entries: ScoreEntry[] }) {
             <TeamLogo
               src={entry.logoUrl}
               alt={`${entry.name} logo`}
-              className="w-8 h-8 rounded-full flex-shrink-0"
+              className="w-auto h-[55px] drop-shadow-medium"
             />
 
             {/* Team Name and record/rank */}
@@ -44,7 +45,7 @@ export default function Scoreboard({ entries }: { entries: ScoreEntry[] }) {
 
           {/* Right side: score */}
           <div className="flex-shrink-0 text-xl font-semibold">
-            {entry.score}
+            {entry.score.toFixed(2)}
           </div>
         </div>
       ))}

@@ -12,49 +12,17 @@ interface Props {
 export default function GameNotesSection({ data }: Props) {
   return (
     <div>
-      {data.pointsLeader && (
-        <>
-          <h3 className="text-xl font-semibold mt-2 mb-1">
-            Points Leader: {data.pointsLeader.name}
-            <span className="ml-1 text-green-500">
-              ({data.pointsLeader.points})
-            </span>
-          </h3>
-          {data.pointsLeader.notes && (
-            <ReactMarkdown className="text-gray-800 mb-4">
-              {data.pointsLeader.notes}
-            </ReactMarkdown>
-          )}
-        </>
-      )}
-
-      {data.dud && (
-        <>
-          <h3 className="text-xl font-semibold mt-2 mb-1">
-            Dud: {data.dud.name}
-            <span className="ml-1 text-red-500">
-              ({data.dud.points})
-            </span>
-          </h3>
-          {data.dud.notes && (
-            <ReactMarkdown className="text-gray-800 mb-4">
-              {data.dud.notes}
-            </ReactMarkdown>
-          )}
-        </>
-      )}
-
       {Array.isArray(data.matchups) && data.matchups.map((matchup, i) => {
         // Build the two scoreboard entries from each matchup
         const entries: ScoreEntry[] = [
           {
-            logoUrl: matchup.team1Logo || "/default-logo.png",
+            logoUrl: matchup.team1Logo || "/default-RWB.png",
             name: matchup.team1,
-            record: matchup.record1 || "", // you’ll need to add record1/record2 to your JSON
-            score: matchup.score1 ?? 0, // or split your score into two fields
+            record: matchup.record1 || "",
+            score: matchup.score1 ?? 0,
           },
           {
-            logoUrl: matchup.team2Logo || "/default-logo.png",
+            logoUrl: matchup.team2Logo || "/default-logo-alt.png",
             name: matchup.team2,
             record: matchup.record2 || "",
             score: matchup.score2 ?? 0,
@@ -69,7 +37,7 @@ export default function GameNotesSection({ data }: Props) {
 
             {/* Breakdown text */}
             <div className="mt-2 text-gray-800">
-              <ReactMarkdown>
+              <ReactMarkdown className="whitespace-pre-wrap">
                 {matchup.breakdown}
               </ReactMarkdown>
             </div>

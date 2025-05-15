@@ -1,4 +1,6 @@
 import React from "react";
+import Image from "next/image";
+import { useLogo } from "@/lib/LogoContext";
 
 export default function TeamLogo({
   src,
@@ -9,18 +11,20 @@ export default function TeamLogo({
   alt: string;
   className?: string;
 }) {
-  // Start with either the provided src or the default
-  const [logo, setLogo] = React.useState(src || "/default-logo.png");
+  // Random src for logo in case a src isn't provided
+  const randomLogoSrc = useLogo();
 
   return (
-    <img
-      src={logo}
+    <Image
+      src={src || randomLogoSrc}
       alt={alt}
+      width={88}
+      height={11}
       className={className}
-      onError={() => {
+      onError={(e) => {
         // If it fails to load, switch to the default logo
-        if (logo !== "/default-logo.png") {
-          setLogo("/default-logo.png");
+        if (e.currentTarget.src.endsWith("default-logo.png") === false) {
+          e.currentTarget.src = "/default-logo.png";
         }
       }}
     />

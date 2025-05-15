@@ -33,9 +33,9 @@ const RecapMatchupSchema = z.object({
   imageAlt:   z.string().optional(),
 });
 
-// Game‑Notes for section schema
-const GameNotesSectionSchema = z.object({
-  type: z.literal("gameNotes"),
+// Points Leader and Dud Section schema
+const LeaderDudSectionSchema = z.object({
+  type: z.literal("leaderDud"),
   pointsLeader: z.object({
     name:   z.string(),
     points: z.number(),
@@ -46,12 +46,18 @@ const GameNotesSectionSchema = z.object({
     points: z.number(),
     notes:  z.string().optional(),
   }),
+})
+
+// Game Notes Section schema
+const GameNotesSectionSchema = z.object({
+  type: z.literal("gameNotes"),
   matchups: z.array(RecapMatchupSchema),
 });
 
-// Discriminated union of the two
+// Discriminated union of the three
 const SectionSchema = z.discriminatedUnion("type", [
   RecapSectionSchema,
+  LeaderDudSectionSchema,
   GameNotesSectionSchema,
 ]);
 
