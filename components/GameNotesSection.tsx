@@ -16,13 +16,13 @@ export default function GameNotesSection({ data }: Props) {
         // Build the two scoreboard entries from each matchup
         const entries: ScoreEntry[] = [
           {
-            logoUrl: matchup.team1Logo || "/default-logo.png",
+            logoUrl: matchup.team1Logo || "/default-RWB.png",
             name: matchup.team1,
-            record: matchup.record1 || "", // you’ll need to add record1/record2 to your JSON
-            score: matchup.score1 ?? 0, // or split your score into two fields
+            record: matchup.record1 || "",
+            score: matchup.score1 ?? 0,
           },
           {
-            logoUrl: matchup.team2Logo || "/default-logo.png",
+            logoUrl: matchup.team2Logo || "/default-logo-alt.png",
             name: matchup.team2,
             record: matchup.record2 || "",
             score: matchup.score2 ?? 0,

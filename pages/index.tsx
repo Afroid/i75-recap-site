@@ -1,18 +1,10 @@
 import React from "react";
 import Image from "next/image";
-
-const logos = [
-  "/default-logo.png",
-  "/default-logo-alt.png",
-  "/default-RWB.png"
-];
+import { useLogo } from "@/lib/LogoContext";
 
 export default function Home() {
-  // Randomizer
-  const logoSrc = React.useMemo(
-    () => logos[Math.floor(Math.random() * logos.length)],
-    []
-  );
+  // Random src for logo
+  const logoSrc = useLogo();
 
   return (
     <>
