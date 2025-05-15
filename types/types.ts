@@ -56,15 +56,19 @@ export interface RecapSection {
 export interface RecapMatchup {
   /** Team/player 1 name */
   team1: string;
+  team1Logo?: string;
+  record1?: string; // E.G.: "(1-2, 7th)"
+  score1?: number;
+
   /** Team/player 2 name */
   team2: string;
-  /** Name of the winner */
-  winner: string;
-  /** Final score in format '123.4-110.3' */
-  score: string;
+  team2Logo?: string;
+  record2?: string;
+  score2?: number;
+
   /** Markdown content describing the matchup */
   breakdown: string;
-  /** Optional image (e.g., gif or meme related to the matchup) */
+  /** Optional image (E.G.: GIF or meme related to the matchup) */
   imageUrl?: string;
   /** Alt text for image */
   imageAlt?: string;
@@ -95,10 +99,10 @@ export interface GNSSection {
  * and a list of content sections that make up the recap body.
  */
 export interface RecapWeek {
-  /** The week number of the recap (e.g., 1 for Week 1) */
+  /** The week number of the recap (E.G.: 1 for Week 1) */
   week: number;
 
-  /** A custom title for the recap (e.g., "Week 1 Recap" or something funnier) */
+  /** A custom title for the recap (E.G.: "Week 1 Recap" or something funnier) */
   title: string;
 
   /** An array of content sections that make up the full recap */
@@ -112,7 +116,7 @@ export interface RecapWeek {
  * You can load a different RecapData object for each season.
  */
 export interface RecapData {
-  /** The season year these recaps belong to (e.g., 2024) */
+  /** The season year these recaps belong to (E.G.: 2024) */
   year: number;
 
   /** All recaps that occurred during the regular season for that year */
