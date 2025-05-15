@@ -5,9 +5,11 @@ import {
   sectionDisplayNames,
   RecapWeek,
   RecapSection,
+  LDSSection,
   GNSSection
 } from "@/types/types";
 import Breadcrumb from "@/components/Breadcrumb";
+import LeaderDudSection from "@/components/LeaderDudSection";
 import GameNotesSection from "@/components/GameNotesSection";
 
 interface Props {
@@ -24,6 +26,7 @@ export default function RecapLayout({ recap, year }: Props) {
       </h1>
 
       {recap.sections.map((section, idx) => {
+        const isLeaderDud = section.type === "leaderDud";
         const isGameNotes = section.type === "gameNotes";
         const displayName = sectionDisplayNames[section.type];
 
@@ -37,8 +40,13 @@ export default function RecapLayout({ recap, year }: Props) {
               </h2>
             )}
 
-            {/* This is checked to narrow types and pick a completely different rendering path */}
-            {isGameNotes ? (
+            {/* This is checked to narrow types and pick a completely different rendering path.
+                Nested ternaries are frowned upon but I used it anyway so I wouldn't have to
+                extract this into a renderSection function */}
+            {isLeaderDud ? (
+              <LeaderDudSection data={section as LDSSection}/>
+            ) :
+            isGameNotes ? (
               <GameNotesSection data={section as GNSSection}/>
             ) : (
               <>

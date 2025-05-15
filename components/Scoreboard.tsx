@@ -44,7 +44,7 @@ export default function Scoreboard({ entries }: { entries: ScoreEntry[] }) {
 
           {/* Right side: score */}
           <div className="flex-shrink-0 text-xl font-semibold">
-            {entry.score}
+            {entry.score.toFixed(2)}
           </div>
         </div>
       ))}
