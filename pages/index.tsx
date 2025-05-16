@@ -17,6 +17,7 @@ export default function Home() {
             width={600}
             height={400}
             className="w-auto h-auto rounded drop-shadow-heavy"
+            priority
           />
         </div>
 

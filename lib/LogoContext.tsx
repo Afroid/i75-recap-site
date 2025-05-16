@@ -1,5 +1,6 @@
+// lib/LogoContext.tsx
 "use client";
-import { createContext, useContext, useMemo } from "react";
+import { createContext, useContext, useState, useEffect } from "react";
 
 const logos = [
   "/default-logo.png",
@@ -7,14 +8,18 @@ const logos = [
   "/default-RWB.png",
 ];
 
-const LogoContext = createContext<string | null>(null);
+const LogoContext = createContext("/default-logo.png");
 
 export function LogoProvider({ children }: { children: React.ReactNode }) {
-  // Randomizes only once on initial render
-  const logo = useMemo(
-    () => logos[Math.floor(Math.random() * logos.length)],
-    []
-  );
+  // This starts with a fixed default so SSR + initial hydration match
+  const [logo, setLogo] = useState<string>("/default-logo.png");
+
+  // After it's mounted, this will pick a random GIF exactly once
+  useEffect(() => {
+    const choice = logos[Math.floor(Math.random() * logos.length)];
+    setLogo(choice);
+  }, []);
+
   return (
     <LogoContext.Provider value={logo}>
       {children}
@@ -23,7 +28,5 @@ export function LogoProvider({ children }: { children: React.ReactNode }) {
 }
 
 export function useLogo() {
-  const logo = useContext(LogoContext);
-  if (logo === null) throw new Error("useLogo must be inside LogoProvider");
-  return logo;
+  return useContext(LogoContext);
 }
