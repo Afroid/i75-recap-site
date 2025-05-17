@@ -3,9 +3,13 @@
 Welcome to the official repository for the **I75 League**, a private Fantasy Football league.
 This project transforms years of weekly email recaps into a clean, dynamic, modern web experience.
 
-Built with **Next.js**, **TypeScript**, **TailwindCSS**, **Framer Motion**, **ESLint (Flat Config)**, **Husky**, and **Lint-Staged**.
+Built with **Next.js**, **TypeScript**, **TailwindCSS**, **Framer Motion**, **ESLint (Flat Config)**, **Husky**, **Lint-Staged**, and more.
 
 🧠 Full project wiki available here: [**I75 League Wiki**](https://github.com/Afroid/i75-recap-site/wiki)
+
+---
+
+## 🚀 Badges
 
 ---
 
@@ -50,6 +54,50 @@ Open [http://localhost:3000](http://localhost:3000) to see the app.
 
 ---
 
+## 🧪 Testing
+
+We use **Jest** + **React Testing Library** for unit and snapshot tests.
+
+🧪🧠 Full testing wiki available here: [**I75 League Testing**](https://github.com/Afroid/i75-recap-site/wiki/I75-League-Testing)
+
+### Scripts
+
+| Script                   | What it does                                                          |
+| ------------------------ | --------------------------------------------------------------------- |
+| `npm test`               | Run **all** tests once (jsdom environment)                           |
+| `npm run test:watch`     | Run tests in **watch** mode                                          |
+| `npm run test:coverage`  | Generate **coverage** reports (HTML + text-summary + lcov)           |
+| `npx jest <path>`        | Run **only** the specified test file, e.g.:<br>`npx jest pages/index.test.tsx` |
+
+### Coverage
+
+After running:
+```bash
+npm run test:coverage
+
+-   **HTML report**: `coverage/lcov-report/index.html`
+
+-   **Terminal summary**: printed automatically
+
+Open the HTML file in your browser for detailed insights.
+
+---
+
+## 🛠️ Key Scripts
+
+| Script           | Command                                                      | Description                                 |
+| ---------------- | ------------------------------------------------------------ | ------------------------------------------- |
+| **dev**          | `npm run dev`                                                | Start Next.js in development mode           |
+| **build**        | `npm run build`                                              | Build production bundle                     |
+| **start**        | `npm run start`                                              | Launch production server                    |
+| **prepare**      | `npm run prepare`                                            | Install Husky Git hooks                     |
+| **lint**         | `npm run lint`                                               | Run ESLint with auto-fix                    |
+| **test**         | `npm run test`                                               | Run Jest once                               |
+| **test:watch**   | `npm run test:watch`                                         | Run Jest in watch mode (re-runs on changes) |
+| **test:coverage**| `npm run test:coverage`                                      | Run Jest and output coverage report         |
+
+---
+
 ## 🛠 Code Quality Tools
 
 - **ESLint** (Flat Config - modern setup)
@@ -77,23 +125,13 @@ Open [http://localhost:3000](http://localhost:3000) to see the app.
 
 ---
 
-## 🧐 Future Plans
-
-- Admin login per league
-- Multiple league support
-- Upload GIFs/screenshots to CDN
-- Dark mode
-- Mobile app (possible)
-
----
-
 ## ✍️ Author
 
-**John Brady**
+**The John**
 
 ---
 
 ## 📜 License
 
 This project is private to the I75 League.
-Contact the repo owner for questions.
+Contact the repo owner for questions or to collaborate.
