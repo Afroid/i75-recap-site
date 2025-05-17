@@ -30,8 +30,8 @@ export default function AboutPage() {
           rivalries along the way—which inspired the name “I75 League.”
         </p>
         <p className="text-lg mb-4">
-          After our <strong>20th season</strong>, we transform weekly email threads into a polished
-          web experience complete with scores, highlights, GIFs, and a dash of humor.
+          After our <strong>20th season</strong>, we've transformed weekly email threads into a
+          polished web experience complete with scores, highlights, GIFs, and a dash of humor.
         </p>
         <p className="text-lg">
           Whether you’re a longtime member or a curious visitor, we hope you enjoy reliving each
