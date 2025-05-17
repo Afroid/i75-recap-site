@@ -1,0 +1,63 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home page matches the snapshot 1`] = `
+<DocumentFragment>
+  <main
+    data-testid="home-main"
+  >
+    <div
+      class="mx-auto w-full max-w-lg"
+      data-testid="home-hero-logo-container"
+    >
+      <img
+        alt="Hero Logo"
+        class="w-auto h-auto rounded drop-shadow-heavy"
+        data-nimg="1"
+        data-testid="home-hero-logo"
+        decoding="async"
+        height="400"
+        src="/_next/image?url=%2Fdefault-logo.png&w=1200&q=75"
+        srcset="/_next/image?url=%2Fdefault-logo.png&w=640&q=75 1x, /_next/image?url=%2Fdefault-logo.png&w=1200&q=75 2x"
+        style="color: transparent;"
+        width="600"
+      />
+    </div>
+    <section
+      class="max-w-2xl mx-auto text-center"
+      data-testid="home-intro-section"
+    >
+      <h1
+        class="lg:text-5xl text-3xl font-extrabold text-green-700 mb-4"
+        data-testid="home-hero-heading"
+      >
+        I75 League Recaps
+      </h1>
+      <p
+        class="text-lg text-gray-600 mb-6"
+        data-testid="home-intro-text"
+      >
+        Welcome to the official recap hub for the I75 League, where every week’s matchups are transformed from email threads into a polished web experience—complete with scores, highlights, GIFs, and a dash of humor.
+      </p>
+      <div
+        class="flex justify-center gap-4"
+        data-testid="home-cta-container"
+      >
+        <a
+          class="   px-5 py-3 bg-green-600   text-white font-semibold rounded-lg   hover:bg-green-700 transition   "
+          data-testid="home-view-all-recaps-button"
+          href="/recaps/viewAllRecaps"
+        >
+          View All Recaps
+        </a>
+        <a
+          class="   px-5 py-3 border border-green-600 text-green-600   rounded-lg hover:bg-green-50 transition   "
+          data-testid="home-learn-more-button"
+          href="/about"
+        >
+          Learn More
+        </a>
+      </div>
+    </section>
+  </main>
+</DocumentFragment>
+`;
