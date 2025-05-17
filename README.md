@@ -73,7 +73,9 @@ We use **Jest** + **React Testing Library** for unit and snapshot tests.
 
 After running:
 
-    npm  run  test:coverage
+```bash
+npm run test:coverage
+```
 
 -   **HTML report**: `coverage/lcov-report/index.html`
 
