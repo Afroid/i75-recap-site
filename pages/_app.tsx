@@ -1,5 +1,5 @@
 import type { AppProps } from "next/app";
-import Header from "../components/Header";
+import Header from "@/components/Header";
 import Head from "next/head";
 import "../styles/globals.css"; // This is where the globals live.
 import { LogoProvider } from "@/lib/LogoContext";
