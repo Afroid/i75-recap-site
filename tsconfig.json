@@ -19,8 +19,9 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "preserve",
-    "incremental": true
+    "incremental": true,
+    "types": ["node", "jest", "@testing-library/jest-dom"]
   },
-  "include": ["."],
+  "include": [".", "**/*.ts", "**/*.tsx", "jest.setup.ts"],
   "exclude": ["node_modules"]
 }
