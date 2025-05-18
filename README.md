@@ -9,7 +9,10 @@ Built with **Next.js**, **TypeScript**, **TailwindCSS**, **Framer Motion**, **ES
 
 ---
 
-## 🚀 Badges
+## 🛡️ Badges
+
+-   CI status
+-   Test coverage
 
 ---
 
