@@ -7,19 +7,26 @@ on:
 
 
 permissions:
-  contents: write     # allows pushing tags/commits
+  contents: write # allows pushing tags/commits
 
 jobs:
   release:
     runs-on: ubuntu-latest
     env:
-      HUSKY_SKIP_HOOKS: 1    # disable hooks globally in this job
+      HUSKY: 0 # disable hooks globally in this job
 
     steps:
       - uses: actions/checkout@v3
         with:
+          fetch-depth: 0 # <— important so semantic-release can see your tags
           # this ensures the GITHUB_TOKEN is available for git push
           persist-credentials: true
+
+      - name: Print CI flags
+        run: |
+          echo "CI=$CI"
+          echo "GITHUB_ACTIONS=$GITHUB_ACTIONS"
+          echo "HUSKY=$HUSKY"
 
       - name: Use Node.js 20.x
         uses: actions/setup-node@v3
@@ -31,7 +38,7 @@ jobs:
         run: npm ci
 
       - name: Run semantic-release
-        run: npx semantic-release
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: npx semantic-release
