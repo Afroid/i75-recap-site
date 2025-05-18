@@ -72,8 +72,10 @@ We use **Jest** + **React Testing Library** for unit and snapshot tests.
 ### Coverage
 
 After running:
+
 ```bash
 npm run test:coverage
+```
 
 -   **HTML report**: `coverage/lcov-report/index.html`
 

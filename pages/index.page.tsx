@@ -45,20 +45,22 @@ export default function Home() {
             <a
               data-testid={TestIds.HOME_VIEW_ALL_RECAPS_BUTTON}
               href="/recaps/viewAllRecaps"
-              className="
-                px-5 py-3 bg-green-600
-                text-white font-semibold rounded-lg
-                hover:bg-green-700 transition
-              ">
+              className={[
+                "px-5 py-3 bg-green-600",
+                "text-white font-semibold rounded-lg",
+                "hover:bg-green-700 transition",
+              ].join(" ")}
+            >
               View All Recaps
             </a>
             <a
               data-testid={TestIds.HOME_LEARN_MORE_BUTTON}
               href="/about"
-              className="
-                px-5 py-3 border border-green-600 text-green-600
-                rounded-lg hover:bg-green-50 transition
-              ">
+              className={[
+                "px-5 py-3 border border-green-600 text-green-600",
+                "rounded-lg hover:bg-green-50 transition",
+              ].join(" ")}
+            >
               Learn More
             </a>
           </div>
