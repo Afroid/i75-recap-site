@@ -1,6 +1,6 @@
 {
   "name": "i75league",
-  "version": "0.1.0",
+  "version": "1.1.0",
   "private": true,
   "dependencies": {
     "@types/node": "^16.18.101",
@@ -24,8 +24,8 @@
     "start": "next start",
     "prepare": "husky install",
     "lint": "eslint . --ext .js,.ts,.jsx,.tsx --fix",
-    "test":          "jest",
-    "test:watch":    "jest --watch",
+    "test": "jest",
+    "test:watch": "jest --watch",
     "test:coverage": "jest --coverage"
   },
   "eslintConfig": {

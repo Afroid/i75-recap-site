@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/Afroid/i75-recap-site/compare/v1.0.0...v1.1.0) (2025-05-18)
+
+
+### Features
+
+* adding npm so package.json's version will update. Adding github so it will create a GitHub Release (notes and tag, no extra assets) ([#31](https://github.com/Afroid/i75-recap-site/issues/31)) ([35454a9](https://github.com/Afroid/i75-recap-site/commit/35454a9c35327715eb9968a39e4517ed442d6753))
+
 # 1.0.0 (2025-05-18)
 
 
