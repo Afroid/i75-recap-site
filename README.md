@@ -11,8 +11,13 @@ Built with **Next.js**, **TypeScript**, **TailwindCSS**, **Framer Motion**, **ES
 
 ## 🛡️ Badges
 
--   CI status
--   Test coverage
+🚦 Status
+
+[![CI status](https://github.com/Afroid/i75-recap-site/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/Afroid/i75-recap-site/actions/workflows/ci.yml)
+
+🧪 Status
+
+[![Coverage Status](https://img.shields.io/badge/coverage-85%25-yellowgreen)](coverage/lcov-report/index.html)
 
 ---
 
