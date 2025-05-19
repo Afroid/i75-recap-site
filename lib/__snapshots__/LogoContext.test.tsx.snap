@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LogoContext / useLogo matches a snapshot of the markup with default-logo.png 1`] = `
+<DocumentFragment>
+  <img
+    alt="Logo"
+    data-testid="logo"
+    src="/default-logo.png"
+  />
+</DocumentFragment>
+`;
+
+exports[`LogoContext / useLogo matches a snapshot of the markup with default-logo.png 2`] = `
+<DocumentFragment>
+  <img
+    alt="Logo"
+    data-testid="logo"
+    src="/default-RWB.png"
+  />
+</DocumentFragment>
+`;
