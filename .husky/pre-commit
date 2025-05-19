@@ -9,3 +9,11 @@ if [ $? -ne 0 ]; then
   echo "❌ Lint-staged failed. Please fix errors before committing."
   exit 1
 fi
+
+echo "🧪 Running unit tests…"
+# Passing --bail so Jest stops on the first failure
+npm test -- --bail --silent
+if [ $? -ne 0 ]; then
+  echo "❌ Unit tests failed. Please fix them before committing."
+  exit 1
+fi
