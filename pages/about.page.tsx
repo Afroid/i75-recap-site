@@ -1,8 +1,11 @@
 import Head from "next/head";
 
+// The About page of the I75 League recap site
+// Sets up SEO <Head> tags and renders the page content under a styled <main>
 export default function AboutPage() {
   return (
     <>
+      {/* Next.js <Head> for setting document title and meta description */}
       <Head>
         <title>About – I75 League Recaps</title>
         <meta
@@ -10,7 +13,8 @@ export default function AboutPage() {
           content="Learn the story behind the I75 League fantasy football recap site."
         />
       </Head>
-      <main className="pt-6 max-w-3xl mx-auto px-4">
+      {/* Main content area for the About page, with styling and test identifier */}
+      <main data-testid="about-main" className="pt-6 max-w-3xl mx-auto px-4">
         <div className="md:text-center">
           <h1
             className="
@@ -24,6 +28,7 @@ export default function AboutPage() {
           </h1>
 
         </div>
+        {/* Paragraphs describing the history and mission of the league */}
         <p className="text-lg mb-4">
           The I75 League began as a tight‑knit fantasy football group in Florida. Over the
           years, our members have moved up and down the East Coast—building families, careers, and
