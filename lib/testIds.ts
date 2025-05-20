@@ -58,6 +58,12 @@ export const TestIds = {
   // DesktopNavbar Component
 
   // GameNotesSection.tsx
+  GAME_NOTES_SECTION: "game-notes-section",
+  GAME_NOTES_ITEM: "game-notes-item",
+  GAME_NOTES_SCOREBOARD: "game-notes-scoreboard",
+  GAME_NOTES_BREAKDOWN: "game-notes-breakdown",
+  GAME_NOTES_IMAGE_CONTAINER: "game-notes-image-container",
+  GAME_NOTES_IMAGE: "game-notes-image",
 
   // Header.tsx
 

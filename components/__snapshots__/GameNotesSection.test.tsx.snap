@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`GameNotesSection matches the snapshot for markup structure 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="game-notes-section"
+  >
+    <div
+      class="mb-6"
+      data-testid="game-notes-item-0"
+    >
+      <div
+        data-testid="game-notes-scoreboard"
+      >
+        [{"logoUrl":"/playerX.png","name":"Player X","record":"3-1","score":21},{"logoUrl":"/playerZ.png","name":"Player Z","record":"2-2","score":14}]
+      </div>
+      <div
+        class="mt-2 text-gray-800"
+        data-testid="game-notes-breakdown"
+      >
+        <div
+          data-testid="stubbed-game-notes-breakdown"
+        >
+          Player X dominated from the start.
+        </div>
+      </div>
+      <div
+        class="mt-4"
+        data-testid="game-notes-image-container"
+      >
+        <img
+          alt="Player X vs Player Z highlight"
+          class="w-full lg:w-auto h-auto rounded shadow-md"
+          data-testid="game-notes-image"
+          height="400"
+          src="/gif.gif"
+          width="600"
+        />
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
