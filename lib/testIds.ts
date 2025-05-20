@@ -66,6 +66,13 @@ export const TestIds = {
   GAME_NOTES_IMAGE: "game-notes-image",
 
   // Header.tsx
+  HEADER_SITE_HEADER: "site-header",
+  HEADER_MOBILE_HEADER: "mobile-header",
+  HEADER_HAMBURGER_BUTTON: "header-hamburger-button",
+  HEADER_MOBILE_LOGO: "header-mobile-logo",
+  HEADER_DESKTOP_LOGO: "header-desktop-logo",
+  HEADER_DESKTOP_NAV: "header-desktop-nav",
+  HEADER_MOBILE_DRAWER: "header-mobile-drawer",
 
   // HeaderLogo.tsx
 
