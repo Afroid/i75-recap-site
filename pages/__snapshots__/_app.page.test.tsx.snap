@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MyApp (_app.page.tsx) matches the snapshot 1`] = `
+<DocumentFragment>
+  <title>
+    I75 League
+  </title>
+  <meta
+    content="Where everybody knows your name."
+    name="description"
+  />
+  <link
+    href="/default-logo.png"
+    rel="icon"
+  />
+  <div
+    data-testid="stubbed-logo-provider"
+  >
+    <header
+      data-testid="stubbed-header"
+    >
+      HEADER
+    </header>
+    <main
+      class="pt-16"
+    >
+      <div
+        class="mx-auto px-4 max-w-7xl"
+      >
+        <div
+          data-testid="dummy-page"
+        >
+          📦 snapshot
+        </div>
+      </div>
+    </main>
+  </div>
+</DocumentFragment>
+`;
