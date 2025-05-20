@@ -17,7 +17,7 @@ exports[`AboutPage matches snapshot 1`] = `
       class="md:text-center"
     >
       <h1
-        class="   text-4xl font-bold mb-4   bg-gradient-to-r from-green-300 to-green-700   bg-clip-text text-transparent   inline-block leading-tight   "
+        class="text-4xl font-bold mb-4 bg-gradient-to-r from-green-300 to-green-700 bg-clip-text text-transparent inline-block leading-tight"
       >
         About I75 League
       </h1>

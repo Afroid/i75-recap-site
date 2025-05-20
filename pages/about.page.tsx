@@ -17,12 +17,12 @@ export default function AboutPage() {
       <main data-testid="about-main" className="pt-6 max-w-3xl mx-auto px-4">
         <div className="md:text-center">
           <h1
-            className="
-              text-4xl font-bold mb-4
-              bg-gradient-to-r from-green-300 to-green-700
-              bg-clip-text text-transparent
-              inline-block leading-tight
-            "
+            className={[
+              "text-4xl font-bold mb-4",
+              "bg-gradient-to-r from-green-300 to-green-700",
+              "bg-clip-text text-transparent",
+              "inline-block leading-tight"
+            ].join(" ")}
           >
             About I75 League
           </h1>

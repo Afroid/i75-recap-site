@@ -7,13 +7,13 @@ export default function Custom404() {
   return (
     <main
       data-testid="not-found-main"
-      className="
-        min-h-[calc(100vh-3rem)]
-        min-h-screen
-        flex flex-col items-center justify-center
-        text-center
-        px-4
-      "
+      className={[
+        "min-h-[calc(100vh-3rem)]",
+        "min-h-screen",
+        "flex flex-col items-center justify-center",
+        "text-center",
+        "px-4"
+      ].join(" ")}
     >
       <h1 className="text-4xl font-bold mb-4">Page Not Found</h1>
       <p className="text-lg mb-6 text-center max-w-md">

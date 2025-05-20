@@ -3,7 +3,7 @@
 exports[`Custom404 matches its snapshot 1`] = `
 <DocumentFragment>
   <main
-    class="   min-h-[calc(100vh-3rem)]   min-h-screen   flex flex-col items-center justify-center   text-center   px-4   "
+    class="min-h-[calc(100vh-3rem)] min-h-screen flex flex-col items-center justify-center text-center px-4"
     data-testid="not-found-main"
   >
     <h1
