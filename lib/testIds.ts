@@ -31,7 +31,7 @@ export const TestIds = {
   CONTACT_FORM_NAME_SECTION: "contact-form-name-section",
   CONTACT_FORM_EMAIL_SECTION: "contact-form-email-section",
   CONTACT_FORM_MESSAGE_SECTION: "contact-form-message-section",
-  CONTACT_FORM_SUBMIT: "contact-form-submit"
+  CONTACT_FORM_SUBMIT: "contact-form-submit",
 
   /**
    * Recap Pages - (pages/recaps)
@@ -48,6 +48,12 @@ export const TestIds = {
    */
 
   // Breadcrumb Component
+  BREADCRUMB_NAV: "breadcrumb-nav",
+  BREADCRUMB_LIST: "breadcrumb-list",
+  BREADCRUMB_ITEM: "breadcrumb-item",
+  BREADRCRUMB_LINK: "breadcrumb-link",
+  BREADCRUMB_CURRENT: "breadcrumb-current",
+  BREADCRUMB_SEPARATOR: "breadcrumb-separator",
 
   // DesktopNavbar Component
 
