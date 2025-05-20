@@ -1,9 +1,12 @@
-// pages/404.tsx
 import Link from "next/link";
 
+// Custom404: Overrides Next.js's default 404 page.
+// Rendered when a user navigates to a non-existent route.
+// Provides a friendly message and a link back to the home page.
 export default function Custom404() {
   return (
     <main
+      data-testid="not-found-main"
       className="
         min-h-[calc(100vh-3rem)]
         min-h-screen
@@ -17,7 +20,12 @@ export default function Custom404() {
         The page you're looking for doesn’t exist.
         You might’ve clicked a dead link or mistyped something.
       </p>
-      <Link href="/" className="text-blue-600 hover:underline text-lg">
+      {/* Navigational link back to homepage */}
+      <Link
+        data-testid="return-home-link"
+        href="/"
+        className="text-blue-600 hover:underline text-lg"
+      >
         Return Home
       </Link>
     </main>
