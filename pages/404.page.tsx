@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { TestIds } from "@/lib/testIds";
 
 // Custom404: Overrides Next.js's default 404 page.
 // Rendered when a user navigates to a non-existent route.
@@ -6,7 +7,7 @@ import Link from "next/link";
 export default function Custom404() {
   return (
     <main
-      data-testid="not-found-main"
+      data-testid={TestIds.NOT_FOUND_MAIN}
       className={[
         "min-h-[calc(100vh-3rem)]",
         "min-h-screen",
@@ -22,7 +23,7 @@ export default function Custom404() {
       </p>
       {/* Navigational link back to homepage */}
       <Link
-        data-testid="return-home-link"
+        data-testid={TestIds.RETURN_HOME_LINK}
         href="/"
         className="text-blue-600 hover:underline text-lg"
       >

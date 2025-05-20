@@ -1,6 +1,7 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import AboutPage from './about.page';
+import { TestIds } from '@/lib/testIds';
 
 // Stub next/head so we can snapshot children without modifying document.head
 jest.mock('next/head', () => ({
@@ -14,7 +15,7 @@ describe('AboutPage', () => {
 
     // Assertions
     // Main content area should be in the document
-    expect(screen.getByTestId("about-main")).toBeInTheDocument();
+    expect(screen.getByTestId(TestIds.ABOUT_MAIN)).toBeInTheDocument();
     // ensure our page title is displayed
     expect(screen.getByRole('heading', { level: 1 })).toHaveTextContent('About I75 League');
   });

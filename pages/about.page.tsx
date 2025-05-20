@@ -1,4 +1,5 @@
 import Head from "next/head";
+import { TestIds } from "@/lib/testIds";
 
 // The About page of the I75 League recap site
 // Sets up SEO <Head> tags and renders the page content under a styled <main>
@@ -14,7 +15,7 @@ export default function AboutPage() {
         />
       </Head>
       {/* Main content area for the About page, with styling and test identifier */}
-      <main data-testid="about-main" className="pt-6 max-w-3xl mx-auto px-4">
+      <main data-testid={TestIds.ABOUT_MAIN} className="pt-6 max-w-3xl mx-auto px-4">
         <div className="md:text-center">
           <h1
             className={[

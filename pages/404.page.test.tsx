@@ -1,6 +1,7 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
 import Custom404 from "@/pages/404.page";
+import { TestIds } from "@/lib/testIds";
 
 // Mock next/link so that in tests it renders a plain <a> we can query:
 jest.mock("next/link", () => {
@@ -9,7 +10,7 @@ jest.mock("next/link", () => {
     __esModule: true,
     default: ({ href, children, ...rest }: { href: string; children: React.ReactNode }) => {
       return (
-        <a data-testid="return-home-link" href={href} {...rest}>
+        <a data-testid={TestIds.RETURN_HOME_LINK} href={href} {...rest}>
           {children}
         </a>
       );
@@ -22,7 +23,7 @@ describe("Custom404", () => {
     render(<Custom404 />);
 
     // Grab the element by testid
-    const anchor = screen.getByTestId("return-home-link");
+    const anchor = screen.getByTestId(TestIds.RETURN_HOME_LINK);
 
     // Assertions
     expect(anchor).toHaveAttribute("href", "/");

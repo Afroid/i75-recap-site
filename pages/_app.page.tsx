@@ -3,6 +3,7 @@ import Head from "next/head";                     // Next.js <Head> to inject me
 import Header from "@/components/Header";         // Site-wide top navigation component
 import { LogoProvider } from "@/lib/LogoContext"; // Context provider for logo selection
 import "../styles/globals.css";                   // Global CSS (Tailwind, resets, etc.)
+import { TestIds } from "@/lib/testIds";
 
 /**
  * The top-level App component for Next.js.
@@ -29,11 +30,11 @@ export default function MyApp({ Component, pageProps }: AppProps) {
       {/* Wraps app in LogoProvider so that any component can consume the logo via useLogo(). */}
       <LogoProvider>
         {/* Site header (navigation bar) fixed at the top, rendered on every page. */}
-        <Header />
+        <Header data-testid={TestIds.SITE_HEADER} />
 
         {/* Main content area. pt-16 leaves space for the fixed Header. */}
-        <main className="pt-16">
-          <div className="mx-auto px-4 max-w-7xl">
+        <main data-testid={TestIds.MAIN_CONTENT} className="pt-16">
+          <div data-testid={TestIds.PAGE_WRAPPER} className="mx-auto px-4 max-w-7xl">
             {/*
               Render the specific page component,
               passing along its pageProps from Next.js.

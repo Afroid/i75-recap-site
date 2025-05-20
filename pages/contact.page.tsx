@@ -1,4 +1,5 @@
 import Head from "next/head";
+import { TestIds } from "@/lib/testIds";
 
 // Contact page for the I75 League recap site
 export default function ContactPage() {
@@ -11,7 +12,7 @@ export default function ContactPage() {
       </Head>
 
       {/* Main content area for the Contact page */}
-      <main data-testid="contact-main" className="pt-6 max-w-2xl mx-auto px-4">
+      <main data-testid={TestIds.CONTACT_MAIN} className="pt-6 max-w-2xl mx-auto px-4">
         <h1 className="text-4xl font-bold mb-4">Contact Us</h1>
         <p className="text-lg mb-6">
           For questions about the site, to join our league, or to share feedback, drop us a line:
@@ -20,7 +21,7 @@ export default function ContactPage() {
         {/* Simple email link for direct contact */}
         <p className="mb-8">
           <a
-            data-testid="contact-email-link"
+            data-testid={TestIds.CONTACT_EMAIL_LINK}
             href="mailto:notCurrentlyActiveEmail@i75league.com"
             className="text-green-600 hover:underline"
           >
@@ -29,9 +30,9 @@ export default function ContactPage() {
         </p>
 
         {/* Contact form (non-functional placeholder) */}
-        <form data-testid="contact-form" className="space-y-4">
+        <form data-testid={TestIds.CONTACT_FORM} className="space-y-4">
           {/* Name field section */}
-          <div data-testid="contact-form-name-section">
+          <div data-testid={TestIds.CONTACT_FORM_NAME_SECTION}>
             <label className="block mb-1 font-medium" htmlFor="name">
               Name
             </label>
@@ -44,7 +45,7 @@ export default function ContactPage() {
           </div>
 
           {/* Email field section */}
-          <div data-testid="contact-form-email-section">
+          <div data-testid={TestIds.CONTACT_FORM_EMAIL_SECTION}>
             <label className="block mb-1 font-medium" htmlFor="email">
               Email
             </label>
@@ -57,7 +58,7 @@ export default function ContactPage() {
           </div>
 
           {/* Message field section */}
-          <div data-testid="contact-form-message-section">
+          <div data-testid={TestIds.CONTACT_FORM_MESSAGE_SECTION}>
             <label className="block mb-1 font-medium" htmlFor="message">
               Message
             </label>
@@ -71,7 +72,7 @@ export default function ContactPage() {
 
           {/* Submit button (currently non-functional) */}
           <button
-            data-testid="contact-form-submit"
+            data-testid={TestIds.CONTACT_FORM_SUBMIT}
             type="submit"
             className="px-6 py-3 bg-green-600 text-white rounded-md hover:bg-green-700 transition"
           >
