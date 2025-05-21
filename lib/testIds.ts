@@ -48,6 +48,7 @@ export const TestIds = {
    */
 
   // Breadcrumb Component
+  BREADCRUMB: "breadcrumb",
   BREADCRUMB_NAV: "breadcrumb-nav",
   BREADCRUMB_LIST: "breadcrumb-list",
   BREADCRUMB_ITEM: "breadcrumb-item",
@@ -94,6 +95,14 @@ export const TestIds = {
   // MobileDrawer.tsx
 
   // RecapLayout.tsx
+  RECAP_TITLE: "recap-title",
+  RECAP_SECTION: "recap-section",
+  RECAP_HEADING: "recap-heading",
+  RECAP_INTRO: "recap-intro",
+  RECAP_BULLETS: "recap-bullets",
+  RECAP_BULLET: "recap-bullet",
+  RECAP_CONTENT: "recap-content",
+  RECAP_IMAGE: "recap-image",
 
   // Scoreboard.tsx
   SCOREBOARD_CONTAINER: "scoreboard-container",
