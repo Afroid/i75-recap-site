@@ -75,6 +75,12 @@ export const TestIds = {
   HEADER_MOBILE_DRAWER: "header-mobile-drawer",
 
   // HeaderLogo.tsx
+  HEADER_LOGO_LINK: "header-logo-link",
+  HEADER_LOGO_BG_DARK: "header-logo-bg-dark",
+  HEADER_LOGO_BG_LIGHT: "header-logo-bg-light",
+  HEADER_LOGO_CONTAINER: "header-logo-container",
+  HEADER_LOGO_NAME: "header-logo-name",
+  HEADER_LOGO_DYNAMIC: "header-logo-dynamic",
 
   // LeaderDudSection.tsx
 
