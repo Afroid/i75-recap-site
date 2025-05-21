@@ -104,4 +104,5 @@ export const TestIds = {
   SCOREBOARD_SCORE: "scoreboard-score",
 
   // TeamLogo.tsx
+  TEAM_LOGO_IMAGE: "team-logo-image"
 }

@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TeamLogo matches the snapshot 1`] = `
+<DocumentFragment>
+  <img
+    alt="Snapshot"
+    class="snap-class"
+    data-testid="team-logo-image"
+    height="11"
+    src="/snap-logo.png"
+    width="88"
+  />
+</DocumentFragment>
+`;
