@@ -83,6 +83,13 @@ export const TestIds = {
   HEADER_LOGO_DYNAMIC: "header-logo-dynamic",
 
   // LeaderDudSection.tsx
+  LDS_SECTION: "lds-section",
+  LDS_LEADER_HEADING: "lds-leader-heading",
+  LDS_LEADER_POINTS: "lds-leader-points",
+  LDS_LEADER_NOTES: "lds-leader-notes",
+  LDS_DUD_HEADING: "lds-dud-heading",
+  LDS_DUD_POINTS: "lds-dud-points",
+  LDS_DUD_NOTES: "lds-dud-notes",
 
   // MobileDrawer.tsx
 
