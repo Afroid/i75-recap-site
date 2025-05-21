@@ -1,0 +1,85 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Scoreboard component matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="w-full md:w-80 lg:w-96 border rounded-lg bg-white p-2 space-y-4"
+    data-testid="scoreboard-container"
+  >
+    <div
+      class="flex items-center justify-between"
+      data-testid="scoreboard-entry-Team One"
+    >
+      <div
+        class="flex items-center"
+      >
+        <img
+          alt="Team One logo"
+          class="w-auto h-[55px] drop-shadow-medium"
+          data-testid="scoreboard-logo-Team One"
+          src="/logo1.png"
+        />
+        <div
+          class="ml-1 flex-1 min-w-0"
+        >
+          <div
+            class="text-lg font-medium truncate max-w-[15ch]"
+            data-testid="scoreboard-name-Team One"
+          >
+            Team One
+          </div>
+          <div
+            class="text-sm text-gray-500"
+            data-testid="scoreboard-record-Team One"
+          >
+            (1-0)
+          </div>
+        </div>
+      </div>
+      <div
+        class="flex-shrink-0 text-xl font-semibold"
+        data-testid="scoreboard-score-Team One"
+      >
+        10.50
+      </div>
+    </div>
+    <div
+      class="flex items-center justify-between"
+      data-testid="scoreboard-entry-Team Two"
+    >
+      <div
+        class="flex items-center"
+      >
+        <img
+          alt="Team Two logo"
+          class="w-auto h-[55px] drop-shadow-medium"
+          data-testid="scoreboard-logo-Team Two"
+          src="/logo2.png"
+        />
+        <div
+          class="ml-1 flex-1 min-w-0"
+        >
+          <div
+            class="text-lg font-medium truncate max-w-[15ch]"
+            data-testid="scoreboard-name-Team Two"
+          >
+            Team Two
+          </div>
+          <div
+            class="text-sm text-gray-500"
+            data-testid="scoreboard-record-Team Two"
+          >
+            (0-1)
+          </div>
+        </div>
+      </div>
+      <div
+        class="flex-shrink-0 text-xl font-semibold"
+        data-testid="scoreboard-score-Team Two"
+      >
+        7.25
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

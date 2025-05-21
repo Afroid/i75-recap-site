@@ -96,6 +96,12 @@ export const TestIds = {
   // RecapLayout.tsx
 
   // Scoreboard.tsx
+  SCOREBOARD_CONTAINER: "scoreboard-container",
+  SCOREBOARD_ENTRY: "scoreboard-entry",
+  SCOREBOARD_LOGO: "scoreboard-logo",
+  SCOREBOARD_NAME: "scoreboard-name",
+  SCOREBOARD_RECORD: "scoreboard-record",
+  SCOREBOARD_SCORE: "scoreboard-score",
 
   // TeamLogo.tsx
 }

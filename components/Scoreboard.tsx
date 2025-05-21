@@ -1,5 +1,6 @@
 import React from "react";
 import TeamLogo from "./TeamLogo";
+import { TestIds } from "@/lib/testIds";
 
 export interface ScoreEntry {
   logoUrl: string
@@ -8,17 +9,26 @@ export interface ScoreEntry {
   score: number
 }
 
+/**
+ * Scoreboard component displays a list of team entries,
+ * each showing logo, name, record, and final score.
+ *
+ * @param entries - array of ScoreEntry objects
+ */
 export default function Scoreboard({ entries }: { entries: ScoreEntry[] }) {
 
   return (
-    <div className="
-      w-full                /* mobile: full width */
-      md:w-80              /* ≥768px: 33% width */
-      lg:w-96              /* ≥1024px: 25% width */
-      border rounded-lg bg-white p-2 space-y-4
-    ">
+    <div
+      data-testid={TestIds.SCOREBOARD_CONTAINER}
+      className={[
+        "w-full",
+        "md:w-80 lg:w-96",
+        "border rounded-lg bg-white p-2 space-y-4"
+      ].join(" ")}
+    >
       {entries.map((entry) => (
         <div
+          data-testid={`${TestIds.SCOREBOARD_ENTRY}-${entry.name}`}
           key={entry.name}
           className="flex items-center justify-between"
         >
@@ -27,6 +37,7 @@ export default function Scoreboard({ entries }: { entries: ScoreEntry[] }) {
 
             {/* Team Logo */}
             <TeamLogo
+              data-testid={`${TestIds.SCOREBOARD_LOGO}-${entry.name}`}
               src={entry.logoUrl}
               alt={`${entry.name} logo`}
               className="w-auto h-[55px] drop-shadow-medium"
@@ -34,17 +45,23 @@ export default function Scoreboard({ entries }: { entries: ScoreEntry[] }) {
 
             {/* Team Name and record/rank */}
             <div className="ml-1 flex-1 min-w-0">
-              <div className="text-lg font-medium truncate max-w-[15ch]">
+              <div
+                data-testid={`${TestIds.SCOREBOARD_NAME}-${entry.name}`}
+                className="text-lg font-medium truncate max-w-[15ch]">
                 {entry.name}
               </div>
-              <div className="text-sm text-gray-500">
+              <div
+                data-testid={`${TestIds.SCOREBOARD_RECORD}-${entry.name}`}
+                className="text-sm text-gray-500">
                 {entry.record}
               </div>
             </div>
           </div>
 
-          {/* Right side: score */}
-          <div className="flex-shrink-0 text-xl font-semibold">
+          {/* Right side: formatted score */}
+          <div
+            data-testid={`${TestIds.SCOREBOARD_SCORE}-${entry.name}`}
+            className="flex-shrink-0 text-xl font-semibold">
             {entry.score.toFixed(2)}
           </div>
         </div>
