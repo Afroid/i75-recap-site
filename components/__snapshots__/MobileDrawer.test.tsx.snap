@@ -11,7 +11,7 @@ exports[`MobileDrawer matches snapshot when open 1`] = `
   >
     <div
       animate="[object Object]"
-      class="   fixed top-12 left-0 w-60 h-[calc(100vh-3rem)]   bg-gray-50   pl-4 pr-6 py-2 z-[1001]   flex flex-col gap-6"
+      class="fixed top-12 left-0 w-60 h-[calc(100vh-3rem)] bg-gray-50 pl-4 pr-6 py-2 z-[1001] flex flex-col gap-6"
       data-testid="mobile-drawer"
       exit="[object Object]"
       initial="[object Object]"
@@ -28,7 +28,7 @@ exports[`MobileDrawer matches snapshot when open 1`] = `
           class="mb-2"
         >
           <button
-            class="   flex justify-between items-center w-full   rounded-md whitespace-nowrap text-gray-900   ml-2   "
+            class="flex justify-between items-center w-full rounded-md whitespace-nowrap text-gray-900 ml-2"
             data-testid="mobile-season-toggle-2023"
           >
             2023 Season
@@ -41,7 +41,7 @@ exports[`MobileDrawer matches snapshot when open 1`] = `
           class="mb-2"
         >
           <button
-            class="   flex justify-between items-center w-full   rounded-md whitespace-nowrap text-gray-900   ml-2   "
+            class="flex justify-between items-center w-full rounded-md whitespace-nowrap text-gray-900 ml-2"
             data-testid="mobile-season-toggle-2021"
           >
             2021 Season
@@ -54,7 +54,7 @@ exports[`MobileDrawer matches snapshot when open 1`] = `
           class="mb-2"
         >
           <button
-            class="   flex justify-between items-center w-full   rounded-md whitespace-nowrap text-gray-900   ml-2   "
+            class="flex justify-between items-center w-full rounded-md whitespace-nowrap text-gray-900 ml-2"
             data-testid="mobile-season-toggle-2020"
           >
             2020 Season

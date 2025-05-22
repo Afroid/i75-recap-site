@@ -50,11 +50,11 @@ export default function MobileDrawer({ isOpen, onClose }: MobileDrawerProps) {
           <button
             data-testid={`${TestIds.MOBILE_SEASON_TOGGLE}-${year}`}
             onClick={() => setExpandedYear(isExpanded ? null : year)}
-            className="
-              flex justify-between items-center w-full
-              rounded-md whitespace-nowrap text-gray-900
-              ml-2
-            "
+            className={[
+              "flex justify-between items-center w-full",
+              "rounded-md whitespace-nowrap text-gray-900",
+              "ml-2"
+            ].join(" ")}
           >
             {year} Season
             {isExpanded ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
@@ -103,11 +103,12 @@ export default function MobileDrawer({ isOpen, onClose }: MobileDrawerProps) {
           {/* Sliding drawer panel */}
           <motion.div
             data-testid={TestIds.MOBILE_DRAWER}
-            className="
-              fixed top-12 left-0 w-60 h-[calc(100vh-3rem)]
-              bg-gray-50
-              pl-4 pr-6 py-2 z-[1001]
-              flex flex-col gap-6"
+            className={[
+              "fixed top-12 left-0 w-60 h-[calc(100vh-3rem)]",
+              "bg-gray-50",
+              "pl-4 pr-6 py-2 z-[1001]",
+              "flex flex-col gap-6"
+            ].join(" ")}
             initial={{ x: "-100%" }}
             animate={{ x: 0 }}
             exit={{ x: "-100%" }}
