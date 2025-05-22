@@ -3,26 +3,35 @@ import RecapLayout from "@/components/RecapLayout";
 import { RecapData, RecapWeek } from "@/types/types";
 import fs from "fs";
 import path from "path";
+import { TestIds } from "@/lib/testIds";
 
 interface Props {
   recap: RecapWeek | null;
   year: string;
 }
 
-// Page component: renders the recap layout for the given week.
-// If no recap is found, displays a fallback message.
+/**
+ * RecapPage:
+ * Renders a specific week recap via RecapLayout or shows a fallback.
+ */
 export default function RecapPage({ recap, year }: Props) {
-  if (!recap) return <div>Recap not found</div>;
-  return <RecapLayout recap={recap} year={year} />;
+  if (!recap) return <div data-testid={TestIds.RECAP_NOT_FOUND}>Recap not found</div>;
+  return (
+    <div data-testid={TestIds.RECAP_PAGE}>
+      <RecapLayout recap={recap} year={year} />
+    </div>
+  );
 }
 
-// getStaticPaths: generates all valid routes for [year]/[week] based on JSON files in /data/recaps.
-// This ensures Next.js pre-renders all the recap pages at build time.
+/**
+ * getStaticPaths:
+ * Build all /recaps/[year]/[week] routes from JSON files in data/recaps.
+ */
 export const getStaticPaths: GetStaticPaths = async () => {
   // Absolute path to the /data/recaps directory
   const recapDir = path.join(process.cwd(), "data", "recaps");
 
-  // Read all filenames (e.g., 2024.json, 2023.json, etc.)
+  // Read all filenames but filter to only JSON files (e.g., 2024.json, 2023.json, etc.)
   const files = fs
     .readdirSync(recapDir)
     .filter((f) => f.endsWith(".json"));
@@ -49,20 +58,28 @@ export const getStaticPaths: GetStaticPaths = async () => {
   };
 };
 
-// getStaticProps: loads recap content for the given [year]/[week] params.
-// Dynamically reads the appropriate JSON file and finds the correct week's recap.
+/**
+ * getStaticProps:
+ * Fetch the JSON for the given year
+ * Dynamically reads the JSON and returns the correct week's recap
+ */
 export const getStaticProps: GetStaticProps = async ({ params }) => {
+  // Grab the year from the URL params (e.g. "2023")
   const year = params?.year as string;
   const weekStr = params?.week as string;
 
   const week = parseInt(weekStr.replace("week-", ""));
 
   try {
-    // Build absolute file path to the correct recap JSON file
+    // Build the exact path to that year’s JSON file:
+    // <project-root>/data/recaps/2023.json
     const filePath = path.join(process.cwd(), "data", "recaps", `${year}.json`);
 
-    // Read and parse the JSON content
+    // Read the file contents (utf-8 text)
     const raw = fs.readFileSync(filePath, "utf-8");
+
+    // Parse through the JSON into our RecapData type:
+    // { year: 2023, recaps: [ { week: 1, … }, { week: 2, … }, … ] }
     const data: RecapData = JSON.parse(raw);
 
     // Find the specific recap entry for the requested week

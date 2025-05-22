@@ -38,6 +38,8 @@ export const TestIds = {
    */
 
   // Recap Page
+  RECAP_NOT_FOUND: "recap-not-found",
+  RECAP_PAGE: "recap-page",
 
   // Year Page
   YEAR_PAGE: "year-page",
