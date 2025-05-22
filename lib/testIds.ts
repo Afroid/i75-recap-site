@@ -40,7 +40,7 @@ export const TestIds = {
   // Recap Page
 
   // View All Recaps Page
-
+  VIEW_ALL_RECAPS: "view-all-recaps",
   // Year Page
 
   /**
@@ -93,6 +93,14 @@ export const TestIds = {
   LDS_DUD_NOTES: "lds-dud-notes",
 
   // MobileDrawer.tsx
+  MOBILE_SEASON_TOGGLE: "mobile-season-toggle",
+  MOBILE_SEASON_WEEKS: "mobile-season-weeks",
+  MOBILE_WEEK_LINK: "mobile-week-link",
+  MOBILE_DRAWER_OVERLAY: "mobile-drawer-overlay",
+  MOBILE_DRAWER: "mobile-drawer",
+  MOBILE_DRAWER_TITLE: "mobile-drawer-title",
+  MOBILE_OLDER_SEASON_TITLE: "mobile-older-season-title",
+  MOBILE_TOGGLE_OLDER_SEASONS: "mobile-toggle-older-seasons",
 
   // RecapLayout.tsx
   RECAP_TITLE: "recap-title",
@@ -113,5 +121,10 @@ export const TestIds = {
   SCOREBOARD_SCORE: "scoreboard-score",
 
   // TeamLogo.tsx
-  TEAM_LOGO_IMAGE: "team-logo-image"
+  TEAM_LOGO_IMAGE: "team-logo-image",
+
+  // Static Links
+  NAV_LINK_HOME: "nav-link-home",
+  NAV_LINK_ABOUT: "nav-link-about",
+  NAV_LINK_CONTACT: "nav-link-contact"
 }

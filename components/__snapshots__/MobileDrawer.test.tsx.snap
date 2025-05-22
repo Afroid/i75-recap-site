@@ -1,0 +1,118 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MobileDrawer matches snapshot when open 1`] = `
+<DocumentFragment>
+  <div
+    animate="[object Object]"
+    class="fixed top-12 left-0 right-0 bottom-0 bg-black/50 z-[1000]"
+    data-testid="mobile-drawer-overlay"
+    exit="[object Object]"
+    initial="[object Object]"
+  >
+    <div
+      animate="[object Object]"
+      class="   fixed top-12 left-0 w-60 h-[calc(100vh-3rem)]   bg-gray-50   pl-4 pr-6 py-2 z-[1001]   flex flex-col gap-6"
+      data-testid="mobile-drawer"
+      exit="[object Object]"
+      initial="[object Object]"
+      transition="[object Object]"
+    >
+      <div>
+        <h2
+          class="font-bold text-lg text-green-600 mb-2 underline"
+          data-testid="mobile-drawer-title"
+        >
+          Recaps
+        </h2>
+        <div
+          class="mb-2"
+        >
+          <button
+            class="   flex justify-between items-center w-full   rounded-md whitespace-nowrap text-gray-900   ml-2   "
+            data-testid="mobile-season-toggle-2023"
+          >
+            2023 Season
+            <svg
+              data-testid="chevron-down"
+            />
+          </button>
+        </div>
+        <div
+          class="mb-2"
+        >
+          <button
+            class="   flex justify-between items-center w-full   rounded-md whitespace-nowrap text-gray-900   ml-2   "
+            data-testid="mobile-season-toggle-2021"
+          >
+            2021 Season
+            <svg
+              data-testid="chevron-down"
+            />
+          </button>
+        </div>
+        <div
+          class="mb-2"
+        >
+          <button
+            class="   flex justify-between items-center w-full   rounded-md whitespace-nowrap text-gray-900   ml-2   "
+            data-testid="mobile-season-toggle-2020"
+          >
+            2020 Season
+            <svg
+              data-testid="chevron-down"
+            />
+          </button>
+        </div>
+        <div
+          class="border-t border-gray-300 my-2"
+        />
+        <button
+          class="mb-2 text-md text-green-600"
+          data-testid="mobile-toggle-older-seasons"
+        >
+          View Older Seasons
+        </button>
+        <div
+          class="mb-2"
+        >
+          <a
+            class="text-md text-blue-600"
+            data-testid="view-all-recaps"
+            href="/recaps/viewAllRecaps"
+          >
+            View All Recaps
+          </a>
+        </div>
+        <div
+          class="border-t border-gray-300"
+        />
+      </div>
+      <div
+        class="flex flex-col gap-4"
+      >
+        <a
+          class="text-lg text-gray-800"
+          data-testid="nav-link-home"
+          href="/"
+        >
+          Home
+        </a>
+        <a
+          class="text-lg text-gray-800"
+          data-testid="nav-link-about"
+          href="/about"
+        >
+          About
+        </a>
+        <a
+          class="text-lg text-gray-800"
+          data-testid="nav-link-contact"
+          href="/contact"
+        >
+          Contact
+        </a>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
