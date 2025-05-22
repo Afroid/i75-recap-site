@@ -1,0 +1,102 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`YearPage component matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="pt-4 max-w-2xl mx-auto"
+    data-testid="year-page"
+  >
+    <div
+      class="text-center"
+    >
+      <div
+        class="inline-block"
+      >
+        <h1
+          class="text-4xl lg:text-5xl font-extrabold text-gray-900 mb-2"
+          data-testid="year-title"
+        >
+          2025 Season Recaps
+        </h1>
+        <div
+          class="h-1 w-full bg-gradient-to-r from-green-300 to-green-700 rounded-full mb-6"
+        />
+      </div>
+    </div>
+    <ul
+      class="grid grid-cols-1 sm:grid-cols-2 gap-6"
+      data-testid="year-week-list"
+    >
+      <li
+        animate="[object Object]"
+        data-testid="year-week-item-1"
+        initial="[object Object]"
+        transition="[object Object]"
+      >
+        <a
+          class="block rounded-lg shadow-md bg-white hover:bg-green-50 p-6 text-center transition border border-gray-200 hover:border-green-400 transform transition-transform hover:shadow-lg hover:scale-105 hover:-translate-y-1 flex flex-col justify-center min-h-[150px]"
+          data-testid="year-week-link-1"
+          href="/recaps/2025/week-1"
+        >
+          <h2
+            class="text-xl font-semibold text-gray-900 mb-2"
+          >
+            Week 1
+          </h2>
+          <p
+            class="text-gray-600"
+          >
+            View Recap
+          </p>
+        </a>
+      </li>
+      <li
+        animate="[object Object]"
+        data-testid="year-week-item-2"
+        initial="[object Object]"
+        transition="[object Object]"
+      >
+        <a
+          class="block rounded-lg shadow-md bg-white hover:bg-green-50 p-6 text-center transition border border-gray-200 hover:border-green-400 transform transition-transform hover:shadow-lg hover:scale-105 hover:-translate-y-1 flex flex-col justify-center min-h-[150px]"
+          data-testid="year-week-link-2"
+          href="/recaps/2025/week-2"
+        >
+          <h2
+            class="text-xl font-semibold text-gray-900 mb-2"
+          >
+            Week 2
+          </h2>
+          <p
+            class="text-gray-600"
+          >
+            View Recap
+          </p>
+        </a>
+      </li>
+      <li
+        animate="[object Object]"
+        data-testid="year-week-item-3"
+        initial="[object Object]"
+        transition="[object Object]"
+      >
+        <a
+          class="block rounded-lg shadow-md bg-white hover:bg-green-50 p-6 text-center transition border border-gray-200 hover:border-green-400 transform transition-transform hover:shadow-lg hover:scale-105 hover:-translate-y-1 flex flex-col justify-center min-h-[150px]"
+          data-testid="year-week-link-3"
+          href="/recaps/2025/week-3"
+        >
+          <h2
+            class="text-xl font-semibold text-gray-900 mb-2"
+          >
+            Week 3
+          </h2>
+          <p
+            class="text-gray-600"
+          >
+            View Recap
+          </p>
+        </a>
+      </li>
+    </ul>
+  </div>
+</DocumentFragment>
+`;

@@ -39,9 +39,15 @@ export const TestIds = {
 
   // Recap Page
 
+  // Year Page
+  YEAR_PAGE: "year-page",
+  YEAR_TITLE: "year-title",
+  YEAR_WEEK_LIST: "year-week-list",
+  YEAR_WEEK_ITEM: "year-week-item",
+  YEAR_WEEK_LINK: "year-week-link",
+
   // View All Recaps Page
   VIEW_ALL_RECAPS: "view-all-recaps",
-  // Year Page
 
   /**
    * Components
