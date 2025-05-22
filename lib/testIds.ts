@@ -57,6 +57,17 @@ export const TestIds = {
   BREADCRUMB_SEPARATOR: "breadcrumb-separator",
 
   // DesktopNavbar Component
+  DESKTOP_NAVBAR: "desktop-navbar",
+  DESKTOP_NAV_RECAPS: "desktop-nav-recaps",
+  DESKTOP_RECAPS_BUTTON: "desktop-recaps-button",
+  DESKTOP_RECAPS_FLYOUT: "desktop-recaps-flyout",
+  DESKTOP_SEASON: "desktop-season",
+  DESKTOP_SEASON_BUTTON: "desktop-season-button",
+  DESKTOP_WEEK: "desktop-week",
+  DESKTOP_OLDER_SEASON: "desktop-older-season",
+  DESKTOP_OLDER_SEASON_BUTTON: "desktop-older-season-button",
+  DESKTOP_TOGGLE_OLDER_SEASONS: "desktop-toggle-older-seasons",
+  DESKTOP_VIEW_ALL_RECAPS: "desktop-view-all-recaps",
 
   // GameNotesSection.tsx
   GAME_NOTES_SECTION: "game-notes-section",
