@@ -1,4 +1,3 @@
-// pages/recaps/[year]/index.page.test.tsx
 import fs from "fs";
 import path from "path";
 import React from "react";
@@ -69,12 +68,11 @@ describe("YearPage component", () => {
 describe("getStaticPaths", () => {
   const FAKE_DIR = "/project/data/recaps";
 
-  beforeAll(() => {
+  beforeEach(() => {
     // any call to path.join(...) returns our fake dir
     mockedPath.join.mockReturnValue(FAKE_DIR);
-  });
 
-  beforeEach(() => {
+    // Pretends there is two .json files and one other file that isn't .json
     (fs.readdirSync as jest.Mock).mockReturnValue([
       "2023.json",
       "notes.txt",
@@ -115,13 +113,11 @@ describe("getStaticProps", () => {
     recaps: [{ week: 10, title: "x", sections: [] }],
   };
 
-  beforeAll(() => {
+  beforeEach(() => {
     // path.join(..., '2021.json') → our fake file path
     mockedPath.join.mockReturnValue(FAKE_FILE);
-  });
 
-  beforeEach(() => {
-    // reading that file returns SAMPLE_DATA
+    // Reading that file returns SAMPLE_DATA
     mockedFs.readFileSync.mockReturnValue(JSON.stringify(SAMPLE_DATA));
   });
 
@@ -135,6 +131,7 @@ describe("getStaticProps", () => {
 
     const result = await getStaticProps(context);
 
+    // Assertions
     expect(result).toEqual({
       props: {
         year: 2021,
