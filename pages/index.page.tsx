@@ -11,7 +11,7 @@ export default function Home() {
     <>
       <main data-testid={TestIds.HOME_MAIN}>
         {/* Hero/logo */}
-        <div data-testid={TestIds.HOME_HERO_LOGO_CONTAINER} className="mx-auto w-full max-w-lg">
+        <div className="mx-auto w-full max-w-lg">
           <Image
             data-testid={TestIds.HOME_HERO_LOGO}
             src={logoSrc}
@@ -34,7 +34,7 @@ export default function Home() {
           >
             I75 League Recaps
           </h1>
-          <p data-testid={TestIds.HOME_INTRO_TEXT} className="text-lg text-gray-600 mb-6">
+          <p className="text-lg text-gray-600 mb-6">
             Welcome to the official recap hub for the I75 League, where every week’s matchups
             are transformed from email threads into a polished web experience—complete with scores,
             highlights, GIFs, and a dash of humor.

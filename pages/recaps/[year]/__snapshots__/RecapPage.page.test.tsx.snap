@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RecapPage ([year]/[week].page.tsx) matches snapshot when a recap is provided 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="recap-page"
+  >
+    <div
+      data-testid="stubbed-recap-layout"
+    >
+      Stubbed RecapLayout – year=2025, week=1
+    </div>
+  </div>
+</DocumentFragment>
+`;

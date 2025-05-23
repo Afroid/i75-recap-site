@@ -1,0 +1,121 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RecapLayout matches the full layout snapshot 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="breadcrumb"
+  >
+    2023–Week 1
+  </div>
+  <h1
+    class="text-3xl font-bold mb-6"
+    data-testid="recap-title"
+  >
+    2023 - Week 1 Recap
+  </h1>
+  <div
+    class="mb-8"
+    data-testid="recap-section-tidbits-0"
+  >
+    <h2
+      class="text-2xl font-bold mb-2"
+      data-testid="recap-heading-tidbits-0"
+    >
+      Interesting Tidbits
+    </h2>
+    <div
+      data-testid="stubbed-markdown"
+    >
+      Welcome to week 1
+    </div>
+    <ul
+      class="list-disc pl-6 space-y-1"
+      data-testid="recap-bullets-0"
+    >
+      <li
+        data-testid="recap-bullet-0-0"
+      >
+        <div
+          data-testid="stubbed-markdown"
+        >
+          Note A
+        </div>
+      </li>
+      <li
+        data-testid="recap-bullet-0-1"
+      >
+        <div
+          data-testid="stubbed-markdown"
+        >
+          Note B
+        </div>
+      </li>
+    </ul>
+    <div
+      data-testid="stubbed-markdown"
+    >
+      Goodbye!
+    </div>
+  </div>
+  <div
+    class="mb-8"
+    data-testid="recap-section-sidePieces-1"
+  >
+    <h2
+      class="text-2xl font-bold mb-2"
+      data-testid="recap-heading-sidePieces-1"
+    >
+      Side Pieces
+    </h2>
+    <div
+      data-testid="stubbed-markdown"
+    >
+      Here are some extra side pieces of information.
+    </div>
+    <div
+      class="mt-4"
+    >
+      <img
+        alt="GIF or Screenshot"
+        class="w-full lg:w-auto h-auto rounded shadow-md"
+        data-testid="next-image"
+        height="400"
+        src="/someRandomGif.gif"
+        width="600"
+      />
+    </div>
+  </div>
+  <div
+    class="mb-8"
+    data-testid="recap-section-leaderDud-2"
+  >
+    <h2
+      class="text-2xl font-bold mb-2"
+      data-testid="recap-heading-leaderDud-2"
+    >
+      Leader and Loser
+    </h2>
+    <div
+      data-testid="stubbed-leader-dud"
+    >
+      {"type":"leaderDud","pointsLeader":{"name":"Player X","points":99,"notes":"Great job!"},"dud":{"name":"Player Z","points":0,"notes":"Ouch."}}
+    </div>
+  </div>
+  <div
+    class="mb-8"
+    data-testid="recap-section-gameNotes-3"
+  >
+    <h2
+      class="text-2xl font-bold mb-2"
+      data-testid="recap-heading-gameNotes-3"
+    >
+      Week 1 Game Notes
+    </h2>
+    <div
+      data-testid="stubbed-game-notes"
+    >
+      {"type":"gameNotes","matchups":[{"team1":"X","team1Logo":"","record1":"","score1":21,"team2":"Y","team2Logo":"","record2":"","score2":14,"breakdown":"Close game!"}]}
+    </div>
+  </div>
+</DocumentFragment>
+`;

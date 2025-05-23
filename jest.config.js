@@ -12,8 +12,6 @@ const customJestConfig = {
   testEnvironment: "jest-environment-jsdom",
   moduleNameMapper: {
     "^@/(.*)$": "<rootDir>/$1",
-    // uncomment if you mock next/image:
-    // "^next/image$": "<rootDir>/__mocks__/nextImageMock.js",
   },
   transform: {
     // Use Babel-jest with the Next.js Babel preset so TSX/JSX is handled

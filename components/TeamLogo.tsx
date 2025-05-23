@@ -1,7 +1,17 @@
 import React from "react";
 import Image from "next/image";
 import { useLogo } from "@/lib/LogoContext";
+import { TestIds } from "@/lib/testIds";
 
+/**
+ * TeamLogo component
+ * Renders a team logo image, falling back to a random or default logo if loading fails.
+ *
+ * Props:
+ * - src: Optional specific image URL for the team.
+ * - alt: Alternative text for accessibility.
+ * - className: Optional additional CSS classes.
+ */
 export default function TeamLogo({
   src,
   alt,
@@ -16,6 +26,7 @@ export default function TeamLogo({
 
   return (
     <Image
+      data-testid={TestIds.TEAM_LOGO_IMAGE}
       src={src || randomLogoSrc}
       alt={alt}
       width={88}

@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Custom404 matches its snapshot 1`] = `
+<DocumentFragment>
+  <main
+    class="min-h-[calc(100vh-3rem)] min-h-screen flex flex-col items-center justify-center text-center px-4"
+    data-testid="not-found-main"
+  >
+    <h1
+      class="text-4xl font-bold mb-4"
+    >
+      Page Not Found
+    </h1>
+    <p
+      class="text-lg mb-6 text-center max-w-md"
+    >
+      The page you're looking for doesn’t exist. You might’ve clicked a dead link or mistyped something.
+    </p>
+    <a
+      class="text-blue-600 hover:underline text-lg"
+      data-testid="return-home-link"
+      href="/"
+    >
+      Return Home
+    </a>
+  </main>
+</DocumentFragment>
+`;

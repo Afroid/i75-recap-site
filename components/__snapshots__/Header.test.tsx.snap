@@ -1,0 +1,76 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header matches the snapshot 1`] = `
+<DocumentFragment>
+  <header
+    class="fixed top-0 left-0 w-full z-50 bg-global-nav text-white shadow-md h-12"
+    data-testid="site-header"
+  >
+    <div
+      class="max-w-7xl mx-auto flex items-center justify-between h-full"
+    >
+      <div
+        class="flex items-center space-x-4 lg:hidden bg-green-500 h-full pl-4"
+        data-testid="mobile-header"
+      >
+        <button
+          aria-label="Toggle menu"
+          class="relative w-8 h-8 flex items-center justify-center"
+          data-testid="header-hamburger-button"
+        >
+          <div
+            class="
+                  absolute w-8 h-0.5 bg-white transform
+                  transition-all duration-300 ease-in-out
+                  -translate-y-2
+                "
+          />
+          <div
+            class="absolute w-8 h-0.5 bg-white transition-all duration-300 ease-in-out
+                  
+                "
+          />
+          <div
+            class="
+                  absolute w-8 h-0.5 bg-white transform
+                  transition-all duration-300 ease-in-out
+                  translate-y-2
+                "
+          />
+        </button>
+        <div
+          data-testid="stubbed-header-logo"
+        >
+          Logo
+        </div>
+      </div>
+      <div
+        class="hidden lg:flex"
+        data-testid="header-desktop-logo"
+      >
+        <div
+          data-testid="stubbed-header-logo"
+        >
+          Logo
+        </div>
+      </div>
+      <nav
+        class="hidden lg:flex items-center flex-grow ml-8"
+        data-testid="header-desktop-nav"
+      >
+        <nav
+          data-testid="stubbed-desktop-nav"
+        >
+          DesktopNav
+        </nav>
+      </nav>
+    </div>
+    <div
+      data-is-open="false"
+      data-testid="mobile-drawer"
+    >
+      Drawer(closed)
+    </div>
+  </header>
+</DocumentFragment>
+`;

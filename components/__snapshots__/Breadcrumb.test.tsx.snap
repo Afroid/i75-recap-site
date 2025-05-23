@@ -1,0 +1,60 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Breadcrumb matches the snapshot 1`] = `
+<DocumentFragment>
+  <nav
+    aria-label="Breadcrumb"
+    class="text-sm text-gray-600 mb-6"
+    data-testid="breadcrumb-nav"
+  >
+    <ol
+      class="flex flex-wrap"
+      data-testid="breadcrumb-list"
+    >
+      <li
+        class="flex items-center"
+        data-testid="breadcrumb-item-0"
+      >
+        <a
+          href="/"
+        >
+          I75 League
+        </a>
+        <span
+          class="px-2 text-gray-400"
+          data-testid="breadcrumb-separator-0"
+        >
+          /
+        </span>
+      </li>
+      <li
+        class="flex items-center"
+        data-testid="breadcrumb-item-1"
+      >
+        <a
+          href="/recaps/2023"
+        >
+          2023
+        </a>
+        <span
+          class="px-2 text-gray-400"
+          data-testid="breadcrumb-separator-1"
+        >
+          /
+        </span>
+      </li>
+      <li
+        class="flex items-center"
+        data-testid="breadcrumb-item-2"
+      >
+        <span
+          class="text-gray-900 font-semibold"
+          data-testid="breadcrumb-current"
+        >
+          5
+        </span>
+      </li>
+    </ol>
+  </nav>
+</DocumentFragment>
+`;
