@@ -34,7 +34,7 @@ export const TestIds = {
   CONTACT_FORM_SUBMIT: "contact-form-submit",
 
   /**
-   * Recap Pages - (pages/recaps)
+   * Recap Pages in /pages/recaps/
    */
 
   // Recap Page
@@ -49,6 +49,20 @@ export const TestIds = {
   YEAR_WEEK_LINK: "year-week-link",
 
   // View All Recaps Page
+  VIEW_ALL_RECAPS_DROPDOWN: "view-all-recaps-dropdown",
+  VIEW_ALL_RECAPS_DROPDOWN_BUTTON: "view-all-recaps-dropdown-button",
+  VIEW_ALL_RECAPS_DROPDOWN_ICON_UP: "view-all-recaps-dropdown-icon-up",
+  VIEW_ALL_RECAPS_DROPDOWN_ICON_DOWN: "view-all-recaps-dropdown-icon-down",
+  VIEW_ALL_RECAPS_DROPDOWN_LIST: "view-all-recaps-dropdown-list",
+  VIEW_ALL_RECAPS_DROPDOWN_OPTION: "view-all-recaps-dropdown-option",
+  VIEW_ALL_RECAPS_PAGE: "view-all-recaps-page",
+  VIEW_ALL_RECAPS_SEARCH_INPUT: "view-all-recaps-search-input",
+  VIEW_ALL_RECAPS_SEARCH_ICON: "view-all-recaps-search-icon",
+  VIEW_ALL_RECAPS_RECAP_LIST: "view-all-recaps-recap-list",
+  VIEW_ALL_RECAPS_RECAP_ITEM: "view-all-recaps-recap-item",
+  VIEW_ALL_RECAPS_RECAP_LINK: "view-all-recaps-recap-link",
+  VIEW_ALL_RECAPS_RECAP_TITLE: "view-all-recaps-recap-title",
+  VIEW_ALL_RECAPS_RECAP_SEASON: "view-all-recaps-recap-season",
   VIEW_ALL_RECAPS: "view-all-recaps",
 
   /**

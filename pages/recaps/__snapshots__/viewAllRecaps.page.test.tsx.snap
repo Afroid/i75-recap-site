@@ -1,0 +1,186 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ViewAllRecapsPage matches the snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="pt-4 max-w-4xl mx-auto px-4"
+    data-testid="view-all-recaps-page"
+  >
+    <div
+      class="mb-6 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between"
+    >
+      <div
+        class="relative w-full sm:max-w-xs"
+      >
+        <input
+          class="border px-3 py-2 rounded-md w-full sm:max-w-xs"
+          data-testid="view-all-recaps-search-input"
+          placeholder="Search by year or week..."
+          type="text"
+          value=""
+        />
+        <svg
+          aria-hidden="true"
+          class="lucide lucide-search absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400"
+          data-testid="view-all-recaps-search-icon"
+          fill="none"
+          height="18"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+          width="18"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <circle
+            cx="11"
+            cy="11"
+            r="8"
+          />
+          <path
+            d="m21 21-4.3-4.3"
+          />
+        </svg>
+      </div>
+      <div
+        class="flex flex-col sm:flex-row w-full sm:w-auto sm:gap-4 gap-2"
+      >
+        <div
+          class="flex flex-row gap-2 w-full sm:w-auto"
+        >
+          <div
+            class="w-2/5 sm:w-auto lg:w-28"
+          >
+            <div
+              class="relative w-full"
+              data-testid="view-all-recaps-dropdown-
+      all-years"
+            >
+              <button
+                class="flex justify-between items-center border px-3 py-2 rounded-md w-full"
+                data-testid="view-all-recaps-dropdown-button-
+        all-years"
+              >
+                <span>
+                  All Years
+                </span>
+                <svg
+                  aria-hidden="true"
+                  class="lucide lucide-chevron-down text-gray-500"
+                  data-testid="view-all-recaps-dropdown-icon-down"
+                  fill="none"
+                  height="16"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                  width="16"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="m6 9 6 6 6-6"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div
+            class="w-3/5 sm:w-auto lg:w-40"
+          >
+            <div
+              class="relative w-full"
+              data-testid="view-all-recaps-dropdown-
+      sort-order"
+            >
+              <button
+                class="flex justify-between items-center border px-3 py-2 rounded-md w-full"
+                data-testid="view-all-recaps-dropdown-button-
+        sort-order"
+              >
+                <span>
+                  Latest to Oldest
+                </span>
+                <svg
+                  aria-hidden="true"
+                  class="lucide lucide-chevron-down text-gray-500"
+                  data-testid="view-all-recaps-dropdown-icon-down"
+                  fill="none"
+                  height="16"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                  width="16"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="m6 9 6 6 6-6"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <ul
+      class="grid grid-cols-1 sm:grid-cols-2 gap-6"
+      data-testid="view-all-recaps-recap-list"
+    >
+      <li
+        animate="[object Object]"
+        data-testid="view-all-recaps-recap-item-2023-1"
+        initial="[object Object]"
+        transition="[object Object]"
+      >
+        <a
+          class="block rounded-lg shadow-md bg-white hover:bg-green-50 p-6 text-center transition border border-gray-200 hover:border-green-400 transform transition-transform hover:shadow-lg hover:scale-105 hover:-translate-y-1 flex flex-col justify-center min-h-[150px]"
+          data-testid="view-all-recaps-recap-link-2023-1"
+          href="/recaps/2023/week-1"
+        >
+          <h2
+            class="text-xl font-semibold text-gray-900 mb-2"
+            data-testid="view-all-recaps-recap-title-2023-1"
+          >
+            Week 1
+          </h2>
+          <p
+            class="text-gray-600"
+            data-testid="view-all-recaps-recap-season-2023-1"
+          >
+            Season 2023
+          </p>
+        </a>
+      </li>
+      <li
+        animate="[object Object]"
+        data-testid="view-all-recaps-recap-item-2022-2"
+        initial="[object Object]"
+        transition="[object Object]"
+      >
+        <a
+          class="block rounded-lg shadow-md bg-white hover:bg-green-50 p-6 text-center transition border border-gray-200 hover:border-green-400 transform transition-transform hover:shadow-lg hover:scale-105 hover:-translate-y-1 flex flex-col justify-center min-h-[150px]"
+          data-testid="view-all-recaps-recap-link-2022-2"
+          href="/recaps/2022/week-2"
+        >
+          <h2
+            class="text-xl font-semibold text-gray-900 mb-2"
+            data-testid="view-all-recaps-recap-title-2022-2"
+          >
+            Week 2
+          </h2>
+          <p
+            class="text-gray-600"
+            data-testid="view-all-recaps-recap-season-2022-2"
+          >
+            Season 2022
+          </p>
+        </a>
+      </li>
+    </ul>
+  </div>
+</DocumentFragment>
+`;
