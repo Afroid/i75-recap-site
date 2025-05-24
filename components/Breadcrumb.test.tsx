@@ -1,6 +1,5 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
-import "@testing-library/jest-dom";
 import Breadcrumb from "@/components/Breadcrumb";
 
 // Stub next/link so it just renders a plain <a>
