@@ -20,8 +20,24 @@
     "noEmit": true,
     "jsx": "preserve",
     "incremental": true,
-    "types": ["node", "jest", "@testing-library/jest-dom"]
+    "types": [
+      "node",                       // for Node.js globals (process, __dirname, etc)
+      "jest",
+      "@testing-library/jest-dom",
+      "webdriverio",                // core WDIO types (Element & Chainable)
+      "@wdio/globals/types",        // defines `browser`, `driver`, etc
+      "@wdio/mocha-framework",      // defines `describe`, `it`, `before`, `after`, etc
+    ]
   },
-  "include": [".", "**/*.ts", "**/*.tsx", "jest.setup.ts"],
+  "include": [
+    ".",
+    "**/*.ts",
+    "**/*.tsx",
+    "jest.setup.ts",
+    "tests/**/*.ts",
+    "tests/e2e/wdio/wdio.conf.ts",
+    "types/**/*.d.ts",
+    "tests/**/*.ts"
+  ],
   "exclude": ["node_modules"]
 }
