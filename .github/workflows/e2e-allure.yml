@@ -40,6 +40,7 @@ jobs:
           path: allure-report
 
   pages:
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     name: Publish Allure to GitHub Pages
     needs: e2e
     environment:
@@ -53,7 +54,6 @@ jobs:
       pages: write
       id-token: write
 
-    if: github.ref == 'refs/heads/main'
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
