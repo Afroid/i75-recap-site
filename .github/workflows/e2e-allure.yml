@@ -27,6 +27,9 @@ jobs:
   pages:
     if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     name: Publish Allure to GitHub Pages
+    environment:
+      name: github-pages
+      url: https://Afroid.github.io/i75-recap-site/
     runs-on: ubuntu-latest
     permissions:
       contents: write
