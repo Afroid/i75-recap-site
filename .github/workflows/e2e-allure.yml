@@ -33,7 +33,7 @@ jobs:
         run: npx allure generate allure-results --clean -o allure-report
 
       - name: Upload Allure report artifact
-        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        if: github.ref == 'refs/heads/main'
         uses: actions/upload-artifact@v3
         with:
           name: allure-report
