@@ -1,0 +1,52 @@
+name: E2E Tests & Allure Report
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  # PR + main: just run the tests
+  e2e:
+    name: Run WDIO Tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '20'
+          cache: 'npm'
+      - run: npm ci
+      - run: npm run build
+      - run: npm run start &       # spin up your server in background
+      - run: npx wait-on http://localhost:3000
+      - run: npm run wdio:e2e      # or whatever your script is
+
+  # Only on pushes to main: build, test, generate Allure, then deploy
+  pages:
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    name: Publish Allure to GitHub Pages
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pages: write
+      id-token: write
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '20'
+          cache: 'npm'
+      - run: npm ci
+      - run: npm run build
+      - run: npm run start &
+      - run: npx wait-on http://localhost:3000
+      - run: npm run wdio:e2e          # re‑runs tests and generates allure-results/
+      - run: npx allure generate allure-results --clean -o allure-report
+      - uses: peaceiris/actions-gh-pages@v3
+        with:
+          publish_branch: gh-pages
+          publish_dir: ./allure-report
+          user_name: github-actions[bot]
+          user_email: github-actions[bot]@users.noreply.github.com
