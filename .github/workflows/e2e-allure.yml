@@ -49,7 +49,11 @@ jobs:
       - run: npx allure generate allure-results --clean -o allure-report
       - uses: peaceiris/actions-gh-pages@v3
         with:
+          # the token to authenticate the push
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          # branch and folder to publish
           publish_branch: gh-pages
           publish_dir: ./allure-report
+          # commit as the Actions bot
           user_name: github-actions[bot]
           user_email: github-actions[bot]@users.noreply.github.com
