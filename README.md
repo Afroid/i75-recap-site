@@ -111,7 +111,6 @@ Open the HTML file in your browser for detailed insights.
 We use [Allure](https://docs.qameta.io/allure/) to generate interactive HTML reports for our E2E runs.
 
 [**Allure Test Report**](https://Afroid.github.io/i75-recap-site/)
-https://Afroid.github.io/i75-recap-site/
 
 ### Allure Reporting Scripts
 
@@ -139,7 +138,6 @@ We’ve included a GitHub Actions workflow (`.github/workflows/allure.yml`) that
 Once merged, your reports will be publicly available at:
 
 [**Allure Test Report**](https://Afroid.github.io/i75-recap-site/)
-https://Afroid.github.io/i75-recap-site/
 
 ---
 
