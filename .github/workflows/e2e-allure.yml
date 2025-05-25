@@ -19,7 +19,7 @@ jobs:
           node-version: '20'
           cache: 'npm'
       - run: npm ci
-      - run: npm run test:wdio
+      - run: npm run wdio:e2e
 
   # pages: only on real pushes to main, self‑contained publish
   pages:
@@ -39,7 +39,7 @@ jobs:
           node-version: '20'
           cache: 'npm'
       - run: npm ci
-      - run: npm run test:wdio
+      - run: npm run wdio:e2e
       - run: npx allure generate allure-results --clean -o allure-report
       - uses: peaceiris/actions-gh-pages@v3
         with:
