@@ -1,3 +1,5 @@
+import allure from '@wdio/allure-reporter';
+
 const BROWSERS = (process.env.BROWSERS ?? 'chrome').split(',');
 const BASE_URL = process.env.BASE_URL ?? 'http://localhost:3000';
 const HEADLESS = process.env.HEADLESS !== 'false';
@@ -45,7 +47,38 @@ export const config: WebdriverIO.Config = {
   capabilities: caps as WebdriverIO.Config['capabilities'],
   framework: 'mocha',
   services: [],      // I can leave this empty because WDIO will auto‑manage drivers
-  reporters: ['spec'],
+  reporters: [
+    'spec',
+    ['allure', {
+      outputDir: 'allure-results',
+      disableWebdriverStepsReporting: true,
+      disableWebdriverScreenshotsReporting: false,
+    }]
+  ],
+  //
+  // afterTest is called once each test completes
+  //
+  afterTest: async function (
+    _test,    // Unused, so that's why it's prefixed with an underscore
+    _context, // Unused
+    { error } // only one being used (for now)
+  ) {
+    /**
+     * result, duration, passed, retries are part of afterTest's hook signature, just like error
+     * If you want to use them for something later, you can.
+     */
+    if (error) {
+      // Grab a screenshot and attach it to Allure
+      const screenshot = await browser.takeScreenshot();
+      allure.addAttachment(
+        'Screenshot on failure',
+        Buffer.from(screenshot, 'base64'),
+        'image/png'
+      );
+    }
+    // you can also add custom labels, parameters, steps, etc:
+    // allure.addLabel('feature', test.parent);
+  },
   baseUrl: BASE_URL,
   tsConfigPath: "../../../tsconfig.json",
 
