@@ -1,2 +1,2 @@
 "DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
-"","10153","renders the site header","","Sun May 25 06:13:24 UTC 2025","passed","Sun May 25 06:13:34 UTC 2025","","Home page","",""
+"","10058","renders the site header","","Tue May 27 19:52:21 UTC 2025","passed","Tue May 27 19:52:31 UTC 2025","","Home page","",""
