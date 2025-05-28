@@ -17,7 +17,7 @@ Built with **Next.js**, **TypeScript**, **TailwindCSS**, **Framer Motion**, **ES
 
 🧪 Status
 
-[![Coverage Status](https://img.shields.io/badge/coverage-85%25-yellowgreen)](coverage/lcov-report/index.html)
+[![Codecov](https://img.shields.io/codecov/c/github/Afroid/i75-recap-site?branch=main&logo=codecov)](https://codecov.io/gh/Afroid/i75-recap-site)
 
 ---
 
