@@ -17,7 +17,7 @@ Built with **Next.js**, **TypeScript**, **TailwindCSS**, **Framer Motion**, **ES
 
 🧪 Status
 
-[![Coverage Status](https://img.shields.io/badge/coverage-94.24%5.76-yellowgreen)](coverage/lcov-report/index.html)
+[![Coverage Status](https://img.shields.io/badge/coverage-94%6-yellowgreen)](coverage/lcov-report/index.html)
 
 ---
 
