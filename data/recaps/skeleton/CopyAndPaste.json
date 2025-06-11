@@ -1,0 +1,78 @@
+{
+  "year": 1234,
+  "recaps": [
+    {
+      "week": 1,
+      "title": "",
+      "sections": [
+        {
+          "type": "intro",
+          "content": ""
+        },
+        {
+          "type": "tidbits",
+          "intro": "",
+          "bullets": [],
+          "outro": "",
+          "imageUrl": "",
+          "imageAlt": ""
+        },
+        {
+          "type": "injuries",
+          "intro": "",
+          "bullets": [],
+          "outro": "",
+          "imageUrl": "",
+          "imageAlt": ""
+        },
+        {
+          "type": "leaderDud",
+          "pointsLeader": {
+            "name": "",
+            "points": 0,
+            "notes": ""
+          },
+          "dud": {
+            "name": "",
+            "points": 0,
+            "notes": ""
+          }
+        },
+        {
+          "type": "gameNotes",
+          "matchups": [
+            {
+              "team1": "",
+              "score1": 0,
+              "record1": "",
+              "team2": "",
+              "score2": 0,
+              "record2": "",
+              "breakdown": "",
+              "imageUrl": "",
+              "imageAlt": ""
+            }
+          ]
+        },
+        {
+          "type": "sidePieces",
+          "content": "",
+          "imageUrl": "",
+          "imageAlt": ""
+        },
+        {
+          "type": "matchups",
+          "content": "",
+          "imageUrl": "",
+          "imageAlt": ""
+        },
+        {
+          "type": "farewell",
+          "content": "",
+          "imageUrl": "",
+          "imageAlt": ""
+        }
+      ]
+    }
+  ]
+}
