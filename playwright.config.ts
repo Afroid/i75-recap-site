@@ -1,14 +1,20 @@
 import { defineConfig, devices } from '@playwright/test';
 
 export default defineConfig({
-  testDir: './e2e/playwright',      // keep your Playwright tests separate
-  timeout: 30_000,                  // per‑test timeout
+  testDir: './tests/e2e/playwright',      // Keeps the Playwright tests separate
+  testMatch: ['**/specs/**/*.spec.ts'],   // Picks up specs under the specs/ folder
+  timeout: 30_000,                        // Per‑test timeout
   reporter: [
     ['list'],
     ['html', { open: 'never', outputFolder: 'playwright-report' }],
-    // If I add Allure later:
-    // ['allure-playwright']
+    ['allure-playwright', { outputFolder: 'allure-results' }],
   ],
+  webServer: {
+    command: 'npm run start',             // or 'npm run dev'
+    url: 'http://localhost:3000',
+    reuseExistingServer: !process.env.CI,
+    timeout: 120_000,                     // This makes it wait up to 2 minutes for it to start
+  },
   use: {
     baseURL: process.env.PW_BASE_URL || 'http://localhost:3000',
     headless: true,
@@ -17,7 +23,7 @@ export default defineConfig({
   },
   projects: [
     { name: 'chromium', use: { ...devices['Desktop Chrome'] } },
-    { name: 'firefox',  use: { ...devices['Desktop Firefox'] } },
-    { name: 'webkit',   use: { ...devices['Desktop Safari'] } },
+    // { name: 'firefox',  use: { ...devices['Desktop Firefox'] } },
+    // { name: 'webkit',   use: { ...devices['Desktop Safari'] } },
   ],
 });

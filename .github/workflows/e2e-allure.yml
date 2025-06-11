@@ -7,7 +7,7 @@ on:
     branches: [ main ]
 
 jobs:
-  # PR + main: just run the tests
+  # PR + main: just run the WDIO tests
   e2e:
     name: Run WDIO Tests
     runs-on: ubuntu-latest
@@ -19,9 +19,9 @@ jobs:
           cache: 'npm'
       - run: npm ci
       - run: npm run build
-      - run: npm run start &       # spin up your server in background
+      - run: npm run start &       # Spins up the server in background
       - run: npx wait-on http://localhost:3000
-      - run: npm run wdio:e2e      # or whatever your script is
+      - run: npm run wdio:e2e
 
   # Only on pushes to main: build, test, generate Allure, then deploy
   pages:
@@ -42,18 +42,27 @@ jobs:
           node-version: '20'
           cache: 'npm'
       - run: npm ci
+
+      # Install Playwright browsers
+      - run: npx playwright install --with-deps
+
       - run: npm run build
       - run: npm run start &
       - run: npx wait-on http://localhost:3000
+
+      # Run both frameworks into the same allure-results/
       - run: npm run wdio:e2e          # re‑runs tests and generates allure-results/
+      - run: npm run pw:e2e
+
+      # Generate & publish a single combined report
       - run: npx allure generate allure-results --clean -o allure-report
       - uses: peaceiris/actions-gh-pages@v3
         with:
-          # the token to authenticate the push
+          # The token to authenticate the push
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          # branch and folder to publish
+          # Branch and folder to publish
           publish_branch: gh-pages
           publish_dir: ./allure-report
-          # commit as the Actions bot
+          # Commit as the Actions bot
           user_name: github-actions[bot]
           user_email: github-actions[bot]@users.noreply.github.com
