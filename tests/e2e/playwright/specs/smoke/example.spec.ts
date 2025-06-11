@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
 
-test('home page loads', async ({ page }) => {
+test('Home page loads', async ({ page }) => {
   await page.goto('/');
-  await expect(page.locator('h1')).toHaveText('Welcome to the Home Page');
+  await expect(page.locator('h1')).toHaveText('I75 League Recaps');
 });
