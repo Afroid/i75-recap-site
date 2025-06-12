@@ -1,1 +1,1 @@
-[{"uid":"15c689ea0d98935","name":"renders the site header","time":{"start":1749604216788,"stop":1749604226863,"duration":10075},"status":"passed","severity":"normal"}]
+[{"uid":"653f71818339d3f2","name":"renders the site header","time":{"start":1749687034153,"stop":1749687044247,"duration":10094},"status":"passed","severity":"normal"},{"uid":"1a098e61e04cafdb","name":"Home page loads","time":{"start":1749687046198,"stop":1749687046565,"duration":367},"status":"passed","severity":"normal"}]

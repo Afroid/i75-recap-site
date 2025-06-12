@@ -1,2 +1,3 @@
 "DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
-"","10075","renders the site header","","Wed Jun 11 01:10:16 UTC 2025","passed","Wed Jun 11 01:10:26 UTC 2025","","Home page","",""
+"","367","Home page loads","chromium","Thu Jun 12 00:10:46 UTC 2025","passed","Thu Jun 12 00:10:46 UTC 2025","","specs/smoke/example.spec.ts","",""
+"","10094","renders the site header","","Thu Jun 12 00:10:34 UTC 2025","passed","Thu Jun 12 00:10:44 UTC 2025","","Home page","",""
