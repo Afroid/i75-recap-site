@@ -50,9 +50,13 @@ jobs:
       - run: npm run start &
       - run: npx wait-on http://localhost:3000
 
-      # Run both frameworks into the same allure-results/
-      - run: npm run wdio:e2e          # re‑runs tests and generates allure-results/
-      - run: npm run pw:e2e
+      # Run all three frameworks into the same allure-results/
+      - name: Run WDIO tests
+        run: npm run wdio:e2e          # re‑runs tests and generates allure-results/
+      - name: Run Cypress tests
+        run: npm run cypress:run
+      - name: Run Playwright tests
+        run: npm run pw:e2e
 
       # Generate & publish a single combined report
       - run: npx allure generate allure-results --clean -o allure-report
