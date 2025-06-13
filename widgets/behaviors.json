@@ -1,1 +1,1 @@
-{"total":2,"items":[{"uid":"30fb31f1f7d0eec1880ce5bc2f9e7a59","name":"Home page","statistic":{"failed":0,"broken":0,"skipped":0,"passed":1,"unknown":0,"total":1}}]}
+{"total":3,"items":[{"uid":"715929df35d3bbc640c55c86ee10a1db","name":"WDIO E2E Testing","statistic":{"failed":0,"broken":0,"skipped":0,"passed":2,"unknown":0,"total":2}},{"uid":"3ea54b85eb61498a963e4bab5867d3c0","name":"I75 League Site","statistic":{"failed":0,"broken":0,"skipped":0,"passed":1,"unknown":0,"total":1}}]}

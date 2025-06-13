@@ -1,3 +1,5 @@
 "DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
-"","367","Home page loads","chromium","Thu Jun 12 00:10:46 UTC 2025","passed","Thu Jun 12 00:10:46 UTC 2025","","specs/smoke/example.spec.ts","",""
-"","10094","renders the site header","","Thu Jun 12 00:10:34 UTC 2025","passed","Thu Jun 12 00:10:44 UTC 2025","","Home page","",""
+"","372","Home page loads","Playwright E2E Tests","Fri Jun 13 01:34:47 UTC 2025","passed","Fri Jun 13 01:34:47 UTC 2025","Smoke Tests > Tests the home page","specs/smoke/example.spec.ts","",""
+"","283","checks random elements on the page","","Fri Jun 13 01:34:17 UTC 2025","passed","Fri Jun 13 01:34:17 UTC 2025","","WDIO E2E Testing","",""
+"","522","Homepage smoke test","Cypress E2E Tests","Fri Jun 13 01:34:44 UTC 2025","passed","Fri Jun 13 01:34:45 UTC 2025","","Testing the Home Page","",""
+"","10148","renders the site header","","Fri Jun 13 01:34:17 UTC 2025","passed","Fri Jun 13 01:34:27 UTC 2025","","WDIO E2E Testing","",""
