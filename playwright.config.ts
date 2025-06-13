@@ -7,7 +7,10 @@ export default defineConfig({
   reporter: [
     ['list'],
     ['html', { open: 'never', outputFolder: 'playwright-report' }],
-    ['allure-playwright', { outputFolder: 'allure-results' }],
+    ['allure-playwright', {
+      outputFolder: 'allure-results',
+      suiteTitle: true
+    }],
   ],
   webServer: {
     command: 'npm run start',             // or 'npm run dev'
@@ -23,7 +26,7 @@ export default defineConfig({
     video: 'retain-on-failure',
   },
   projects: [
-    { name: 'chromium', use: { ...devices['Desktop Chrome'] } },
+    { name: 'Playwright E2E Tests', use: { ...devices['Desktop Chrome'] } },
     // { name: 'firefox',  use: { ...devices['Desktop Firefox'] } },
     // { name: 'webkit',   use: { ...devices['Desktop Safari'] } },
   ],

@@ -27,6 +27,8 @@
       "webdriverio",                // core WDIO types (Element & Chainable)
       "@wdio/globals/types",        // defines `browser`, `driver`, etc
       "@wdio/mocha-framework",      // defines `describe`, `it`, `before`, `after`, etc
+      "cypress",
+      "@shelex/cypress-allure-plugin"
     ]
   },
   "include": [
