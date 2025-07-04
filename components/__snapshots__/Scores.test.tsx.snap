@@ -1,0 +1,128 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Scores component matches snapshot for one Final game 1`] = `
+<div>
+  <div
+    class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4"
+  >
+    <div
+      class="relative border border-gray-300 rounded-lg overflow-hidden shadow-sm hover:shadow-lg hover:scale-105 transition-shadow"
+      data-testid="scores-game-0"
+    >
+      <table
+        class="w-full table-fixed"
+      >
+        <thead
+          class="bg-gray-100"
+        >
+          <tr
+            class="text-xs text-gray-600 uppercase"
+          >
+            <th
+              class="w-1/2 top-2 left-2 bg-white px-2 py-1 rounded text-xs font-bold uppercase text-left text-black"
+              data-testid="scores-status-badge-Final"
+            >
+              Final
+            </th>
+            <th
+              class="w-1/6 px-2 text-right"
+            >
+              R
+            </th>
+            <th
+              class="w-1/6 px-2 text-right"
+            >
+              H
+            </th>
+            <th
+              class="w-1/6 px-2 text-right mr-2"
+            >
+              E
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr
+            class="bg-green-100 font-semibold"
+            data-testid="scores-row-Atlanta Braves"
+          >
+            <td
+              class="px-2 py-2 flex items-center border-t border-gray-200 align-middle"
+            >
+              <span
+                class="whitespace-nowrap mr-1 "
+                data-testid="scores-team-name-Atlanta Braves"
+              >
+                Atlanta Braves
+              </span>
+              <span
+                class="text-gray-500 text-xs whitespace-nowrap"
+                data-testid="scores-team-record-Atlanta Braves"
+              >
+                3-0
+              </span>
+            </td>
+            <td
+              class="py-2 px-2 text-right border-t border-gray-200 align-middle"
+              data-testid="scores-runs-Atlanta Braves"
+            >
+              3
+            </td>
+            <td
+              class="py-2 px-2 text-right border-t border-gray-200 align-middle"
+              data-testid="scores-hits-Atlanta Braves"
+            >
+              5
+            </td>
+            <td
+              class="py-2 px-2 text-right border-t border-gray-200 align-middle"
+              data-testid="scores-errors-Atlanta Braves"
+            >
+              1
+            </td>
+          </tr>
+          <tr
+            class=""
+            data-testid="scores-row-New York Mets"
+          >
+            <td
+              class="px-2 py-2 flex items-center border-t border-gray-200 align-middle"
+            >
+              <span
+                class="whitespace-nowrap mr-1 "
+                data-testid="scores-team-name-New York Mets"
+              >
+                New York Mets
+              </span>
+              <span
+                class="text-gray-500 text-xs whitespace-nowrap"
+                data-testid="scores-team-record-New York Mets"
+              >
+                2-1
+              </span>
+            </td>
+            <td
+              class="py-2 px-2 text-right border-t border-gray-200 align-middle"
+              data-testid="scores-runs-New York Mets"
+            >
+              2
+            </td>
+            <td
+              class="py-2 px-2 text-right border-t border-gray-200 align-middle"
+              data-testid="scores-hits-New York Mets"
+            >
+              4
+            </td>
+            <td
+              class="py-2 px-2 text-right border-t border-gray-200 align-middle"
+              data-testid="scores-errors-New York Mets"
+            >
+              0
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+`;

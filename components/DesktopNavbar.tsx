@@ -265,6 +265,13 @@ export default function DesktopNavbar() {
         )}
       </div>
 
+      <Link
+        data-testid={TestIds.NAV_LINK_SCORES}
+        href="/scores"
+        className="hover:text-green-400 transition-colors duration-300"
+      >
+        MLB Scores
+      </Link>
       {/* Right side: Static Navigation Links */}
       <div data-testid="nav-static-links" className="flex items-center space-x-8 ml-auto">
         <Link

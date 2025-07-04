@@ -130,6 +130,13 @@ exports[`DesktopNavbar matches snapshot of the flyout with latest seasons 1`] = 
         </a>
       </div>
     </div>
+    <a
+      class="hover:text-green-400 transition-colors duration-300"
+      data-testid="nav-link-scores"
+      href="/scores"
+    >
+      MLB Scores
+    </a>
     <div
       class="flex items-center space-x-8 ml-auto"
       data-testid="nav-static-links"
