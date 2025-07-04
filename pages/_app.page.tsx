@@ -33,7 +33,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
         <Header data-testid={TestIds.SITE_HEADER} />
 
         {/* Main content area. pt-16 leaves space for the fixed Header. */}
-        <main data-testid={TestIds.MAIN_CONTENT} className="pt-16">
+        <main data-testid={TestIds.MAIN_CONTENT} className="pt-16 bg-[#edeef0] min-h-screen">
           <div data-testid={TestIds.PAGE_WRAPPER} className="mx-auto px-4 max-w-7xl">
             {/*
               Render the specific page component,

@@ -21,7 +21,7 @@ describe("Scores component", () => {
     };
 
     // AAA – Act: render Scores
-    render(<Scores boxScores={boxScores} highlightTeam="New York Mets" />);
+    render(<Scores boxScores={boxScores} favoriteTeam="Atlanta Braves" />);
 
     // AAA – Assert: first row (Atlanta Braves) is highlighted as winner
     // const firstRow = container.querySelector("tbody > tr:nth-child(1)");

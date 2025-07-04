@@ -36,7 +36,7 @@ export default function ScoresPage() {
       <Scores
         data-testid={TestIds.SCORES_COMPONENT}
         boxScores={boxScores}
-        highlightTeam="Atlanta Braves"
+        favoriteTeam="Atlanta Braves"
       />
     </main>
   )

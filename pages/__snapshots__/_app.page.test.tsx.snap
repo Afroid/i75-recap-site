@@ -22,7 +22,7 @@ exports[`MyApp (_app.page.tsx) matches the snapshot 1`] = `
       HEADER
     </header>
     <main
-      class="pt-16"
+      class="pt-16 bg-[#edeef0] min-h-screen"
       data-testid="main-content"
     >
       <div
