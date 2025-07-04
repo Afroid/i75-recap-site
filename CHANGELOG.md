@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/Afroid/i75-recap-site/compare/v1.2.0...v1.3.0) (2025-07-04)
+
+
+### Features
+
+* Pushing some CSS changes for alignment issues and color schemes, and I renamed highlightTeam to favoriteTeam. ([#48](https://github.com/Afroid/i75-recap-site/issues/48)) ([7732ebd](https://github.com/Afroid/i75-recap-site/commit/7732ebd185671aaf28aa7521dcc102be348bf02d))
+
 # [1.2.0](https://github.com/Afroid/i75-recap-site/compare/v1.1.0...v1.2.0) (2025-07-04)
 
 
