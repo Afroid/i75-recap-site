@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/Afroid/i75-recap-site/compare/v1.1.0...v1.2.0) (2025-07-04)
+
+
+### Features
+
+* updated PR template, add MLB links for desktop and mobile, added scores page and component for MLB, added API to pull in MLB stats from a microservice I built. ([#47](https://github.com/Afroid/i75-recap-site/issues/47)) ([2c9d413](https://github.com/Afroid/i75-recap-site/commit/2c9d413b242f627a426da270929a826a421478ee))
+
 # [1.1.0](https://github.com/Afroid/i75-recap-site/compare/v1.0.0...v1.1.0) (2025-05-18)
 
 
