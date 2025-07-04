@@ -14,7 +14,7 @@ interface BoxScoresProps {
   /** team name → its box-score */
   boxScores: Record<string, ScoreDetail>;
   /** optionally highlight one team’s row */
-  highlightTeam?: string;
+  favoriteTeam?: string;
 };
 
 interface PairedGame {
@@ -25,7 +25,7 @@ interface PairedGame {
   winner?: "A" | "B";
 };
 
-const Scores = ({ boxScores, highlightTeam }: BoxScoresProps) => {
+const Scores = ({ boxScores, favoriteTeam }: BoxScoresProps) => {
   // Turn flat object into pairs
   const entries = Object.entries(boxScores);
   const games: PairedGame[] = [];
@@ -60,13 +60,14 @@ const Scores = ({ boxScores, highlightTeam }: BoxScoresProps) => {
             key={idx}
             data-testid={`${TestIds.SCORES_GAME}-${idx}`}
             className={[
+              "bg-white",
               "relative border border-gray-300",
               "rounded-lg overflow-hidden",
               "shadow-sm hover:shadow-lg hover:scale-105 transition-shadow"
             ].join(" ")}
           >
             <table className="w-full table-fixed">
-              <thead className="bg-gray-100">
+              <thead>
                 <tr className="text-xs text-gray-600 uppercase">
                   {/* Status badge */}
                   {/* e.g. Preview, Live, Final */}
@@ -75,7 +76,7 @@ const Scores = ({ boxScores, highlightTeam }: BoxScoresProps) => {
                       data-testid={`${TestIds.SCORES_STATUS_BADGE}-${status}`}
                       className={[
                         "w-1/2 top-2 left-2",
-                        "bg-white px-2 py-1 rounded",
+                        "px-2 py-1 rounded",
                         "text-xs font-bold uppercase text-left",
                         status === "Preview"
                           ? "text-orange-500"
@@ -87,9 +88,9 @@ const Scores = ({ boxScores, highlightTeam }: BoxScoresProps) => {
                       {status}
                     </th>
                   )}
-                  <th className="w-1/6 px-2 text-right">R</th>
-                  <th className="w-1/6 px-2 text-right">H</th>
-                  <th className="w-1/6 px-2 text-right mr-2">E</th>
+                  <th className="w-1/6 px-2 py-1 text-right">R</th>
+                  <th className="w-1/6 px-2 py-1 text-right">H</th>
+                  <th className="w-1/6 px-2 py-1 text-right">E</th>
                 </tr>
               </thead>
               <tbody>
@@ -103,17 +104,12 @@ const Scores = ({ boxScores, highlightTeam }: BoxScoresProps) => {
                     className={ team === winningTeam ? "bg-green-100 font-semibold" : "" }
                   >
                     {/* Team name + team's record */}
-                    <td className={[
-                      "px-2 py-2",
-                      "flex items-center",
-                      "border-t border-gray-200 align-middle"
-                    ].join(" ")}>
-
+                    <td className="px-2 pb-1 pt-2 align-middle">
                       <span
                         data-testid={`${TestIds.SCORES_TEAM_NAME}-${team}`}
                         className={[
                           "whitespace-nowrap mr-1",
-                          team === highlightTeam ? "text-green-500 font-semibold" : ""
+                          team === favoriteTeam ? "text-green-500 font-semibold" : ""
                         ].join(" ")}
                       >
                         {getMascot(team)}
@@ -129,19 +125,19 @@ const Scores = ({ boxScores, highlightTeam }: BoxScoresProps) => {
                     {/* Runs, hits, errors for that specific team */}
                     <td
                       data-testid={`${TestIds.SCORES_RUNS}-${team}`}
-                      className="py-2 px-2 text-right border-t border-gray-200 align-middle"
+                      className="px-2 pb-1 pt-2 text-right align-middle"
                     >
                       {box.runs ?? 0}
                     </td>
                     <td
                       data-testid={`${TestIds.SCORES_HITS}-${team}`}
-                      className="py-2 px-2 text-right border-t border-gray-200 align-middle"
+                      className="px-2 pb-1 pt-2 text-right align-middle"
                     >
                       {box.hits ?? 0}
                     </td>
                     <td
                       data-testid={`${TestIds.SCORES_ERRORS}-${team}`}
-                      className="py-2 px-2 text-right border-t border-gray-200 align-middle"
+                      className="px-2 pb-1 pt-2 text-right align-middle"
                     >
                       {box.errors ?? 0}
                     </td>
