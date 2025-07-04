@@ -168,6 +168,16 @@ export default function MobileDrawer({ isOpen, onClose }: MobileDrawerProps) {
               <div className="border-t border-gray-300" />
             </div>
 
+            <h2 className="font-bold text-lg text-green-600 mb-2 underline">
+              <Link
+                data-testid={TestIds.NAV_LINK_SCORES}
+                href="/scores"
+                onClick={onClose}
+              >
+                MLB Scores
+              </Link>
+            </h2>
+
             {/* Static Navigation Links */}
             <div className="flex flex-col gap-4">
               <Link

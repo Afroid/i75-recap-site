@@ -33,6 +33,10 @@ export const TestIds = {
   CONTACT_FORM_MESSAGE_SECTION: "contact-form-message-section",
   CONTACT_FORM_SUBMIT: "contact-form-submit",
 
+  // Scores Page
+  SCORES_PAGE: "scores-page",
+  SCORES_COMPONENT: "scores-component",
+
   /**
    * Recap Pages in /pages/recaps/
    */
@@ -153,11 +157,22 @@ export const TestIds = {
   SCOREBOARD_RECORD: "scoreboard-record",
   SCOREBOARD_SCORE: "scoreboard-score",
 
+  // Scores.tsx
+  SCORES_GAME: "scores-game",
+  SCORES_STATUS_BADGE: "scores-status-badge",
+  SCORES_ROW: "scores-row",
+  SCORES_TEAM_NAME: "scores-team-name",
+  SCORES_TEAM_RECORD: "scores-team-record",
+  SCORES_RUNS: "scores-runs",
+  SCORES_HITS: "scores-hits",
+  SCORES_ERRORS: "scores-errors",
+
   // TeamLogo.tsx
   TEAM_LOGO_IMAGE: "team-logo-image",
 
   // Static Links
   NAV_LINK_HOME: "nav-link-home",
   NAV_LINK_ABOUT: "nav-link-about",
-  NAV_LINK_CONTACT: "nav-link-contact"
+  NAV_LINK_CONTACT: "nav-link-contact",
+  NAV_LINK_SCORES: "nav-link-scores"
 }

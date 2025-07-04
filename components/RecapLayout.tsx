@@ -30,7 +30,7 @@ export default function RecapLayout({ recap, year }: Props) {
 
       {/* Page title showing year and week number */}
       <h1
-        data-testid="recap-title"
+        data-testid={TestIds.RECAP_TITLE}
         className="text-3xl font-bold mb-6"
       >
         {year} - Week {recap.week} Recap

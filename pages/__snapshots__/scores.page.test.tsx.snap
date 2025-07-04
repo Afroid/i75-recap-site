@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`fetcher & ScoresPage renders the Scores component and matches snapshot when data is ready 1`] = `
+<div>
+  <main
+    data-testid="scores-page"
+  >
+    <h1
+      class="text-2xl font-bold mb-4"
+    >
+      MLB Scoreboard
+    </h1>
+    <div
+      data-testid="scores-component"
+    >
+      Mocked Scores
+    </div>
+  </main>
+</div>
+`;

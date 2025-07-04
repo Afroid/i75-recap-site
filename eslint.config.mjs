@@ -5,7 +5,7 @@ import pluginReact from "eslint-plugin-react";
 import { defineConfig } from "eslint/config";
 
 export default defineConfig([
-  // 🧹 1. Ignore folders first
+  // Ignore folders first
   {
     ignores: [
       "node_modules",
@@ -14,26 +14,27 @@ export default defineConfig([
       "build",
       "data",            // Ignore JSON files folder
       "dev-notes.ignore", // Ignore the dev notes file
+      "allure-report",
     ],
   },
 
-  // 🛠 2. Main JS/TS config
+  // Main JS/TS config
   {
     files: ["**/*.{js,mjs,cjs,ts,jsx,tsx}"],
     plugins: { js },
     extends: ["js/recommended"],
   },
 
-  // 🌎 3. Globals like window, document, etc.
+  // Globals like window, document, etc.
   {
     files: ["**/*.{js,mjs,cjs,ts,jsx,tsx}"],
     languageOptions: { globals: { ...globals.browser, ...globals.node } },
   },
 
-  // 🔥 4. TypeScript rules
+  // TypeScript rules
   tseslint.configs.recommended,
 
-  // ⚛️ 5. React rules
+  // React rules
   {
     ...pluginReact.configs.flat.recommended,
     settings: {

@@ -1,6 +1,11 @@
-## 📝 Summary
+## 🔧 Summary of Changes
 
-Brief overview of the change and its purpose.
+Is this a...
+- ✅ Major updates or additions
+- 🐛 Bug fixes or refactors
+- 🎨 Styling/UX updates
+
+Give a brief overview of the change and its purpose.
 
 _Example: Added mobile drawer accordion functionality for weekly recaps._
 
@@ -11,14 +16,6 @@ _Example: Added mobile drawer accordion functionality for weekly recaps._
 Add a link to a ticket or planning doc if one exists.
 
 _Example: [JIRA-42](https://your-jira-instance.atlassian.net/browse/JIRA-42)_
-
----
-
-## 🔧 Changes
-
-- ✅ Major updates or additions
-- 🐛 Bug fixes or refactors
-- 🎨 Styling/UX updates
 
 ---
 
@@ -57,6 +54,8 @@ Tests:       8 passed, 8 total
 - [ ] Screenshots/demos attached if UI changed
 - [ ] No major performance regressions
 
-## 🧪 Notes
+## 🧪 Notes (optional)
+
+_Add any caveats, follow-ups, or test notes here. If this is a WIP, explain what's left._## 🧪 Notes
 
 _Add any caveats, follow-ups, or test notes here. If this is a WIP, explain what's left._
