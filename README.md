@@ -68,17 +68,17 @@ Open [http://localhost:3000](http://localhost:3000) to see the app.
 ## 🧪 Testing
 
 We use **Jest** + **React Testing Library** for unit and snapshot tests.
-We use **WDIO** (Playwright and Cypress are coming) for our E2E runs.
+We use **WDIO**, **Playwright** and **Cypress** for our E2E runs.
 
 🧪🧠 Full testing wiki available here: [**I75 League Testing**](https://github.com/Afroid/i75-recap-site/wiki/I75-League-Testing)
 
 ### Jest Scripts
 
-| Script                   | What it does                                                          |
-| ------------------------ | --------------------------------------------------------------------- |
-| `npm test`               | Run **all** tests once (jsdom environment)                           |
-| `npm run test:watch`     | Run tests in **watch** mode                                          |
-| `npm run test:coverage`  | Generate **coverage** reports (HTML + text-summary + lcov)           |
+| Script                   | What it does                                                                   |
+| ------------------------ | -------------------------------------------------------------------------------|
+| `npm test`               | Run **all** tests once (jsdom environment)                                     |
+| `npm run test:watch`     | Run tests in **watch** mode                                                    |
+| `npm run test:coverage`  | Generate **coverage** reports (HTML + text-summary + lcov)                     |
 | `npx jest <path>`        | Run **only** the specified test file, e.g.:<br>`npx jest pages/index.test.tsx` |
 
 ### Jest Test Coverage
@@ -105,6 +105,29 @@ Open the HTML file in your browser for detailed insights.
 | `npm run test:smoke`                    | Run **smoke** suite (fast‑sanity checks) against `BASE_URL`                                               |
 | `npm run test:full`                     | Run **full** suite (all specs) against `BASE_URL`                                                         |
 | `npm run wdio:spec -- <path/to/spec>`   | Run **only** the specified spec file, e.g.<br>`npm run wdio:spec -- header.spec.ts`                       |
+
+---
+
+### Cypress Scripts
+
+| Script                      | What it does                                                         |
+| --------------------------- | -------------------------------------------------------------------- |
+| `npm run cypress:open`      | Launch the Cypress Test Runner (interactive GUI)                     |
+| `npm run cypress:run`       | Execute **all** Cypress tests in headless mode                       |
+| `npm run cypress:run:smoke` | Run only the smoke tests (`cypress/e2e/smoke/**/*.cy.{js,jsx,ts,tsx}`) |
+
+---
+
+### Playwright Scripts
+
+| Script                 | What it does                                                         |
+| ---------------------- | -------------------------------------------------------------------- |
+| `npm run pw:e2e`       | Run **all** Playwright tests (headless)                              |
+| `npm run pw:e2e:smoke` | Run Playwright tests tagged with `@smoke`                            |
+| `npm run pw:e2e:headed`| Run Playwright tests in headed (non-headless) mode                   |
+| `npm run pw:e2e:report`| Generate & open the HTML report (`playwright show-report`)           |
+
+---
 
 ### 📊 Allure Test Reports
 
@@ -161,25 +184,6 @@ Once merged, your reports will be publicly available at:
 - **ESLint** (Flat Config - modern setup)
 - **Husky** (Git pre-commit hooks)
 - **Lint-Staged** (only lints staged files on commit)
-
-✅ Code will auto-lint on every commit.
-✅ Trailing spaces, formatting, and basic rules are enforced automatically.
-
----
-
-## 📁 Project Structure (high-level)
-
-```
-/components       → UI components (Header, Navbar, Drawer, etc.)
-/data/recaps      → JSON recap content (by year)
-/lib              → Utility libraries (e.g., getRecaps.ts)
-/pages            → Routes (dynamic year/week routing)
-/public           → Static assets (images, icons)
-/styles           → TailwindCSS global styles
-/types            → TypeScript types (RecapData, RecapWeek, etc.)
-.vscode           → Project-wide VS Code settings (optional)
-.husky            → Git hooks
-```
 
 ---
 
